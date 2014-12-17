@@ -1,0 +1,11 @@
+apertium-nno-nob (1.0.0+svn~57977-1) trusty; urgency=low
+
+  [ Kartik Mistry ]
+  * Rebuilt for Trusty.
+
+  [ Tino Didriksen ]
+  * Initial release
+  * Significant changes in svn since tarball, so mixing new build scripts with
+    old data files
+
+ -- Kartik Mistry <kartik@debian.org>  Wed, 17 Dec 2014 14:51:09 +0530
