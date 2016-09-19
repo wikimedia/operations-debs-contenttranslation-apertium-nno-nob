@@ -94,7 +94,7 @@
       <attr-item tags="pp"/>
     </def-attr>
     <def-attr n="voice">
-      <attr-item tags="pass"/>
+      <attr-item tags="pasv"/>
     </def-attr>
     <def-attr n="nbr">
       <attr-item tags="sg"/>
@@ -164,7 +164,7 @@
             <let><clip pos="2" part="gen"/><lit v=""/></let>
             <let><clip pos="2" part="nbr"/><lit-tag v="sg"/></let>
           </when>
-          <otherwise c="posi/sup: always sp and un when def">
+          <otherwise c="pst/sup: always sp and un when def">
             <let><clip pos="2" part="gen"/><lit-tag v="un"/></let>
             <let><clip pos="2" part="nbr"/><lit-tag v="sp"/></let>
           </otherwise>
@@ -192,7 +192,7 @@
       <action>
         <choose>
           <when><test><and>
-            <equal><clip pos="0" part="tags"/><lit-tag v="vblex.inf.pass"/></equal>
+            <equal><clip pos="0" part="tags"/><lit-tag v="vblex.inf.pasv"/></equal>
             <equal><clip pos="1" part="temps"/><lit-tag v="pp"/></equal>
           </and></test>
           <out>
