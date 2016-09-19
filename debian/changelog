@@ -1,3 +1,9 @@
+apertium-nno-nob (1.1.0~r66076-1+wmf1) jessie-wikimedia; urgency=low
+
+  * Rebuild for Jessie.
+
+ -- Kartik Mistry <kartik@debian.org>  Mon, 19 Sep 2016 19:32:32 +0530
+
 apertium-nno-nob (1.0.0+svn~57977-1) trusty; urgency=low
 
   [ Kartik Mistry ]

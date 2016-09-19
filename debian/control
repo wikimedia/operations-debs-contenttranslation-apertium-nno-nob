@@ -2,28 +2,30 @@ Source: apertium-nno-nob
 Section: science
 Priority: optional
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Uploaders: Tino Didriksen <mail@tinodidriksen.com>,
+Uploaders: Tino Didriksen <tino@didriksen.cc>,
            Kartik Mistry <kartik@debian.org>
-Build-Depends: apertium (>= 3.3),
-               apertium-nno,
-               apertium-nob,
+Build-Depends: apertium-dev (>= 3.4),
+               apertium-lex-tools,
+               apertium-nno (>= 0.6.0~r66076),
+               apertium-nob (>= 0.6.0~r66076),
                autotools-dev,
                cg3,
-               debhelper (>= 9.0),
+               debhelper (>= 9),
                dh-autoreconf,
                gawk,
-               libapertium3-3.3-dev,
-               liblttoolbox3-3.3-dev,
-               locales,
                pkg-config (>= 0.21)
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Homepage: http://apertium.org/
-Vcs-Git: git://anonscm.debian.org/debian-science/packages/apertium-nno-nob.git
+Vcs-Git: https://anonscm.debian.org/cgit/debian-science/packages/apertium-nno-nob.git
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/apertium-nno-nob.git
 
 Package: apertium-nno-nob
 Architecture: all
-Depends: apertium (>= 3.3), cg3, ${misc:Depends}, ${shlibs:Depends}
+Depends: apertium (>= 3.4),
+         apertium-lex-tools,
+         cg3,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Provides: apertium-nob-nno
 Conflicts: apertium-nob-nno
 Description: Apertium translation data for the Norwegian Nynorsk-Norwegian Bokmål pair
