@@ -131,7 +131,7 @@
     </def-cat>
     <def-cat n="posgen">
       <cat-item tags="det.pos.*"/>
-      <cat-item tags="n.*.*.*.gen"/>
+      <cat-item tags="n.*.gen"/>
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
@@ -164,7 +164,7 @@
       <cat-item tags="adv"/>
     </def-cat>
     <def-cat n="infm">
-      <cat-item lemma="å" tags="cnjsub"/>
+      <cat-item lemma="å" tags="part"/>
     </def-cat>
     <def-cat n="sin">
       <cat-item lemma="seg" tags="det.pos.*"/>
@@ -182,11 +182,15 @@
     <def-cat n="vblexinf">
       <cat-item tags="vblex.inf"/>
     </def-cat>
+    <def-cat n="vblexinf_or_infpass">
+      <cat-item tags="vblex.inf"/>
+      <cat-item tags="vblex.inf.pasv"/>
+    </def-cat>
     <def-cat n="vblexinfpass">
-      <cat-item tags="vblex.inf.pass"/>
+      <cat-item tags="vblex.inf.pasv"/>
     </def-cat>
     <def-cat n="vblexpass">
-      <cat-item tags="vblex.*.pass"/>
+      <cat-item tags="vblex.*.pasv"/>
       <cat-item tags="vblex.pstv.pres"/>
     </def-cat>
   </section-def-cats>
@@ -214,7 +218,7 @@
       <attr-item tags="pp"/>
     </def-attr>
     <def-attr n="voice">
-      <attr-item tags="pass"/>
+      <attr-item tags="pasv"/>
     </def-attr>
     <def-attr n="a_det">
       <attr-item tags="det"/>
@@ -230,21 +234,21 @@
       <attr-item tags="adj"/>
       <attr-item tags="adj.pp"/>
       <attr-item tags="adj.pprs"/>
-      <attr-item tags="adj.posi"/>
+      <attr-item tags="adj.pst"/>
       <attr-item tags="adj.comp"/>
       <attr-item tags="adj.sup"/>
-      <attr-item tags="adj.ord.posi"/>
+      <attr-item tags="adj.ord.pst"/>
       <attr-item tags="adj.ord.comp"/>
       <attr-item tags="adj.ord.sup"/>
 
       <attr-item tags="adj.sint"/>
-      <attr-item tags="adj.sint.posi"/>
+      <attr-item tags="adj.sint.pst"/>
       <attr-item tags="adj.sint.comp"/>
       <attr-item tags="adj.sint.sup"/>
     </def-attr>
 
     <def-attr n="grau">
-      <attr-item tags="posi"/>
+      <attr-item tags="pst"/>
       <attr-item tags="comp"/>
       <attr-item tags="sup"/> 
     </def-attr>
@@ -279,7 +283,6 @@
     <def-var n="caseFirstWord"/>
     <def-var n="c_name"         c="chunk name"/>
     <def-var n="ntags"/>
-    <def-var n="pass"/>
     <def-var n="aux"/>
     <def-var n="grau_aux"       c="lexical unit containing meir/mest if translating from sint to non-sint"/>
   </section-def-vars>
@@ -330,6 +333,9 @@
       <list-item v="kjøkken"/>
       <list-item v="skip"/>
     </def-list>
+    <def-list n="gen-av">
+      <list-item v="bok"/>
+    </def-list>
 
     <def-list n="det_indef">
       <!-- feels like these should have their own
@@ -346,6 +352,14 @@
               c="Verbs which require vere instead of bli/verte.">
       <list-item v="vite"/>
       <list-item v="eige"/>
+    </def-list>
+
+    <def-list n="adj-genders" c="possible nno/nob adj genders">
+      <list-item v="&lt;m&gt;"/>
+      <list-item v="&lt;mf&gt;"/>
+      <list-item v="&lt;f&gt;"/>
+      <list-item v="&lt;nt&gt;"/>
+      <list-item v="&lt;un&gt;"/>
     </def-list>
   </section-def-lists>
 
@@ -450,48 +464,22 @@
                   (We want to allow 'helt.nt svart.mf katt.m', no gender change nor GD on 'helt',
                    but o/w make sure adj corresponds: 'helt.nt forfatterskap => heil.mf forfattarskap')">
       <choose><when>
-        <test><or>
-          <equal><clip pos="2" side="tl" part="gen"/><lit-tag v="GD"/></equal>
-          <and>
-            <not><equal><clip pos="1" side="sl" part="gen"/><clip pos="1" side="tl" part="gen"/></equal></not>
-            <not><equal><clip pos="1" side="tl" part="gen"/><lit-tag v="f"/></equal></not>
-          </and>
-        </or></test>
+        <test><and>
+          <in><clip pos="1" side="tl" part="gen"/><list n="adj-genders"/></in>
+          <or>
+            <equal><clip pos="2" side="tl" part="gen"/><lit-tag v="GD"/></equal>
+            <and>
+              <not><equal><clip pos="1" side="sl" part="gen"/><clip pos="1" side="tl" part="gen"/></equal></not>
+              <not><equal><clip pos="1" side="tl" part="gen"/><lit-tag v="f"/></equal></not>
+            </and>
+          </or>
+        </and></test>
         <let><clip pos="2" side="tl" part="gen"/><clip pos="1" side="tl" part="gen"/></let>
       </when></choose>
       <call-macro n="set_gender1.adj"><with-param pos="2"/></call-macro>
     </def-macro>
 
-    <def-macro n="set_grau_aux2" npar="2"
-               c="arg.1: adjective arg.2: adjective
-                  When translating from «meir/mest» non-sint to sint, remove «meir/mest», empty grau_aux-variable.
-                  When translating from (first arg) sint to non-sint, put «meir/mest» in grau_aux-variable.
-
-                  Assumes c_name has been set!">
-      <choose>
-        <when>
-          <test><and>
-            <equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal>
-            <or>
-              <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="comp"/></equal>
-              <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="sup"/></equal>
-            </or>
-            <not><begins-with><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with></not>
-            <begins-with><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with>
-          </and></test>
-          <!-- The second adj is synthetic, so copy tags from first adj: -->
-          <let><clip pos="2" side="tl" part="tags"/><clip pos="1" side="tl" part="tags"/></let>
-          <!-- And delete the first (meir/mest) adj: -->
-          <let><clip pos="1" side="tl" part="whole"/><lit v=""/></let>
-          <let><var n="grau_aux"/><lit v=""/></let>
-        </when>
-
-        <otherwise>
-          <!-- Or maybe we want to _add_ meir/mest: -->
-          <call-macro n="set_grau_aux1"><with-param pos="1"/></call-macro>
-        </otherwise>
-      </choose>
-    </def-macro>
+    
 
     <def-macro n="set_grau_aux1" npar="1"
                c="arg.1: adjective
@@ -536,7 +524,7 @@
 
           <let>
             <clip pos="1" side="tl" part="tags"/>
-            <lit-tag v="adj.posi.un.pl.ind"/>
+            <lit-tag v="adj.pst.un.pl.ind"/>
           </let>
         </when>
 
@@ -546,6 +534,52 @@
           </let>
         </otherwise>
 
+      </choose>
+    </def-macro>
+
+    <def-macro n="set_grau_aux2" npar="2"
+               c="arg.1: adjective arg.2: adjective
+                  When translating from «meir/mest» non-sint to sint, remove «meir/mest», empty grau_aux-variable.
+                  When translating from (first arg) sint to non-sint, put «meir/mest» in grau_aux-variable.
+
+                  Assumes c_name has been set!">
+      <choose>
+        <when>
+          <test><and>
+            <equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal>
+            <or>
+              <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="comp"/></equal>
+              <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="sup"/></equal>
+            </or>
+            <not><begins-with><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with></not>
+            <begins-with><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with>
+          </and></test>
+          <!-- The second adj is synthetic, so copy tags from first adj: -->
+          <let><clip pos="2" side="tl" part="tags"/><clip pos="1" side="tl" part="tags"/></let>
+          <!-- And delete the first (meir/mest) adj: -->
+          <let><clip pos="1" side="tl" part="whole"/><lit v=""/></let>
+          <let><var n="grau_aux"/><lit v=""/></let>
+        </when>
+
+        <otherwise>
+          <!-- Or maybe we want to _add_ meir/mest: -->
+          <call-macro n="set_grau_aux1"><with-param pos="1"/></call-macro>
+          <!-- and fix tags on the second adj (but no new aux if only second adj is non-pst; TODO better) -->
+          <choose><when>
+            <test><and>
+              <begins-with><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with>
+              <not><begins-with><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with></not>
+              <or>
+                <equal><clip pos="2" side="tl" part="grau"/><lit-tag v="comp"/></equal>
+                <equal><clip pos="2" side="tl" part="grau"/><lit-tag v="sup"/></equal>
+              </or>
+            </and></test>
+            <let>
+              <clip pos="2" side="tl" part="tags"/>
+              <lit-tag v="adj.pst.un.pl.ind"/>
+            </let>
+          </when></choose>
+        </otherwise>
       </choose>
     </def-macro>
 
@@ -623,6 +657,8 @@
           <let><var n="gen-prep"/><lit v="i"/></let></when>
           <when><test><in><clip pos="1" side="tl" part="lemh"/><list n="gen-på"/></in></test>
           <let><var n="gen-prep"/><lit v="på"/></let></when>
+          <when><test><in><clip pos="1" side="tl" part="lemh"/><list n="gen-av"/></in></test>
+          <let><var n="gen-prep"/><lit v="av"/></let></when>
           <otherwise><let><var n="gen-prep"/><lit v="til"/></let></otherwise>
         </choose>
         <out>
@@ -882,7 +918,7 @@ Requires rather ugly RL prn lemmas in nn.dix, see personal_pronouns__prn pardef"
         <pattern-item n="posgen"/>
         <pattern-item n="måte"/>
         <pattern-item n="infm"/>
-        <pattern-item n="vblexinf"/>
+        <pattern-item n="vblexinf_or_infpass"/>
       </pattern>
       <action>
         <call-macro n="switch_cases">
@@ -906,7 +942,7 @@ Requires rather ugly RL prn lemmas in nn.dix, see personal_pronouns__prn pardef"
         <choose>
           <when>
             <test>
-              <equal><clip pos="4" side="tl" part="voice"/><lit v="pass"/></equal>
+              <equal><clip pos="4" side="tl" part="voice"/><lit-tag v="pasv"/></equal>
             </test>
             <call-macro n="set_aux2"><with-param pos="4"/><with-param pos="4"/></call-macro>
             <out>
