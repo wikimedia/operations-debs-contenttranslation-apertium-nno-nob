@@ -1,3 +1,9 @@
+apertium-nno-nob (1.1.0~r66076-1+wmf2) jessie-wikimedia; urgency=low
+
+  * Updated depends on cg3.
+
+ -- Kartik Mistry <kartik@debian.org>  Tue, 09 Jan 2018 09:51:53 +0530
+
 apertium-nno-nob (1.1.0~r66076-1+wmf1) jessie-wikimedia; urgency=low
 
   * Rebuild for Jessie.

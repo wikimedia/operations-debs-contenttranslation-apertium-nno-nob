@@ -9,7 +9,7 @@ Build-Depends: apertium-dev (>= 3.4),
                apertium-nno (>= 0.6.0~r66076),
                apertium-nob (>= 0.6.0~r66076),
                autotools-dev,
-               cg3,
+               cg3 (>= 1.0.0~r12254),
                debhelper (>= 9),
                dh-autoreconf,
                gawk,
@@ -23,7 +23,7 @@ Package: apertium-nno-nob
 Architecture: all
 Depends: apertium (>= 3.4),
          apertium-lex-tools,
-         cg3,
+         cg3 (>= 1.0.0~r12254),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: apertium-nob-nno
