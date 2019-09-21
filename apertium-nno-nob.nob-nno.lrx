@@ -1,4 +1,329 @@
 <rules>
+  <!-- NOB → NNO -->
+
+  <rule><match lemma="forhold" tags="n.*"><select lemma="forhold"/></match></rule>
+  <!-- <rule weight="2.0"> -->
+  <!--   <match tags="n.*.*.*.cmp"/> -->
+  <!--   <match lemma="forhold" tags="n.*"> -->
+  <!--     <select lemma="forhold"/> -->
+  <!--   </match> -->
+  <!-- </rule> -->
+
+  <rule> <match lemma="kjennelse" tags="n.*"> <select lemma="rettsavgjerd"/> </match> </rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="rett"/>
+      <match lemma="rettslig"/>
+      <match lemma="Høyesterett"/>
+    </or>
+    <match lemma="kjennelse" tags="n.*">
+      <select lemma="avgjerd"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="kjennelse" tags="n.*">
+      <select lemma="avgjerd"/>
+    </match>
+    <or>
+      <match lemma="rett"/>
+      <match lemma="rettslig"/>
+      <match lemma="Høyesterett"/>
+    </or>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="kjennelse" tags="n.*">
+      <select lemma="avgjerd"/>
+    </match>
+    <match tags="*"/>
+    <or>
+      <match lemma="rett"/>
+      <match lemma="rettslig"/>
+      <match lemma="Høyesterett"/>
+    </or>
+  </rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="rett"/>
+      <match lemma="rettslig"/>
+      <match lemma="Høyesterett"/>
+    </or>
+    <match tags="*"/>
+    <match lemma="kjennelse" tags="n.*">
+      <select lemma="avgjerd"/>
+    </match>
+  </rule>
+
+  <rule> <match lemma="rystelse" tags="n.*"> <select lemma="risting"/> </match> </rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="oppleve"/>
+      <match lemma="fornemme"/>
+      <match lemma="kjenne"/>
+      <match lemma="nok"/>
+      <match lemma="være"/>
+      <match lemma="bli"/>
+      <match lemma="blive"/>
+    </or>
+    <match tags="*"/>
+    <match lemma="rystelse" tags="n.*">
+      <select lemma="skaking"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="være"/>
+      <match lemma="bli"/>
+      <match lemma="blive"/>
+    </or>
+    <match lemma="denne"/>
+    <match lemma="en"/>
+    <match lemma="rystelse" tags="n.*">
+      <select lemma="skaking"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="rystelse" tags="n.*">
+      <select lemma="skaking"/>
+    </match>
+    <match lemma="for"/>
+  </rule>
+
+  <rule> <match lemma="bety" tags="vblex.*"> <select lemma="bety"/> </match> </rule>
+
+  <!-- I have yet to see non-erroneous uses of these words as masc in corpus -->
+  <rule> <match lemma="formannskap">   <select lemma="formannskap"   tags="n.nt.*"/> </match> </rule>
+  <rule> <match lemma="presidentskap"> <select lemma="presidentskap" tags="n.nt.*"/> </match> </rule>
+  <rule> <match lemma="borgerskap">    <select lemma="borgarskap"    tags="n.nt.*"/> </match> </rule>
+
+  <rule> <match lemma="være" tags="vblex.*"> <select lemma="vere"/> </match> </rule>
+  <rule weight="2.0" c="er blitt">
+    <match lemma="være" tags="vblex.*">
+      <select lemma="ha"/>
+    </match>
+    <or>
+      <match lemma="bli" tags="vblex.pp"/>
+      <match lemma="bli" tags="adj.pp.nt.sg.ind"/>
+      <match lemma="blive" tags="vblex.pp"/>
+      <match lemma="blive" tags="adj.pp.nt.sg.ind"/>
+    </or>
+  </rule>
+  <rule weight="2.0" c="er det blitt">
+    <match lemma="være" tags="vblex.*">
+      <select lemma="ha"/>
+    </match>
+    <match tags="*"/>
+    <or>
+      <match lemma="bli" tags="vblex.pp"/>
+      <match lemma="bli" tags="adj.pp.nt.sg.ind"/>
+      <match lemma="blive" tags="vblex.pp"/>
+      <match lemma="blive" tags="adj.pp.nt.sg.ind"/>
+    </or>
+  </rule>
+  <rule weight="2.0" c="er de også blitt">
+    <match lemma="være" tags="vblex.*">
+      <select lemma="ha"/>
+    </match>
+    <match tags="*"/>
+    <match tags="*"/>
+    <or>
+      <match lemma="bli" tags="vblex.pp"/>
+      <match lemma="bli" tags="adj.pp.nt.sg.ind"/>
+      <match lemma="blive" tags="vblex.pp"/>
+      <match lemma="blive" tags="adj.pp.nt.sg.ind"/>
+    </or>
+  </rule>
+  <rule weight="2.0" c="er altså Johaug også blitt">
+    <match lemma="være" tags="vblex.*">
+      <select lemma="ha"/>
+    </match>
+    <match tags="*"/>
+    <match tags="*"/>
+    <match tags="*"/>
+    <or>
+      <match lemma="bli" tags="vblex.pp"/>
+      <match lemma="bli" tags="adj.pp.nt.sg.ind"/>
+      <match lemma="blive" tags="vblex.pp"/>
+      <match lemma="blive" tags="adj.pp.nt.sg.ind"/>
+    </or>
+  </rule>
+
+  <rule> <match lemma="hvilket" tags="cnjsub"> <select lemma="noko som"/> </match> </rule>
+
+  <rule> <match lemma="fremlegge" tags="vblex.*"> <select lemma="framlegge"/> </match> </rule>
+  <rule> <match lemma="framlegge" tags="vblex.*"> <select lemma="framlegge"/> </match> </rule>
+
+  <rule> <match lemma="anbefaling" tags="n.*"><select lemma="tilråding"/></match> </rule>
+  <rule> <match lemma="anbefale" tags="vblex.*"> <select lemma="tilrå"/> </match> </rule>
+
+  <rule> <match lemma="prøve" tags="vblex.*"> <select lemma="prøve"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="prøve" tags="vblex.*">
+      <select lemma="freiste"/>
+    </match>
+    <match lemma="lykke"/>
+  </rule>
+  <rule> <match lemma="friste" tags="vblex.*"> <select lemma="freiste"/> </match> </rule>
+  <rule> <match lemma="forsøke" tags="vblex.*"> <select lemma="prøve"/> </match> </rule>
+
+  <rule> <match lemma="domstolsbehandling" tags="n.*"> <select lemma="domstolsbehandling"/> </match> </rule>
+  <rule> <match lemma="forening" tags="n.*">           <select lemma="foreining"/> </match> </rule>
+  <rule> <match lemma="behandling" tags="n.*">         <select lemma="behandling"/> </match> </rule>
+  <rule> <match lemma="forening" tags="n.*">           <select lemma="foreining"/> </match> </rule>
+  <rule> <match lemma="verdighet" tags="n.*">          <select lemma="verd"/> </match> </rule>
+  <rule> <match lemma="bedrift" tags="n.*">            <select lemma="bedrift"/> </match> </rule>
+  <rule> <match lemma="befolkning" tags="n.*">         <select lemma="befolkning"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="befolkning" tags="n.*">         <select lemma="befolkning"/> </match>
+    <match tags="n.*.*.*.cmp"/>
+  </rule>
+  <rule weight="2.0">
+    <match tags="n.*.*.*.cmp"/>
+    <match lemma="befolkning" tags="n.*">         <select lemma="befolkning"/> </match>
+  </rule>
+
+  <rule> <match lemma="nødvendigvis" tags="adv"> <select lemma="nødvendigvis"/> </match> </rule>
+  <rule> <match lemma="muligens" tags="adv"> <select lemma="kanskje"/> </match> </rule>
+  <rule> <match lemma="muligvis" tags="adv"> <select lemma="kanskje"/> </match> </rule>
+  <rule> <match lemma="imidlertid" tags="adv"> <select lemma="likevel"/> </match> </rule>
+
+  <rule> <match lemma="i påvente av at" tags="adv"> <select lemma="fram til"/> </match> </rule>
+
+  <rule><match lemma="håpe" tags="vblex.*"><select lemma="håpe"/></match></rule>
+  <rule><match lemma="håpe" tags="adj.*"><select lemma="håpe"/></match></rule>
+
+  <rule> <match lemma="håp" tags="n.*"> <select lemma="håp"/> </match> </rule>
+  <rule> <match lemma="forhåpning" tags="n.*"> <select lemma="von"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="forhåpning" tags="n.*.*.def">
+      <select lemma="håp"/>
+    </match>
+  </rule>
+
+  <rule> <match lemma="bruk" tags="n.*"> <select lemma="bruk"/> </match> </rule>
+
+  <rule> <match lemma="beherske" tags="vblex.*"> <select lemma="meistre"/> </match> </rule>
+
+  <rule> <match lemma="bevare" tags="vblex.*"> <select lemma="verne"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="bevare" tags="vblex.pp">
+      <select lemma="bevare"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="bevare" tags="vblex.*.pasv">
+      <select lemma="bevare"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="bevare" tags="adj.pp.*">
+      <select lemma="bevare"/>
+    </match>
+  </rule>
+
+  <rule> <match lemma="anklage" tags="n.*"> <select lemma="skulding"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="anklage" tags="n.*.sg.*">
+      <select lemma="tiltale"/>
+    </match>
+    <or>
+      <match lemma="lyde"/>
+      <match lemma="for"/>
+    </or>
+  </rule>
+
+  <rule> <match lemma="anklage" tags="vblex.*"> <select lemma="skylde"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="anklage" tags="vblex.*.sg.*">
+      <select lemma="tiltale"/>
+    </match>
+    <or>
+      <match lemma="lyde"/>
+      <match lemma="for"/>
+    </or>
+  </rule>
+
+  <rule> <match lemma="trygghet" tags="n.*"> <select lemma="tryggleik"/> </match> </rule>
+
+  <rule> <match lemma="antall" tags="n.*"> <select lemma="mengde"/> </match> </rule>
+  <rule weight="3.0" c="ei stor mengd søknader, but det store talet på søknader">
+    <match lemma="en"/>
+    <or><match tags="adj.*"/><match tags="adv"/></or>
+    <match lemma="antall">
+      <select lemma="mengde"/>
+    </match>
+    <or>
+      <match tags="n.*"/>
+      <match tags="adj.*"/>
+    </or>
+  </rule>
+  <rule weight="3.0" c="ei særs stor mengd søknader, but det store talet på søknader">
+    <match lemma="en"/>
+    <or><match tags="adj.*"/><match tags="adv"/></or>
+    <or><match tags="adj.*"/><match tags="adv"/></or>
+    <match lemma="antall">
+      <select lemma="mengde"/>
+    </match>
+    <or>
+      <match tags="n.*"/>
+      <match tags="adj.*"/>
+    </or>
+  </rule>
+  <rule weight="3.0" c="ei mengd søknader, but dette talet på søknader">
+    <match lemma="en"/>
+    <match lemma="antall">
+      <select lemma="mengde"/>
+    </match>
+    <or>
+      <match tags="n.*"/>
+      <match tags="adj.*"/>
+    </or>
+  </rule>
+  <rule weight="3.0">
+    <match lemma="antall">
+      <select lemma="talet på"/>
+    </match>
+    <or>
+      <match tags="n.*"/>
+      <match tags="adj.*"/>
+    </or>
+  </rule>
+  <rule weight="3.0">
+    <match lemma="antall">
+      <select lemma="talet på"/>
+    </match>
+    <or>
+      <match lemma="krone"/>
+      <match lemma="grad"/>
+    </or>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="antall" tags="n.*.sg.def"> <!-- nno only can generate for this tagging -->
+      <select lemma="tal"/>
+    </match>
+  </rule>
+
+  <rule> <match lemma="brenne" tags="adj.*"> <select lemma="brenne"/> </match> </rule>
+  <rule> <match lemma="brenne" tags="vblex.*"> <select lemma="brenne"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="brenne" tags="vblex.*">
+      <select lemma="brenne¹"/>
+    </match>
+    <or>
+      <match lemma="av"/>
+      <match lemma="alle"/>
+      <match lemma="ein"/>
+    </or>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="brenne" tags="vblex.*">
+      <select lemma="brenne¹"/>
+    </match>
+    <match tags="*"/>
+    <or>
+      <match lemma="noko"/>
+    </or>
+  </rule>
+
   <rule> <match lemma="foreligge" tags="vblex.*"> <select lemma="finnast"/> </match> </rule>
   <rule> <match lemma="foreligge" tags="adj.*"> <select lemma="gjelde"/> </match> </rule>
 
@@ -20,6 +345,8 @@
     <match tags="prn.*"/>
   </rule>
 
+  <rule> <match lemma="male" tags="vblex.*"> <select lemma="måle¹"/> </match> </rule>
+  <rule> <match lemma="male" tags="adj.*"> <select lemma="måle¹"/> </match> </rule>
   <rule weight="2.0">
     <match lemma="male" tags="vblex.*">
       <select lemma="male"/>
@@ -34,8 +361,20 @@
       <match lemma="fin"/>
     </or>
   </rule>
-
-  <rule> <match lemma="male" tags="vblex.*"> <select lemma="måle"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="male" tags="adj.*">
+      <select lemma="male"/>
+    </match>
+    <or>
+      <match lemma="korn"/>
+      <match lemma="mjøl"/>
+      <match lemma="kjøtt"/>
+      <match lemma="mandel"/>
+      <match lemma="kaffi"/>
+      <match lemma="grov"/>
+      <match lemma="fin"/>
+    </or>
+  </rule>
 
   <rule weight="2.0">
     <match lemma="maling" tags="n.*.sg.ind">
@@ -50,11 +389,15 @@
     </match>
   </rule>
 
+  <rule weight="1.0"><match lemma="forestilling" tags="n.*"><select lemma="framsyning"/></match></rule>
   <rule weight="2.0">
     <match lemma="forestilling" tags="n.*">
       <select lemma="førestilling"/>
     </match>
-    <match lemma="om"/>
+    <or>
+      <match lemma="om"/>
+      <match lemma="at"/>
+    </or>
   </rule>
   <rule weight="2.0">
     <match lemma="forestilling" tags="n.*">
@@ -106,5 +449,437 @@
 
   <rule> <match lemma="anse" tags="adj.*"> <select lemma="verdsetje"/> </match> </rule>
   <rule> <match lemma="anse" tags="vblex.*"> <select lemma="sjå# på"/> </match> </rule>
-</rules>
 
+  <rule><match lemma="angående" tags="pr.*"><select lemma="rundt"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="angående" tags="pr.*">
+      <select lemma="om"/>
+    </match>
+    <or>
+      <match lemma="at"/>
+      <match tags="adj.*"/>
+      <match tags="det.*"/>
+      <match tags="prn.*"/>
+    </or>
+  </rule>
+
+  <rule><match lemma="hensikt" tags="n.*"><select lemma="hensikt"/></match></rule>
+  <rule><match lemma="formål" tags="n.*"><select lemma="formål"/></match></rule>
+
+  <rule><match lemma="gang" tags="n.*"><select lemma="gong"/></match></rule>
+  <rule weight="2.0">
+    <!-- TODO: can't merge this with the next rule until we fix https://github.com/apertium/apertium-lex-tools/issues/12 -->
+    <match tags="n.*.*.*.cmp"/> 
+    <match lemma="gang" tags="n.*">
+      <select lemma="gang"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="i"/>
+      <match lemma="på"/>
+    </or>
+    <match lemma="gang" tags="n.*">
+      <select lemma="gang"/>
+    </match>
+  </rule>
+  <rule><match lemma="hemmelig" tags="adj.*"><select lemma="hemmeleg"/></match></rule>
+
+  <rule><match lemma="sikkerhet" tags="n.*"><select lemma="sikkerheit"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="sikkerhet" tags="n.*.*.*.cmp">
+      <select lemma="trygging"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="rike"/>
+      <match lemma="nasjon"/>
+    </or>
+    <match lemma="sikkerhet" tags="n.*">
+      <select lemma="tryggleik"/>
+    </match>
+  </rule>
+
+  <!-- all corpus hits seem to be about arbeidsløyse -->
+  <rule><match lemma="ledighet" tags="n.*"><select lemma="arbeidsløyse"/></match></rule>
+
+  <rule><match lemma="løpe" tags="vblex.*"><select lemma="springe"/></match></rule>
+  <rule><match lemma="løpe" tags="adj.*"><select lemma="springe"/></match></rule>
+
+  <rule><match lemma="grusom" tags="adj.*"><select lemma="grufull"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="grusom" tags="adj.*">
+      <select lemma="frykteleg"/>
+    </match>
+    <match lemma="overgriper" tags="n.*"/>
+  </rule>
+  <rule><match lemma="oversikt" tags="n.*"><select lemma="oversikt"/></match></rule>
+
+  <rule><match lemma="utsagn" tags="n.*"><select lemma="fråsegn"/></match></rule>
+  <rule weight="2.0">
+    <match tags="n.*.*.*.cmp"/>
+    <match lemma="utsagn" tags="n.*">
+      <select lemma="utsegn"/>
+    </match>
+  </rule>
+  <rule><match lemma="uttalelse" tags="n.*"><select lemma="fråsegn"/></match></rule>
+  <rule weight="2.0">
+    <match tags="n.*.*.*.cmp"/>
+    <match lemma="uttalelse" tags="n.*">
+      <select lemma="utsegn"/>
+    </match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="uttalelse" tags="n.m.pl.ind"><select lemma="utsegn"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="utsagn" tags="n.nt.pl.ind"><select lemma="utsegn"/></match>
+  </rule>
+
+  <rule><match lemma="voldsom" tags="adj.*"><select lemma="kraftig"/></match></rule>
+  <rule weight="2.0"><match lemma="voldsom" tags="adj.sint.pst.nt.sg.ind"><select lemma="veldig"/></match></rule>
+  <rule weight="3.0">
+    <match lemma="voldsom" tags="adj.*">
+      <select lemma="forrykande"/>
+    </match>
+    <or>
+      <match lemma="fart"/>
+      <match lemma="rask"/>
+      <match lemma="hurtig"/>
+      <match lemma="tempo"/>
+      <match lemma="storm"/>
+      <match lemma="regnvêr"/>
+      <match lemma="vêr"/>
+    </or>
+  </rule>
+
+  <rule><match lemma="utelukke" tags="vblex.*"><select lemma="sjå# bort frå"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="utelukke" tags="vblex.*">
+      <select lemma="avvise"/>
+    </match>
+    <match lemma="noe"/>
+  </rule>
+
+  <rule><match lemma="gjenfortelle" tags="vblex.*"><select lemma="fortelje# att"/></match></rule>
+
+  <rule><match lemma="uthule" tags="vblex.*"><select lemma="hole# ut"/></match></rule>
+  <rule><match lemma="uthule" tags="adj.*"><select lemma="uthule"/></match></rule>
+
+  <!-- finst trygge kontekstar for halde fram? -->
+  <!-- <rule><match lemma="fortsette" tags="vblex.*"><select lemma="halde# fram"/></match></rule> -->
+  <rule><match lemma="fortsette" tags="vblex.*"><select lemma="fortsetje"/></match></rule>
+  <rule><match lemma="fortsette" tags="adj.*"><select lemma="fortsetje"/></match></rule>
+
+  <rule><match lemma="enhver" tags="det.*"><select lemma="kvar og ein"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="enhver" tags="det.*">
+      <select lemma="ein kvar"/>
+    </match>
+    <match lemma="pris"/>
+  </rule>
+  <rule><match lemma="etter sigende" tags="adv"><select lemma="etter det som blir sagt,"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="etter sigende" tags="adv">
+      <select lemma="etter det som blir sagt"/>
+    </match>
+    <or>
+      <match tags="sent"/>
+      <match tags="sent.*"/>
+    </or>
+  </rule>
+
+  <rule><match lemma="etterfølge" tags="vblex.*"><select lemma="etterfølgje"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="etterfølge" tags="vblex.*">
+      <select lemma="følgje"/>
+    </match>
+    <match lemma="av"/>
+  </rule>
+
+  <rule><match lemma="epost" tags="n.*"><select lemma="e-post"/></match></rule>
+  <rule weight="2.0">
+    <match tags="n.*.*.*.cmp"/>
+    <match lemma="epost" tags="n.*">
+      <select lemma="epost"/>
+    </match>
+  </rule>
+  <rule><match lemma="mild" tags="adj.*"><select lemma="mild"/></match></rule>
+  <rule><match lemma="fornøyd" tags="adj.*"><select lemma="fornøgd"/></match></rule>
+  <rule><match lemma="beholde" tags="vblex.*"><select lemma="behalde"/></match></rule>
+
+  <rule><match lemma="i anledning av" tags="pr"><select lemma="i samband med"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="i anledning av" tags="pr"><select lemma="på grunn av"/></match>
+  </rule>
+
+  <rule><match lemma="når det kommer til" tags="pr"><select lemma="når det gjeld"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="når det kommer til" tags="pr">
+      <select lemma="når det kjem til"/>
+    </match>
+    <or>
+      <match lemma="stykke"/>
+      <match lemma="avstemning"/>
+    </or>
+  </rule>
+  <rule><match lemma="forbigå" tags="adj.*"><select lemma="forbigå"/></match></rule>
+  <rule weight="2.0"><match lemma="forbigå" tags="vblex.pp"><select lemma="forbigå"/></match></rule>
+  <rule weight="3.0">
+    <match lemma="føle"/>
+    <match lemma="seg"/>
+    <match lemma="forbigå">
+      <select lemma="gløyme"/>
+    </match>
+  </rule>
+  <rule><match lemma="forbigå" tags="vblex.*"><select lemma="gå forbi"/></match></rule>
+  <rule><match lemma="bekrefte" tags="vblex.*"><select lemma="stadfeste"/></match></rule>
+  <rule><match lemma="overveiende" tags="adv"><select lemma="hovudsakleg"/></match></rule>
+  <rule><match lemma="århundre" tags="n.*"><select lemma="hundreår"/></match></rule>
+  <rule><match lemma="utallig" tags="adj.*"><select lemma="tallaus"/></match></rule>
+  <rule><match lemma="angriper" tags="n.*"><select lemma="angripar"/></match></rule>
+  <rule><match lemma="betro" tags="vblex.*"><select lemma="fortru"/></match></rule>
+  <rule><match lemma="før eller siden" tags="adv"><select lemma="før eller sidan"/></match></rule>
+  <rule><match lemma="beskjed" tags="n.*"><select lemma="beskjed"/></match></rule>
+  <rule><match lemma="voldgift" tags="n.*"><select lemma="valdgift"/></match></rule>
+  <rule><match lemma="innta" tags="vblex.*"><select lemma="innta"/></match></rule>
+
+  <rule><match lemma="påfølgende" tags="adj.*"><select lemma="følgjande"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="påfølgende" tags="adj.*">
+      <select lemma="etterfølgjande"/>
+    </match>
+    <match tags="n.*.*.ind"/>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="påfølgende" tags="adj.*">
+      <select lemma="etterfølgjande"/>
+    </match>
+    <or><match tags="n.*.*.*.cmp"/><match tags="np.*.cmp"/></or>
+    <match tags="n.*.*.ind"/>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="påfølgende" tags="adj.*">
+      <select lemma="etterfølgjande"/>
+    </match>
+    <or><match tags="n.*.*.*.cmp"/><match tags="np.*.cmp"/></or>
+    <or><match tags="n.*.*.*.cmp"/><match tags="np.*.cmp"/></or>
+    <match tags="n.*.*.ind"/>
+  </rule>
+  <rule><match lemma="fullstendig" tags="adv"><select lemma="fullstendig"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="fullstendig" tags="adv"><select lemma="fullt"/></match>
+    <or>
+      <match lemma="synlig"/>
+      <match lemma="mulig"/>
+      <match lemma="forberede"/>
+      <match lemma="forberedt"/>
+      <match lemma="berede"/>
+      <match lemma="beredt"/>
+      <match lemma="uforberede"/>
+      <match lemma="uforberedt"/>
+      <match lemma="avvise"/>
+      <match lemma="avvisende"/>
+      <match lemma="utvikle"/>
+      <match lemma="voksen"/>
+    </or>
+  </rule>
+  <rule><match lemma="i forveien" tags="adv"><select lemma="i forvegen"/></match></rule>
+  <rule weight="2.0">
+    <or>
+      <match lemma="time"/>
+      <match lemma="halvår"/>
+      <match lemma="helg"/>
+      <match lemma="uke"/>
+      <match lemma="år"/>
+      <match lemma="tid"/>
+      <match lemma="dag"/>
+    </or>
+    <match lemma="i forveien" tags="adv"><select lemma="før"/></match>
+  </rule>
+  <rule><match lemma="erklæring" tags="n.*"><select lemma="erklæring"/></match></rule>
+  <rule><match lemma="beskylde" tags="vblex.*"><select lemma="skylde"/></match></rule>
+  <rule><match lemma="likegyldighet" tags="n.*"><select lemma="likegyldigheit"/></match></rule>
+  <rule><match lemma="skue" tags="n.*"><select lemma="syn"/></match></rule>
+  <rule><match lemma="erfare" tags="vblex.*"><select lemma="erfare"/></match></rule>
+  <rule><match lemma="bringe" tags="vblex.*"><select lemma="bringe"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="bringe" tags="vblex.*"><select lemma="frakte"/></match>
+    <match lemma="i" tags="pr"/>
+  </rule>
+  <rule><match lemma="pågripe" tags="vblex.*"><select lemma="arrestere"/></match></rule>
+
+  <rule><match lemma="nok" tags="adv"><select lemma="nok"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="nok" tags="adv"><select lemma="endå"/></match>
+    <match lemma="en" tags="det.qnt.*"/>
+  </rule>
+
+  <rule><match lemma="i løpet av" tags="pr"><select lemma="i løpet av"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="i løpet av" tags="pr"><select lemma="i"/></match>
+    <or>
+      <match lemma="januar" tags="n.m.sg.ind"/>
+      <match lemma="februar" tags="n.m.sg.ind"/>
+      <match lemma="mars" tags="n.m.sg.ind"/>
+      <match lemma="april" tags="n.m.sg.ind"/>
+      <match lemma="mai" tags="n.m.sg.ind"/>
+      <match lemma="juni" tags="n.m.sg.ind"/>
+      <match lemma="juli" tags="n.m.sg.ind"/>
+      <match lemma="august" tags="n.m.sg.ind"/>
+      <match lemma="september" tags="n.m.sg.ind"/>
+      <match lemma="oktober" tags="n.m.sg.ind"/>
+      <match lemma="november" tags="n.m.sg.ind"/>
+      <match lemma="desember" tags="n.m.sg.ind"/>
+      <match lemma="dag" tags="n.m.sg.def"/> <!-- or gjennom? -->
+      <match lemma="år" tags="n.m.sg.def"/> <!-- or gjennom? -->
+      <!-- TODO: year regex in .dix: -->
+      <match lemma="2018"/>
+      <match lemma="2019"/>
+      <match lemma="2020"/>
+      <match lemma="2021"/>
+      <match lemma="2022"/>
+    </or>
+  </rule>
+  <rule weight="2.0" c="i løpet av de første årene → ∅">
+    <match lemma="i løpet av" tags="pr"><select lemma=""/></match>
+    <match lemma="den" tags="det.dem.un.pl"/>
+  </rule>
+  <rule weight="2.0" c="kan forvente å få bil i løpet av første halvår → ∅">
+    <match lemma="i løpet av" tags="pr"><select lemma=""/></match>
+    <match lemma="første" tags="adj.*"/>
+  </rule>
+  <!-- TODO: innan or om or keep here? -->
+  <!-- <rule weight="2.0" c="i løpet av kort tid → om"> -->
+  <!--   <match lemma="i løpet av" tags="pr"><select lemma="om"/></match> -->
+  <!--   <match lemma="kort" tags="adj.*"/> -->
+  <!--   <match lemma="tid" tags="n.*"/> -->
+  <!-- </rule> -->
+  <rule weight="2.0" c="I løpet av 33 dager er → på">
+    <match lemma="i løpet av" tags="pr"><select lemma="på"/></match>
+    <or>
+      <!-- <match tags="det.qnt.*"/> TODO: not «på 2018»; need different tagging of years and other numbers in .dix -->
+      <match lemma="tour" tags="n.*"/>
+      <match lemma="tur" tags="n.*"/>
+    </or>
+  </rule>
+  <rule weight="3.0" c="opp 3 prosent i løpet av dagen → gjennom">
+    <match tags="*"/>
+    <match lemma="i løpet av" tags="pr"><select lemma="gjennom"/></match>
+    <or>
+      <match lemma="time"/>
+      <match lemma="halvår"/>
+      <match lemma="helg"/>
+      <match lemma="uke"/>
+      <match lemma="år"/>
+      <match lemma="tid"/>
+      <match lemma="dag"/>
+      <match lemma="handledag"/>
+      <match lemma="mandag" tags="n.m.sg.def"/>
+      <match lemma="mandag" tags="n.m.sg.def.gen"/>
+      <match lemma="tirsdag" tags="n.m.sg.def"/>
+      <match lemma="tirsdag" tags="n.m.sg.def.gen"/>
+      <match lemma="onsdag" tags="n.m.sg.def"/>
+      <match lemma="onsdag" tags="n.m.sg.def.gen"/>
+      <match lemma="torsdag" tags="n.m.sg.def"/>
+      <match lemma="torsdag" tags="n.m.sg.def.gen"/>
+      <match lemma="fredag" tags="n.m.sg.def"/>
+      <match lemma="fredag" tags="n.m.sg.def.gen"/>
+      <match lemma="lørdag" tags="n.m.sg.def"/>
+      <match lemma="lørdag" tags="n.m.sg.def.gen"/>
+      <match lemma="søndag" tags="n.m.sg.def"/>
+      <match lemma="søndag" tags="n.m.sg.def.gen"/>
+    </or>
+  </rule>
+  <rule><match lemma="tilsvare" tags="vblex.*"><select lemma="svare# til"/></match></rule>
+  <rule><match lemma="omsetning" tags="n.*"><select lemma="omsetning"/></match></rule>
+
+  <rule><match lemma="kull" tags="n.*"><select lemma="kol"/></match></rule>
+  <rule weight="2.0" c="ulvekull">
+    <match tags="n.*.*.*.cmp"/>
+    <match lemma="kull" tags="n.*">         <select lemma="kull"/> </match>
+  </rule>
+  <rule><match lemma="angivelig" tags="adv"><select lemma="visstnok"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="," tags="sent.*"/>
+    <match lemma="angivelig" tags="adv">
+      <select lemma="truleg"/>
+    </match>
+  </rule>
+  <rule c="Can't even find 'attrå' used as verb in nno-corpus">
+    <match lemma="begjære" tags="vblex.*"><select lemma="krevje"/></match>
+  </rule>
+  <rule><match lemma="etterkomme" tags="vblex.*"><select lemma="etterkomme"/></match></rule>
+
+  <rule><match lemma="myndighet" tags="n.*"><select lemma="styresmakt"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="myndighet" tags="n.*"><select lemma="autoritet"/></match>
+    <match lemma="til" tags="pr"/>
+  </rule>
+  <rule weight="2.0" c="opptre med myndighet">
+    <match lemma="med" tags="pr"/>
+    <match lemma="myndighet" tags="n.*"><select lemma="autoritet"/></match>
+  </rule>
+  <rule weight="2.0">
+    <or>
+      <match tags="det.pos.*"/>
+    </or>
+    <match lemma="myndighet" tags="n.*"><select lemma="makt"/></match>
+    <match lemma="til" tags="pr"/>
+  </rule>
+  <!-- <rule weight="2.0" c="jf. påtalemyndigheten → påtalemakta, though styresmakt seems more common in cmp too"> -->
+  <!--   <match tags="n.*.*.*.cmp"/> -->
+  <!--   <match lemma="myndighet" tags="n.*">         <select lemma="makt"/> </match> -->
+  <!-- </rule> -->
+
+  <rule><match lemma="behefte" tags="vblex.*"><select lemma="hefte"/></match></rule>
+  <rule><match lemma="overtredelse" tags="n.*"><select lemma="regelbrot"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="overtredelse" tags="n.*"><select lemma="brot"/></match>
+    <match lemma="av" tags="pr"/>
+  </rule>
+  <rule><match lemma="eierforhold" tags="n.*"><select lemma="eigarforhold"/></match></rule>
+
+  <rule><match lemma="motta" tags="vblex.*"><select lemma="få"/></match></rule>
+  <rule weight="2.0"><match lemma="motta" tags="vblex.pp"><select lemma="motta"/></match></rule>
+  <rule weight="2.0"><match lemma="motta" tags="vblex.*.pasv"><select lemma="motta"/></match></rule>
+  <rule><match lemma="motta" tags="adj.*"><select lemma="motta"/></match></rule>
+
+  <rule c="blant de øvrige største selskapene"><match lemma="de øvrige" tags="det.*"><select lemma="resten av dei"/></match></rule>
+  <rule c="blant de øvrige selskapene" weight="2.0">
+    <match lemma="de øvrige" tags="det.*"><select lemma="resten av"/></match>
+    <match tags="n.*.pl.def"/>
+  </rule>
+
+  <rule><match lemma="fartsovertredelse" tags="n.*"><select lemma="fartsoverskriding"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="fartsovertredelse" tags="n.*.ind"><select lemma="brot på fartsgrensene"/></match>
+  </rule>
+  <rule><match lemma="menighet" tags="n.*"><select lemma="forsamling"/></match></rule>
+  <rule weight="2.0">
+    <match tags="np.*"/>
+    <match lemma="menighet" tags="n.*"><select lemma="kyrkjesokn"/></match>
+  </rule>
+  <rule><match lemma="overenskomst" tags="n.*"><select lemma="semje"/></match></rule>
+  <rule><match lemma="belæring" tags="n.*"><select lemma="utgreiing"/></match></rule>
+  <rule><match lemma="foruroligende" tags="adj.*"><select lemma="urovekkande"/></match></rule>
+  <rule><match lemma="innvilge" tags="vblex.*"><select lemma="løyve"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="innvilge" tags="vblex.pp"><select lemma="innvilge"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="innvilge" tags="vblex.pret"><select lemma="innvilge"/></match>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="innvilge" tags="adj.pp.*"><select lemma="innvilge"/></match>
+  </rule>
+  <rule><match lemma="skyldes" tags="vblex.*"><select lemma="komme# av"/></match></rule>
+  <rule><match lemma="tilknytte" tags="vblex.*"><select lemma="knyte# til"/></match></rule>
+  <rule><match lemma="forbeholde" tags="vblex.*"><select lemma="reservere# for"/></match></rule>
+  <rule><match lemma="forbeholde" tags="adj.*"><select lemma="reservere# for"/></match></rule>
+  <rule><match lemma="hjelpe" tags="vblex.*"><select lemma="hjelpe"/></match></rule>
+  <rule><match lemma="hjelpe" tags="adj.*"><select lemma="hjelpe"/></match></rule>
+  <rule><match lemma="edderkopp" tags="n.*"><select lemma="vevkjerring"/></match></rule>
+  <rule><match lemma="beroligende" tags="adj.*"><select lemma="roande"/></match></rule>
+</rules>

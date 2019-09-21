@@ -2,7 +2,6 @@
 ## Makefile for Nynorsk--Bokmål
 ###############################################################################
 
-VERSION=1.1.0
 LANG1=nno
 # nno_a har a-endingar i infinitiv, nno_e har e-endingar (standard):
 LANG1e=nno_e
@@ -16,20 +15,34 @@ PREFIX2e=$(LANG2)-$(LANG1e)
 
 BASENAME=apertium-$(PREFIX1)
 
-TARGETS_COMMON = \
-     $(PREFIX1).automorf.bin \
-     $(PREFIX1).rlx.bin \
-     $(PREFIX1).prob \
-     $(PREFIX1).autolex.bin \
-     $(PREFIX1).autobil.bin $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
-     $(PREFIX1).autogen.bin \
-     $(PREFIX2).automorf.bin \
-     $(PREFIX2).rlx.bin \
-     $(PREFIX2).prob \
-     $(PREFIX2).autolex.bin \
-     $(PREFIX2).autobil.bin $(PREFIX2).t1x.bin $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
-     $(PREFIX2).autogen.bin \
-     $(PREFIX2e).autogen.bin
+TARGETS_COMMON = $(TARGETS_PREFIX1) $(TARGETS_PREFIX2)
+
+TARGETS_PREFIX1 =                                             \
+     $(PREFIX1).automorf.bin                                  \
+     $(PREFIX1).rlx.bin                                       \
+     $(PREFIX1).prob                                          \
+     $(PREFIX1).autolex.bin                                   \
+     $(PREFIX1).autobil.bin                                   \
+     $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
+     $(PREFIX1).autogen.bin
+
+TARGETS_PREFIX2 =                                             \
+     $(PREFIX2).automorf.bin                                  \
+     $(PREFIX2).rlx.bin                                       \
+     $(PREFIX2).prob                                          \
+     $(PREFIX2).autolex.bin                                   \
+     $(PREFIX2).autobil.bin                                   \
+     $(PREFIX2).t1x.bin $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
+     $(PREFIX2).autogen.bin                                   \
+     $(PREFIX2e).autogen.bin                                  \
+     $(PREFIX2).autopgen.bin
+
+$(PREFIX1): $(TARGETS_PREFIX1)
+$(PREFIX2): $(TARGETS_PREFIX2)
+e: modes/$(PREFIX1).mode	# build just nob-nno_e
+	cd $(AP_SRC1) && ${MAKE} $(LANG1e).autogen.bin $(LANG1).autopgen.bin
+	cd $(AP_SRC2) && ${MAKE} $(LANG2).automorf.bin $(LANG2).rlx.bin $(LANG2).prob
+	${MAKE} nob-nno
 
 # This include defines goals for install-modes, .deps/.d and .mode files:
 @ap_include@
@@ -51,6 +64,9 @@ $(PREFIX2).autogen.bin: $(AP_SRC1)/$(LANG1).autogen.bin
 	cp $< $@
 
 $(PREFIX2e).autogen.bin: $(AP_SRC1)/$(LANG1e).autogen.bin
+	cp $< $@
+
+$(PREFIX2).autopgen.bin: $(AP_SRC1)/$(LANG1).autopgen.bin
 	cp $< $@
 
 # -------------------
@@ -181,7 +197,7 @@ install-data-local: install-modes
 ###############################################################################
 
 CLEANFILES = $(TARGETS_COMMON)
-clean-local: 
+clean-local:
 	-rm -rf .deps modes
 
 ###############################################################################
@@ -196,3 +212,6 @@ test: all
 	@echo "Eg har ålar i luftputebåten min" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
+	t/bidix-sanity
+	t/hash-count
+	t/wer-loss
