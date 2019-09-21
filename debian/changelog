@@ -1,3 +1,10 @@
+apertium-nno-nob (1.2.0-1+wmf1) jessie-wikimedia; urgency=low
+
+  * New upstream release.
+  * Minor changes: Depends, debian/watch file update.
+
+ -- Kartik Mistry <kartik@debian.org>  Sat, 21 Sep 2019 18:44:00 +0530
+
 apertium-nno-nob (1.1.0~r66076-1+wmf2) jessie-wikimedia; urgency=low
 
   * Updated depends on cg3.

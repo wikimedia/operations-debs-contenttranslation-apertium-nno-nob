@@ -1,5 +1,5 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: http://apertium.org/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Source: https://apertium.org/
 
 Files: *
 Copyright: 2009-2016, Kevin Brubeck Unhammer <unhammer@fsfe.org>
@@ -12,7 +12,7 @@ Copyright: 2009-2016, Kevin Brubeck Unhammer <unhammer@fsfe.org>
 License: GPL-2+
 
 Files: debian/*
-Copyright: 2014-2016, Apertium Project Management Committee <apertium-pmc@dlsi.ua.es>
+Copyright: 2014-2018, Apertium Project Management Committee <apertium-pmc@dlsi.ua.es>
 License: GPL-2+
 
 License: GPL-2+
