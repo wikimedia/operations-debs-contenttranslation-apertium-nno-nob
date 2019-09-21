@@ -3,25 +3,43 @@
   <section-def-cats>
     <!-- compound lhs's are never genitive: -->
     <def-cat n="ncmp">
-      <cat-item tags="n.*.*.*.cmp"/>
+      <cat-item tags="n.*.cmp"/>
+      <cat-item tags="n.*.cmp.guio"/>
+      <cat-item tags="np.*.cmp"/>
+      <cat-item tags="np.*.cmp.guio"/>
     </def-cat>
     <def-cat n="nind">
       <cat-item tags="n.*.*.ind"/>
       <cat-item tags="n.*.*.ind.gen"/>
     </def-cat>
     <!-- n does not include compound lhs's: -->
-    <def-cat n="n">
-      <cat-item tags="n.*.*.*"/>
-      <cat-item tags="n.*.*.*.gen"/>
-    </def-cat>
-    <!-- is this ever a compound-lhs? TODO -->
-    <def-cat n="np">
-      <cat-item tags="np.*"/>
-    </def-cat>
-    <def-cat n="nom">
-      <cat-item tags="n.*.*.*"/>
-      <cat-item tags="n.*.*.*.gen"/>
-      <cat-item tags="np.*"/>
+    <def-cat n="n_np">
+      <cat-item tags="n.*.cmp-split"/>
+      <cat-item tags="n.*.def"/>
+      <cat-item tags="n.*.ind"/>
+      <cat-item tags="n.*.acr"/>
+      <cat-item tags="n.*.sp"/>
+      <cat-item tags="n.*.gen"/>
+      <cat-item tags="np.*.cmp-split"/>
+      <cat-item tags="np.*.gen"/>
+      <cat-item tags="np.*.gen.guio"/>
+      <cat-item tags="np.top"/>
+      <cat-item tags="np.top.f"/>
+      <cat-item tags="np.top.m"/>
+      <cat-item tags="np.top.nt"/>
+      <cat-item tags="np.org"/>
+      <cat-item tags="np.org.f"/>
+      <cat-item tags="np.org.m"/>
+      <cat-item tags="np.org.nt"/>
+      <cat-item tags="np.ant"/>
+      <cat-item tags="np.ant.f"/>
+      <cat-item tags="np.ant.m"/>
+      <cat-item tags="np.ant.nt"/>
+      <cat-item tags="np.cgguess"/>
+      <cat-item tags="np.guess"/>
+      <cat-item tags="np.cog"/>
+      <cat-item tags="np.al"/>
+      <cat-item tags="np.attr"/>
     </def-cat>
     <def-cat n="nacr">
       <cat-item tags="n.acr"/>
@@ -87,7 +105,7 @@
       <cat-item lemma="å" tags="part"/>
     </def-cat>
     <def-cat n="sin">
-      <cat-item lemma="seg" tags="det.pos.*"/>
+      <cat-item lemma="sin" tags="det.pos.*"/>
     </def-cat>
     <def-cat n="måte">
       <cat-item lemma="måte" tags="n.m.sg.ind"/>
@@ -163,17 +181,8 @@
       <attr-item tags="adj"/>
       <attr-item tags="adj.pp"/>
       <attr-item tags="adj.pprs"/>
-      <attr-item tags="adj.pst"/>
-      <attr-item tags="adj.comp"/>
-      <attr-item tags="adj.sup"/>
-      <attr-item tags="adj.ord.pst"/>
-      <attr-item tags="adj.ord.comp"/>
-      <attr-item tags="adj.ord.sup"/>
-
+      <attr-item tags="adj.ord"/>
       <attr-item tags="adj.sint"/>
-      <attr-item tags="adj.sint.pst"/>
-      <attr-item tags="adj.sint.comp"/>
-      <attr-item tags="adj.sint.sup"/>
     </def-attr>
 
     <def-attr n="grau">
@@ -317,8 +326,8 @@
       <choose>
         <when>
           <test><and>
-            <begins-with><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with>
-            <not><begins-with><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with></not>
+            <equal><clip pos="1" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></equal>
+            <not><equal><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></equal></not>
             <or>
               <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="comp"/></equal>
               <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="sup"/></equal>
@@ -350,10 +359,15 @@
             </concat>
           </let>
 
-          <let>
-            <clip pos="1" side="tl" part="tags"/>
-            <lit-tag v="adj.pst.un.pl.ind"/>
-          </let>
+          <choose>
+            <when>
+              <test><equal><clip pos="1" side="sl" part="art"/><lit-tag v="def"/></equal></test>
+              <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj.pst.un.sp.def"/></let>
+            </when>
+            <otherwise>
+              <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj.pst.nt.sg.ind"/></let>
+            </otherwise>
+          </choose>
         </when>
 
         <otherwise>
@@ -379,8 +393,8 @@
               <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="comp"/></equal>
               <equal><clip pos="1" side="tl" part="grau"/><lit-tag v="sup"/></equal>
             </or>
-            <not><begins-with><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with></not>
-            <begins-with><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with>
+            <not><equal><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></equal></not>
+            <equal><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></equal>
           </and></test>
           <!-- The second adj is synthetic, so copy tags from first adj: -->
           <let><clip pos="2" side="tl" part="tags"/><clip pos="1" side="tl" part="tags"/></let>
@@ -395,84 +409,24 @@
           <!-- and fix tags on the second adj (but no new aux if only second adj is non-pst; TODO better) -->
           <choose><when>
             <test><and>
-              <begins-with><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with>
-              <not><begins-with><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></begins-with></not>
+              <equal><clip pos="2" side="sl" part="a_adj"/><lit-tag v="adj.sint"/></equal>
+              <not><equal><clip pos="2" side="tl" part="a_adj"/><lit-tag v="adj.sint"/></equal></not>
               <or>
                 <equal><clip pos="2" side="tl" part="grau"/><lit-tag v="comp"/></equal>
                 <equal><clip pos="2" side="tl" part="grau"/><lit-tag v="sup"/></equal>
               </or>
             </and></test>
-            <let>
-              <clip pos="2" side="tl" part="tags"/>
-              <lit-tag v="adj.pst.un.pl.ind"/>
-            </let>
+            <choose>
+              <when>
+                <test><equal><clip pos="2" side="sl" part="art"/><lit-tag v="def"/></equal></test>
+                <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adj.pst.un.sp.def"/></let>
+              </when>
+              <otherwise>
+                <let><clip pos="2" side="tl" part="tags"/><lit-tag v="adj.pst.nt.sg.ind"/></let>
+              </otherwise>
+            </choose>
           </when></choose>
         </otherwise>
-      </choose>
-    </def-macro>
-
-    <!-- Output macros: -->
-    <def-macro n="out_ndef" npar="2">
-      <!-- arg.1: possessed noun. arg.2 gives typographic case
-
-           Strip case, add definiteness.  -->
-      <call-macro n="set_caseFirstWord2">
-        <with-param pos="1"/>
-        <with-param pos="2"/>
-      </call-macro>
-      <let><clip pos="1" side="tl" part="art"/><lit-tag v="def"/></let>
-      <out>
-        <chunk name="n" case="caseFirstWord">
-          <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
-          <lu>
-            <clip pos="1" side="tl" part="lemh"/>
-            <clip pos="1" side="tl" part="a_nom"/>
-            <clip pos="1" side="tl" part="gen"/>
-            <clip pos="1" side="tl" part="nbr"/>
-            <clip pos="1" side="tl" part="art"/>
-            <clip pos="1" side="tl" part="lemq"/>
-          </lu>
-        </chunk>
-      </out>
-    </def-macro>
-
-    <def-macro n="out_posgen_subj" npar="2">
-      <!-- arg.1: possessor, either genitive noun or det.pos.
-           arg.2: gives typographic case
-           Assumes no variables.
-           Turns eg. "min" into "eg", "naboens" into "naboen".
-           Strips case both from chunk and word.
-      -->
-      <choose>
-        <when>
-          <test><equal><clip pos="1" side="sl" part="a_det"/><lit-tag v="det.pos"/></equal></test>
-          <call-macro n="set_caseFirstWord"><with-param pos="2"/></call-macro>
-          <out>
-            <chunk name="prn" case="caseFirstWord">
-              <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
-              <lu>
-                <clip pos="1" side="tl" part="lemh"/>
-                <lit-tag v="prn"/>
-                <clip pos="1" side="tl" part="persona"/>
-                <clip pos="1" side="tl" part="lemq"/>
-              </lu>
-            </chunk>
-          </out>
-        </when>
-      <otherwise>
-        <call-macro n="set_caseFirstWord"><with-param pos="2"/></call-macro>
-        <let><clip pos="1" side="tl" part="cas"/><lit v=""/></let>
-        <out>
-          <chunk name="n" case="caseFirstWord">
-            <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
-            <lu>
-              <get-case-from pos="2"><clip pos="1" side="tl" part="lemh"/></get-case-from>
-              <clip pos="1" side="tl" part="tags"/>
-              <clip pos="1" side="tl" part="lemq"/>
-            </lu>
-          </chunk>
-        </out>
-      </otherwise>
       </choose>
     </def-macro>
 
@@ -592,7 +546,7 @@
     <rule comment="N
                    Remove cas from lu, but put it in chunk">
       <pattern>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
@@ -609,7 +563,7 @@
                    Remove the space that pretransfer added">
       <pattern>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
@@ -627,7 +581,7 @@
       <pattern>
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
@@ -647,7 +601,7 @@
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
@@ -667,7 +621,7 @@
     <rule comment="ADJ N">
       <pattern>
         <pattern-item n="adj"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <!-- TODO: add this when it's accepted in trunk/apertium: -->
@@ -703,7 +657,7 @@
       <pattern>
         <pattern-item n="adj"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_n_n"/></let>
@@ -732,7 +686,7 @@
         <pattern-item n="adj"/>
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_n_n_n"/></let>
@@ -763,7 +717,7 @@
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_n_n_n_n"/></let>
@@ -794,7 +748,7 @@
       <pattern>
         <pattern-item n="adj"/>
         <pattern-item n="adj"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_adj_n"/></let>
@@ -834,7 +788,7 @@
         <pattern-item n="adj"/>
         <pattern-item n="adj"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_adj_n_n"/></let>
@@ -876,7 +830,7 @@
         <pattern-item n="adj"/>
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_adj_n_n_n"/></let>
@@ -920,7 +874,7 @@
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
         <pattern-item n="ncmp"/>
-        <pattern-item n="n"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_adj_n_n_n_n"/></let>
@@ -1030,7 +984,7 @@
             <let><var n="c_name"/><lit v="detdd"/></let>
           </when>
           <when>
-            <test><equal caseless="yes"><clip pos="1" side="tl" part="lemh"/><lit v="seg"/></equal></test>
+            <test><equal caseless="yes"><clip pos="1" side="tl" part="lemh"/><lit v="sin"/></equal></test>
             <let><var n="c_name"/><lit v="detsin"/></let>
           </when>
           <otherwise><let><var n="c_name"/><lit v="det"/></let></otherwise>

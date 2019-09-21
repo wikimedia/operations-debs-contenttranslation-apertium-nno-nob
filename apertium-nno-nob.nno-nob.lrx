@@ -1,4 +1,23 @@
 <rules>
+  <!-- NNO → NOB -->
+
+  <rule> <match lemma="trygd" tags="n.*"> <select lemma="trygd"/> </match> </rule>
+
+  <rule> <match lemma="prøve" tags="vblex.*"> <select lemma="prøve"/> </match> </rule>
+  <rule> <match lemma="freiste" tags="vblex.*"> <select lemma="forsøke"/> </match> </rule>
+  <rule weight="2.0">
+    <match lemma="freiste" tags="vblex.*">
+      <select lemma="friste"/>
+    </match>
+    <match lemma="med"/>
+  </rule>
+  <rule weight="2.0">
+    <match lemma="freiste" tags="vblex.*">
+      <select lemma="prøve"/>
+    </match>
+    <match lemma="lykke"/>
+  </rule>
+
   <rule> <match lemma="måling" tags="n.*.pl.*"> <select lemma="måling"/> </match>
   </rule>
   <rule weight="2.0">
@@ -24,6 +43,17 @@
       <match lemma="kunst"/>
       <match lemma="grafisk"/>
     </or>
+  </rule>
+
+  <!-- dei er tekne → de er tatt: -->
+  <rule weight="1.0"><match tags="adj.pp.pl"><select tags="adj.pp.mf.sg.ind"/></match></rule>
+  <rule weight="2.0">
+    <match tags="adj.pp.pl"><select tags="adj.pp.pl"/></match>
+    <match tags="n.*"/>
+  </rule>
+  <rule weight="2.0">
+    <match tags="det.*"/>
+    <match tags="adj.pp.pl"><select tags="adj.pp.pl"/></match>
   </rule>
 
   <rule weight="2.0">
@@ -55,7 +85,7 @@
     <match lemma="rett" tags="n.*">
       <select lemma="rettighet"/>
     </match>
-    <match lemma="til" tags="pr.*"/>
+    <match lemma="til" tags="pr"/>
   </rule>
   <rule weight="2.0">
     <match lemma="rett" tags="n.*">
@@ -64,6 +94,9 @@
     <match lemma="og"/>
     <match lemma="plikt"/>
   </rule>
+
+  <rule> <match lemma="lem" tags="n.nt.sg.*"> <select lemma="lem" tags="n.m.sg.*"/> </match> </rule>
+  <rule> <match lemma="lem" tags="n.nt.pl.*"> <select lemma="lem" tags="n.nt.pl.*"/> </match> </rule>
 
   <rule weight="2.0">
     <match lemma="verke" tags="vblex.*">
@@ -87,4 +120,39 @@
   </rule>
   <rule> <match lemma="tilsetje" tags="vblex.*"> <select lemma="ansette"/> </match>
   </rule>
+  <rule><match lemma="føremål" tags="n.*"><select lemma="formål"/></match></rule>
+  <rule><match lemma="hensikt" tags="n.*"><select lemma="hensikt"/></match></rule>
+  <rule><match lemma="treffe" tags="vblex.*"><select lemma="treffe"/></match></rule>
+  <rule><match lemma="mild" tags="adj.*"><select lemma="mild"/></match></rule>
+  <rule><match lemma="linn" tags="adj.*"><select lemma="linn"/></match></rule>
+  <rule><match lemma="stort sett" tags="adv"><select lemma="stort sett"/></match></rule>
+  <rule><match lemma="hovudsakleg" tags="adv.*"><select lemma="hovedsakelig"/></match></rule>
+  <rule><match lemma="tal" tags="n.*"><select lemma="tall"/></match></rule>
+  <rule><match lemma="melding" tags="n.*"><select lemma="melding"/></match></rule>
+  <rule><match lemma="likegyldigheit" tags="n.*"><select lemma="likegyldighet"/></match></rule>
+  <rule><match lemma="syn" tags="n.*"><select lemma="syn"/></match></rule>
+  <rule><match lemma="bringe" tags="vblex.*"><select lemma="bringe"/></match></rule>
+  <rule><match lemma="titusenvis" tags="adv.*"><select lemma="titusenvis"/></match></rule>
+  <rule><match lemma="pågripe" tags="vblex.*"><select lemma="pågripe"/></match></rule>
+  <rule><match lemma="arrestere" tags="vblex.*"><select lemma="arrestere"/></match></rule>
+  <rule><match lemma="omsetje" tags="vblex.*"><select lemma="oversette"/></match></rule>
+  <rule><match lemma="attrå" tags="vblex.*"><select lemma="begjære"/></match></rule>
+  <rule><match lemma="andreplass" tags="n.*"><select lemma="andreplass"/></match></rule>
+  <rule><match lemma="forsamling" tags="n.*"><select lemma="forsamling"/></match></rule>
+  <rule><match lemma="utgreiing" tags="n.*"><select lemma="utredning"/></match></rule>
+  <rule><match lemma="rettleiing" tags="n.*"><select lemma="veiledning"/></match></rule>
+  <rule><match lemma="urovekkande" tags="adj.*"><select lemma="foruroligende"/></match></rule>
+  <rule><match lemma="løyve" tags="vblex.*"><select lemma="innvilge"/></match></rule>
+  <rule><match lemma="godkjenne" tags="vblex.*"><select lemma="godkjenne"/></match></rule>
+  <rule><match lemma="autoritet" tags="n.*"><select lemma="autoritet"/></match></rule>
+  <rule><match lemma="fullmakt" tags="n.*"><select lemma="fullmakt"/></match></rule>
+  <rule><match lemma="makt" tags="n.*"><select lemma="makt"/></match></rule>
+  <rule><match lemma="avgjerdsmakt" tags="n.*"><select lemma="avgjørelsesmyndighet"/></match></rule>
+
+  <rule><match lemma="håp" tags="n.*"><select lemma="håp"/></match></rule>
+  <rule><match lemma="von" tags="n.*"><select lemma="håp"/></match></rule>
+  <rule><match lemma="vone" tags="vblex.*"><select lemma="håpe"/></match></rule>
+  <rule><match lemma="vone" tags="adj.*"><select lemma="håpe"/></match></rule>
+  <rule><match lemma="vevkjerring" tags="n.*"><select lemma="edderkopp"/></match></rule>
+  <rule><match lemma="samtale" tags="n.*"><select lemma="samtale"/></match></rule>
 </rules>
