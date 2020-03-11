@@ -126,13 +126,13 @@
   <rule><match lemma="mild" tags="adj.*"><select lemma="mild"/></match></rule>
   <rule><match lemma="linn" tags="adj.*"><select lemma="linn"/></match></rule>
   <rule><match lemma="stort sett" tags="adv"><select lemma="stort sett"/></match></rule>
-  <rule><match lemma="hovudsakleg" tags="adv.*"><select lemma="hovedsakelig"/></match></rule>
+  <rule><match lemma="hovudsakleg" tags="adv"><select lemma="hovedsakelig"/></match></rule>
   <rule><match lemma="tal" tags="n.*"><select lemma="tall"/></match></rule>
   <rule><match lemma="melding" tags="n.*"><select lemma="melding"/></match></rule>
   <rule><match lemma="likegyldigheit" tags="n.*"><select lemma="likegyldighet"/></match></rule>
   <rule><match lemma="syn" tags="n.*"><select lemma="syn"/></match></rule>
   <rule><match lemma="bringe" tags="vblex.*"><select lemma="bringe"/></match></rule>
-  <rule><match lemma="titusenvis" tags="adv.*"><select lemma="titusenvis"/></match></rule>
+  <rule><match lemma="titusenvis" tags="adv"><select lemma="titusenvis"/></match></rule>
   <rule><match lemma="pågripe" tags="vblex.*"><select lemma="pågripe"/></match></rule>
   <rule><match lemma="arrestere" tags="vblex.*"><select lemma="arrestere"/></match></rule>
   <rule><match lemma="omsetje" tags="vblex.*"><select lemma="oversette"/></match></rule>
@@ -155,4 +155,51 @@
   <rule><match lemma="vone" tags="adj.*"><select lemma="håpe"/></match></rule>
   <rule><match lemma="vevkjerring" tags="n.*"><select lemma="edderkopp"/></match></rule>
   <rule><match lemma="samtale" tags="n.*"><select lemma="samtale"/></match></rule>
+  <rule><match lemma="anstrenge" tags="vblex.*"><select lemma="anstrenge"/></match></rule>
+
+  <rule><match lemma="innstille" tags="vblex.*"><select lemma="innstille"/></match></rule>
+  <rule><match lemma="innstille" tags="adj.*"><select lemma="innstille"/></match></rule>
+  <rule><match lemma="komme" tags="vblex.*"><select lemma="komme"/></match></rule>
+  <rule><match lemma="komme" tags="adj.*"><select lemma="komme"/></match></rule>
+  <rule><match lemma="vente" tags="vblex.*"><select lemma="vente"/></match></rule>
+  <rule><match lemma="vente" tags="adj.*"><select lemma="vente"/></match></rule>
+  <rule><match lemma="ønske" tags="vblex.*"><select lemma="ønske"/></match></rule>
+  <rule><match lemma="ønske" tags="adj.*"><select lemma="ønske"/></match></rule>
+  <rule><match lemma="krevje" tags="vblex.*"><select lemma="kreve"/></match></rule>
+  <rule><match lemma="krevje" tags="adj.*"><select lemma="kreve"/></match></rule>
+  <rule><match lemma="anbefale" tags="vblex.*"><select lemma="anbefale"/></match></rule>
+  <rule><match lemma="anbefale" tags="adj.*"><select lemma="anbefale"/></match></rule>
+  <rule><match lemma="påby" tags="vblex.*"><select lemma="påby"/></match></rule>
+  <rule><match lemma="påby" tags="adj.*"><select lemma="påby"/></match></rule>
+  <rule><match lemma="oppmode" tags="vblex.*"><select lemma="oppfordre"/></match></rule>
+  <rule><match lemma="oppmode" tags="adj.*"><select lemma="oppfordre"/></match></rule>
+  <rule><match lemma="hjelpe" tags="vblex.*"><select lemma="hjelpe"/></match></rule>
+  <rule><match lemma="hjelpe" tags="adj.*"><select lemma="hjelpe"/></match></rule>
+  <rule><match lemma="medverke" tags="vblex.*"><select lemma="medvirke"/></match></rule>
+  <rule><match lemma="medverke" tags="adj.*"><select lemma="medvirke"/></match></rule>
+  <rule><match lemma="presisjon" tags="n.*"><select lemma="presisjon"/></match></rule>
+  <rule><match lemma="leiande" tags="adj.*"><select lemma="ledende"/></match></rule>
+  <rule><match lemma="gå" tags="vblex.*"><select lemma="gå"/></match></rule>
+  <rule><match lemma="gå" tags="adj.*"><select lemma="gå"/></match></rule>
+  <rule><match lemma="blomstring" tags="n.*"><select lemma="blomstring"/></match></rule>
+  <rule><match lemma="avgjere" tags="vblex.*"><select lemma="avgjøre"/></match></rule>
+  <rule><match lemma="avgjere" tags="adj.*"><select lemma="avgjøre"/></match></rule>
+  <rule><match lemma="avfeie" tags="vblex.*"><select lemma="avfeie"/></match></rule>
+  <rule><match lemma="avfeie" tags="adj.*"><select lemma="avfeie"/></match></rule>
+  <rule><match lemma="gjere" tags="vblex.*"><select lemma="gjøre"/></match></rule>
+  <rule><match lemma="gjere" tags="adj.*"><select lemma="gjøre"/></match></rule>
+  <rule><match lemma="sjølvsagt" tags="adv"><select lemma="selvsagt"/></match></rule>
+  <rule><match lemma="mellom anna" tags="adv"><select lemma="blant annet"/></match></rule>
+  <rule><match lemma="ulik" tags="adj.*"><select lemma="ulik"/></match></rule>
+  <rule><match lemma="forskjellig" tags="adj.*"><select lemma="forskjellig"/></match></rule>
+  <rule><match lemma="abnorm" tags="adj.*"><select lemma="abnorm"/></match></rule>
+  <rule><match lemma="sjukleg" tags="adj.*"><select lemma="sykelig"/></match></rule>
+  <rule><match lemma="overalt" tags="adv"><select lemma="overalt"/></match></rule>
+  <rule><match lemma="omriss" tags="n.*"><select lemma="omriss"/></match></rule>
+  <rule><match lemma="krav" tags="n.*"><select lemma="krav"/></match></rule>
+  <rule><match lemma="litt" tags="adv"><select lemma="litt"/></match></rule>
+  <rule weight="2.0">
+    <match lemma="litt" tags="adv"><select lemma="noe"/></match>
+    <match lemma="mye" tags="adj.*"/>
+  </rule>
 </rules>

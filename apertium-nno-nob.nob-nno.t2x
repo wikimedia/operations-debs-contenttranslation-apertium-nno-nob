@@ -12,15 +12,44 @@
     <def-cat n="np">
       <cat-item tags="np.*"/>
     </def-cat>
+    <def-cat n="np_prnnom_og">
+      <cat-item tags="np.*"/>
+      <cat-item tags="prn.*.nom"/>
+      <cat-item tags="prn.*.nom.*"/>
+      <cat-item lemma="og" tags="cnjcoo.clb"/>
+      <cat-item lemma="og" tags="cnjcoo"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
       <cat-item tags="n.*.gen"/>
       <cat-item tags="n.*.gen.*"/>
       <cat-item tags="np.*"/>
     </def-cat>
+    <def-cat n="nom_advnom">
+      <cat-item tags="n.*"/>
+      <cat-item tags="n.*.gen"/>
+      <cat-item tags="n.*.gen.*"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="adv.n.*"/>
+    </def-cat>
     <def-cat n="nind">
       <cat-item tags="n.*.ind"/>
       <cat-item tags="n.*.ind.*"/>
+    </def-cat>
+    <def-cat n="nind_nogen">
+      <cat-item tags="n.*.ind"/>
+      <cat-item tags="n.*.ind.sl-nt"/>
+      <cat-item tags="n.*.ind.sl-m"/>
+      <cat-item tags="n.*.ind.sl-mf"/>
+      <cat-item tags="n.*.ind.sl-f"/>
+      <cat-item tags="n.*.ind.sl-nt.*"/>
+      <cat-item tags="n.*.ind.sl-m.*"/>
+      <cat-item tags="n.*.ind.sl-mf.*"/>
+      <cat-item tags="n.*.ind.sl-f.*"/>
+    </def-cat>
+    <def-cat n="nplind">
+      <cat-item tags="n.*.pl.ind"/>
+      <cat-item tags="n.*.pl.ind.*"/>
     </def-cat>
     <def-cat n="nkeepgenx">
       <cat-item tags="n.*.keepgenx"/>
@@ -37,13 +66,23 @@
       <cat-item tags="n.*.gen"/>
       <cat-item tags="n.*.gen.*"/>
     </def-cat>
-    <def-cat n="ngendefpl">
+    <def-cat n="ngendefORpl">
       <cat-item tags="n.*.def.gen"/>
       <cat-item tags="n.*.def.gen.*"/>
       <cat-item tags="n.*.pl.*.gen"/>
       <cat-item tags="n.*.pl.*.gen.*"/>
       <cat-item tags="n.*.sp.*.gen"/>
       <cat-item tags="n.*.sp.*.gen.*"/>
+    </def-cat>
+    <def-cat n="ngensgdef">
+      <cat-item tags="n.*.sg.def.gen"/>
+      <cat-item tags="n.*.sg.def.gen.*"/>
+    </def-cat>
+    <def-cat n="npldef">
+      <cat-item tags="n.*.pl.def"/>
+      <cat-item tags="n.*.pl.def.*"/>
+      <cat-item tags="n.*.sp.def"/>
+      <cat-item tags="n.*.sp.def.*"/>
     </def-cat>
     <def-cat n="detgen">
       <cat-item tags="det.*.gen"/>
@@ -56,15 +95,24 @@
     <def-cat n="det">
       <cat-item tags="det.*"/>
     </def-cat>
+    <def-cat n="det2adj">
+      <cat-item lemma="det2adj" tags="adj.*"/>
+    </def-cat>
+    <def-cat n="detemph">
+      <cat-item tags="det.emph.*"/>
+    </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
     </def-cat>
     <def-cat n="prn_nom">
       <cat-item tags="prn.*.nom"/>
     </def-cat>
-    <def-cat n="prn_nt">
+    <def-cat n="prn_subj">
       <cat-item tags="prn.*.nt.*"/>
       <cat-item tags="prn.*.nt"/>
+      <cat-item tags="det.*.expl.*"/>
+      <cat-item tags="det.*.expl"/>
+      <cat-item tags="prn.pers.*.nom"/>
     </def-cat>
     <def-cat n="sin">
       <cat-item lemma="detsin" tags="det.pos.*"/>
@@ -75,12 +123,27 @@
     <def-cat n="detpos">
       <cat-item tags="det.pos.*"/>
     </def-cat>
+    <def-cat n="detitg">
+      <cat-item tags="det.itg.*"/>
+    </def-cat>
+    <def-cat n="detdem">
+      <cat-item tags="det.dem.*"/>
+    </def-cat>
+    <def-cat n="detqnt">
+      <cat-item tags="det.qnt.*"/>
+    </def-cat>
     <def-cat n="detnonpos">
       <cat-item tags="det.def.*"/>
       <cat-item tags="det.dem.*"/>
-      <cat-item tags="det.emph.*"/>
+      <!-- <cat-item tags="det.emph.*"/> -->
       <cat-item tags="det.itg.*"/>
       <cat-item tags="det.qnt.*"/>
+    </def-cat>
+    <def-cat n="detqntpl">
+      <cat-item tags="det.qnt.*.pl"/>
+    </def-cat>
+    <def-cat n="detall_qntpl">
+      <cat-item lemma="detall" tags="det.qnt.*.pl"/>
     </def-cat>
 
     <def-cat n="vblex">
@@ -102,6 +165,30 @@
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
     </def-cat>
+    <def-cat n="adv_movable">
+      <cat-item tags="adv.movable"/>
+      <cat-item tags="adv.movable.*"/>
+    </def-cat>
+    <def-cat n="prenom">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+      <cat-item tags="adj.*"/>
+      <cat-item tags="det.*"/>
+      <cat-item tags="pr"/>
+      <cat-item tags="pr.*"/>
+    </def-cat>
+    <def-cat n="prenom_OR_nom">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+      <cat-item tags="adj.*"/>
+      <cat-item tags="det.*"/>
+      <cat-item tags="pr"/>
+      <cat-item tags="pr.*"/>
+      <cat-item tags="n.*"/>
+      <cat-item tags="n.*.gen"/>
+      <cat-item tags="n.*.gen.*"/>
+      <cat-item tags="np.*"/>
+    </def-cat>
     <def-cat n="infm">
       <cat-item lemma="infm" tags="part"/>
       <cat-item lemma="infm" tags="part.*"/>
@@ -110,13 +197,33 @@
       <cat-item tags="vblex.lemq"/>
       <cat-item tags="vblex.lemq.*"/>
     </def-cat>
+    <def-cat n="lemq-skip-n">
+      <cat-item tags="vblex.lemq.lemq-skip-n"/>
+      <cat-item tags="vblex.lemq.lemq-skip-n.*"/>
+    </def-cat>
     <def-cat n="adjpart">
       <cat-item tags="vblex.pp"/>
       <cat-item tags="adj.pp"/>
       <cat-item tags="adj.pp.*"/>
     </def-cat>
-    <def-cat n="prep_til">
-      <cat-item tags="pr.til"/>
+    <def-cat n="adjpart_np_movable">
+      <cat-item tags="vblex.pp.np-movable"/>
+      <cat-item tags="adj.pp.np-movable"/>
+      <cat-item tags="adj.pp.*.np-movable"/>
+    </def-cat>
+    <def-cat n="pasv-pp">
+      <cat-item lemma="adj2vblex" tags="vblex.pp"/>
+      <cat-item lemma="adj2vblex" tags="adj.pp"/>
+      <cat-item lemma="adj2vblex" tags="adj.pp.*"/>
+    </def-cat>
+    <def-cat n="prep_nhead">
+      <cat-item tags="pr.*.nhead"/>
+    </def-cat>
+    <def-cat n="prep_av">
+      <cat-item tags="pr.av"/>
+    </def-cat>
+    <def-cat n="prep_som">
+      <cat-item tags="pr.som"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent.*"/>
@@ -200,6 +307,38 @@
       <attr-item tags="def"/>
       <attr-item tags="ind"/>
     </def-attr>
+    <def-attr n="expl">
+      <attr-item tags="expl"/>
+    </def-attr>
+
+    <def-attr n="gen_prep_override">
+      <attr-item tags="pr_til"/>
+
+      <attr-item tags="pr_av"/>
+      <attr-item tags="pr_blant"/>
+      <attr-item tags="pr_etter"/>
+      <attr-item tags="pr_for"/>
+      <attr-item tags="pr_frå"/>
+      <attr-item tags="pr_før"/>
+      <attr-item tags="pr_gjennom"/>
+      <attr-item tags="pr_hos"/>
+      <attr-item tags="pr_i"/>
+      <attr-item tags="pr_med"/>
+      <attr-item tags="pr_mellom"/>
+      <attr-item tags="pr_mot"/>
+      <attr-item tags="pr_om"/>
+      <attr-item tags="pr_over"/>
+      <attr-item tags="pr_per"/>
+      <attr-item tags="pr_på"/>
+      <attr-item tags="pr_rundt"/>
+      <attr-item tags="pr_som"/>
+      <attr-item tags="pr_uansett"/>
+      <attr-item tags="pr_under"/>
+      <attr-item tags="pr_unna"/>
+      <attr-item tags="pr_ut"/>
+      <attr-item tags="pr_ved"/>
+    </def-attr>
+
   </section-def-attrs>
 
 
@@ -214,7 +353,10 @@
     <def-var n="case"/>
     <def-var n="n_defness"/>
     <def-var n="lemh"/>
-    <def-var n="ana_gen"/>
+    <def-var n="pr_lemh"/>
+    <def-var n="genpr"/>
+    <def-var n="ana_gen"     c="nt or mf"/>
+    <def-var n="ana_gen_m-f" c="m or f"/>
     <def-var n="ana_nbr"/>
     <def-var n="ana_temps" c="Last seen finite verb temps (pres/pret)"/>
   </section-def-vars>
@@ -309,7 +451,10 @@
         <when>
           <test><and>
             <not><equal><clip pos="1" part="gen"/><lit v=""/></equal></not>
-            <not><equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal></not>
+            <or> <!-- only change gender of det for singular nouns *or* if det is «kva for ein (av)» -->
+              <equal><clip pos="2" part="a_det"/><lit-tag v="det.itg"/></equal>
+              <not><equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal></not>
+            </or>
             <not><equal><clip pos="2" part="nbr"/><lit-tag v="pl"/></equal></not>
           </and></test>
           <let><clip pos="2" part="gen"/><clip pos="1" part="gen"/></let>
@@ -357,6 +502,7 @@
               <equal><var n="ana_gen"/><lit-tag v="f"/></equal>
               <equal><var n="ana_gen"/><lit-tag v="m"/></equal>
             </or></test>
+            <let><var n="ana_gen_m-f"/><var n="ana_gen"/></let>
             <let><var n="ana_gen"/><lit-tag v="mf"/></let>
           </when></choose>
         </when>
@@ -383,6 +529,21 @@
       <choose><when>
         <test><equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal></test>
         <let><clip pos="1" part="art"/><lit v=""/></let>
+      </when></choose>
+    </def-macro>
+    <def-macro n="modify_prn_gen" npar="1"
+               c="arg.1: prn">
+      <choose><when>
+        <test><equal><clip pos="1" part="gen"/><lit-tag v="GD"/></equal></test>
+        <choose>
+          <when>
+            <test><equal><var n="ana_gen_m-f"/><lit v=""/></equal></test>
+            <let><clip pos="1" part="gen"/><lit-tag v="m"/></let>
+          </when>
+          <otherwise>
+            <let><clip pos="1" part="gen"/><var n="ana_gen_m-f"/></let>
+          </otherwise>
+        </choose>
       </when></choose>
     </def-macro>
 
@@ -466,6 +627,57 @@
         <var n="number_no_sp"/>
         <lit v="$}"/>
       </chunk></out>
+    </def-macro>
+
+    <def-macro n="out_bi-gen-prep" npar="2"
+               c="arg.1: preposition, arg.2: owned noun">
+      <let><var n="genpr"/><clip pos="2" part="gen_prep_override"/></let>
+      <choose>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_til"/></equal></test><let><var n="pr_lemh"/><lit v="til"/></let></when>
+        <!-- dev/genitive-prepositions: -->
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_av"/></equal></test><let><var n="pr_lemh"/><lit v="av"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_blant"/></equal></test><let><var n="pr_lemh"/><lit v="blant"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_etter"/></equal></test><let><var n="pr_lemh"/><lit v="etter"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_for"/></equal></test><let><var n="pr_lemh"/><lit v="for"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_frå"/></equal></test><let><var n="pr_lemh"/><lit v="frå"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_før"/></equal></test><let><var n="pr_lemh"/><lit v="før"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_gjennom"/></equal></test><let><var n="pr_lemh"/><lit v="gjennom"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_hos"/></equal></test><let><var n="pr_lemh"/><lit v="hos"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_i"/></equal></test><let><var n="pr_lemh"/><lit v="i"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_med"/></equal></test><let><var n="pr_lemh"/><lit v="med"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_mellom"/></equal></test><let><var n="pr_lemh"/><lit v="mellom"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_mot"/></equal></test><let><var n="pr_lemh"/><lit v="mot"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_om"/></equal></test><let><var n="pr_lemh"/><lit v="om"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_over"/></equal></test><let><var n="pr_lemh"/><lit v="over"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_per"/></equal></test><let><var n="pr_lemh"/><lit v="per"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_på"/></equal></test><let><var n="pr_lemh"/><lit v="på"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_rundt"/></equal></test><let><var n="pr_lemh"/><lit v="rundt"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_som"/></equal></test><let><var n="pr_lemh"/><lit v="som"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_uansett"/></equal></test><let><var n="pr_lemh"/><lit v="uansett"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_under"/></equal></test><let><var n="pr_lemh"/><lit v="under"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_unna"/></equal></test><let><var n="pr_lemh"/><lit v="unna"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_ut"/></equal></test><let><var n="pr_lemh"/><lit v="ut"/></let></when>
+        <when><test><equal><var n="genpr"/><lit-tag v="pr_ved"/></equal></test><let><var n="pr_lemh"/><lit v="ved"/></let></when>
+
+        <otherwise><let><var n="pr_lemh"/><lit v=""/></let></otherwise>
+      </choose>
+      <choose>
+        <when>
+          <test><equal><var n="pr_lemh"/><lit v=""/></equal></test>
+          <out><chunk><clip pos="1" part="whole"/></chunk></out>
+        </when>
+        <otherwise>
+          <out>
+            <chunk>
+              <lit v="gen-prep"/>
+              <lit-tag v="pr"/>
+              <lit v="{^"/>
+              <var n="pr_lemh"/>
+              <lit-tag v="pr"/>
+              <lit v="$}"/>
+          </chunk></out>
+        </otherwise>
+      </choose>
     </def-macro>
 
   </section-def-macros>
@@ -596,14 +808,15 @@
         </out>
       </action>
     </rule>
-    <rule comment="AUX ADJPART PRN_NT => AUX PRN_NT ADJPART
+    <rule comment="AUX PASV-PP PRN_SUBJ => AUX PRN_SUBJ PASV-PP
                    (Videre) påpekes det =1> (Vidare) blir påpeikt det =2> (Vidare) blir det påpeikt">
       <pattern>
         <pattern-item n="aux"/>
-        <pattern-item n="adjpart"/>
-        <pattern-item n="prn_nt"/>
+        <pattern-item n="pasv-pp"/>
+        <pattern-item n="prn_subj"/>
       </pattern>
       <action>
+        <call-macro n="modify_prn_gen"><with-param pos="3"/></call-macro>
         <call-macro n="modify_pp_gen_nbr"><with-param pos="2"/></call-macro>
         <out>
           <chunk>
@@ -620,14 +833,14 @@
         </out>
       </action>
     </rule>
-    <rule comment="AUXPASS ADJPART ADV => AUXPASS ADV ADJPART
+    <rule comment="AUXPASS ADJPART ADV_MOVABLE => AUXPASS ADV_MOVABLE ADJPART
                    boken leses ofte =1> boka blir lest ofte =2> boka blir ofte lest
                    auxpass are created in t1x; move adv's behind these
                    (No match if the aux was there originally, then we don't move any adverbs)">
       <pattern>
         <pattern-item n="auxpass"/>
         <pattern-item n="adjpart"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_movable"/>
       </pattern>
       <action>
         <call-macro n="modify_pp_gen_nbr"><with-param pos="2"/></call-macro>
@@ -646,7 +859,7 @@
         </out>
       </action>
     </rule>
-    <rule comment="AUXPASS ADJPART LEMQ ADV => AUXPASS ADV ADJPART LEMQ
+    <rule comment="AUXPASS ADJPART LEMQ ADV_MOVABLE => AUXPASS ADV_MOVABLE ADJPART LEMQ
                    påberopes ofte =1> vert skulda på ofte =2> vert ofte skulda på
                    auxpass are created in t1x; move adv's behind these
                    (No match if the aux was there originally, then we don't move any adverbs)">
@@ -654,7 +867,7 @@
         <pattern-item n="auxpass"/>
         <pattern-item n="adjpart"/>
         <pattern-item n="lemq"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_movable"/>
       </pattern>
       <action>
         <call-macro n="modify_pp_gen_nbr"><with-param pos="2"/></call-macro>
@@ -677,15 +890,15 @@
         </out>
       </action>
     </rule>
-    <rule comment="AUXPASS ADJPART ADV ADV => AUXPASS ADV ADV ADJPART
+    <rule comment="AUXPASS ADJPART ADV_MOVABLE ADV_MOVABLE => AUXPASS ADV_MOVABLE ADV_MOVABLE ADJPART
                    boken leses heller ofte =1> boka blir lest heller ofte =2> boka blir heller ofte lest
                    auxpass are created in t1x; move adv's behind these
                    (No match if the aux was there originally, then we don't move any adverbs)">
       <pattern>
         <pattern-item n="auxpass"/>
         <pattern-item n="adjpart"/>
-        <pattern-item n="adv"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_movable"/>
+        <pattern-item n="adv_movable"/>
       </pattern>
       <action>
         <call-macro n="modify_pp_gen_nbr"><with-param pos="2"/></call-macro>
@@ -708,16 +921,16 @@
         </out>
       </action>
     </rule>
-    <rule comment="AUXPASS ADJPART LEMQ ADV ADV => AUXPASS ADV ADV ADJPART LEMQ
+    <rule comment="AUXPASS ADJPART LEMQ ADV_MOVABLE ADV_MOVABLE => AUXPASS ADV_MOVABLE ADV_MOVABLE ADJPART LEMQ
                    påberopes heller ofte =1> vert skulda på heller ofte =2> vert heller ofte skulda på
-                   auxpass are created in t1x; move adv's behind these
-                   (No match if the aux was there originally, then we don't move any adverbs)">
+                   auxpass are created in t1x; move adv_movable's behind these
+                   (No match if the aux was there originally, then we don't move any adv_movableerbs)">
       <pattern>
         <pattern-item n="auxpass"/>
         <pattern-item n="adjpart"/>
         <pattern-item n="lemq"/>
-        <pattern-item n="adv"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_movable"/>
+        <pattern-item n="adv_movable"/>
       </pattern>
       <action>
         <call-macro n="modify_pp_gen_nbr"><with-param pos="2"/></call-macro>
@@ -806,7 +1019,7 @@
                    (No match if the aux was there originally, then we don't move anything)">
       <pattern>
         <pattern-item n="auxpass"/>
-        <pattern-item n="adjpart"/>
+        <pattern-item n="adjpart_np_movable"/>
         <pattern-item n="ndef"/>
         <pattern-item n="detpos"/>
       </pattern>
@@ -838,7 +1051,7 @@
                    (No match if the aux was there originally, then we don't move anything)">
       <pattern>
         <pattern-item n="auxpass"/>
-        <pattern-item n="adjpart"/>
+        <pattern-item n="adjpart_np_movable"/>
         <pattern-item n="ndef"/>
       </pattern>
       <action>
@@ -859,6 +1072,45 @@
         </out>
       </action>
     </rule>
+    <rule comment="AUXPASS ADJPART_NP_MOVABLE DET NDEF => AUXPASS DET NDEF ADJPART_NP_MOVABLE
+                   (nå) reguleres de sentrale bøkene =1> blir regulert de sentrale bøkene =2> blir de sentrale bøkene regulert
+                   auxpass are created in t1x
+                   (No match if the aux was there originally, then we don't move anything)">
+      <!-- We need actual syntactical tagging to fix this in general: -->
+      <!-- TODO: not for «denne veka/hausten», «(På) fredag», «(Ifølge) Nationen» -->
+      <!-- TODO: not for MWE-verbs, not for «tildeles» -->
+      <!-- TODO: not for inverted order (tildeles): 235765 Årets Peer Gynt-pris blir tildelt den nettbaserte TV-serien tildelt «Skam» og regissør Julie Andem. -->
+      <!-- TODO: «denne typen<n> verktøy<n>» as one chunk? -->
+      <pattern>
+        <pattern-item n="auxpass"/>
+        <pattern-item n="adjpart_np_movable"/>
+        <pattern-item n="det"/>
+        <pattern-item n="ndef"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        <call-macro n="set_ana"><with-param pos="4"/></call-macro>
+        <call-macro n="modify_pp_gen_nbr"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="N AUXPASS ADJPART NDEF => N AUXPASS ADJPART NDEF
                    Overrides the AUXPASS ADJPART NDEF rule.
                    kroner øremerkes tiltaket =1> kroner blir øremerket tiltaket =2> kroner blir øremerket tiltaket
@@ -888,6 +1140,46 @@
           <b pos="3"/>
           <chunk>
             <clip pos="4" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="N AUXPASS ADJPART DET NDEF => N AUXPASS ADJPART DET NDEF
+                   Overrides the AUXPASS ADJPART DET NDEF rule.
+                   (mens) avstemningen holdes den påfølgende onsdagen → (mens) avstemminga blir halden den følgjande onsdagen
+                   auxpass are created in t1x
+                   (No match if the aux was there originally, then we don't move anything)">
+      <pattern>
+        <pattern-item n="nom"/>
+        <pattern-item n="auxpass"/>
+        <pattern-item n="adjpart"/>
+        <pattern-item n="det"/>
+        <pattern-item n="ndef"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        <call-macro n="set_ana"><with-param pos="2"/></call-macro>
+        <call-macro n="set_ana"><with-param pos="5"/></call-macro>
+        <call-macro n="modify_pp_gen_nbr"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="4"/>
+          <chunk>
+            <clip pos="5" part="whole"/>
           </chunk>
         </out>
       </action>
@@ -925,12 +1217,12 @@
         </out>
       </action>
     </rule>
-    <rule comment="VBLEX LEMQ ADV => VBLEX ADV LEMQ
+    <rule comment="VBLEX LEMQ ADV_MOVABLE => VBLEX ADV_MOVABLE LEMQ
                    Push blanks one place up since lemq space is inside the chunk.">
       <pattern>
         <pattern-item n="vblex"/>
         <pattern-item n="lemq"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_movable"/>
       </pattern>
       <action>
         <call-macro n="set_ana"><with-param pos="1"/></call-macro>
@@ -949,13 +1241,13 @@
         </out>
       </action>
     </rule>
-    <rule comment="VBLEX LEMQ ADV ADV => VBLEX ADV ADV LEMQ
+    <rule comment="VBLEX LEMQ ADV_MOVABLE ADV_MOVABLE => VBLEX ADV_MOVABLE ADV_MOVABLE LEMQ
                    Push blanks one place up since lemq space is inside the chunk.">
       <pattern>
         <pattern-item n="vblex"/>
         <pattern-item n="lemq"/>
-        <pattern-item n="adv"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_movable"/>
+        <pattern-item n="adv_movable"/>
       </pattern>
       <action>
         <call-macro n="set_ana"><with-param pos="1"/></call-macro>
@@ -979,12 +1271,71 @@
       </action>
     </rule>
 
-    <rule comment="VBLEX LEMQ PRN => VBLEX PRN LEMQ
+    <rule comment="VBLEX LEMQ PRN_NOM => VBLEX PRN_NOM LEMQ
                    Push blanks one place up since lemq space is inside the chunk.">
       <pattern>
         <pattern-item n="vblex"/>
         <pattern-item n="lemq"/>
         <pattern-item n="prn_nom"/>
+      </pattern>
+      <action>
+        <call-macro n="modify_prn_gen"><with-param pos="3"/></call-macro>
+        <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="NP_PRNNOM_OG VBLEX LEMQ-SKIP-N NDEF => NP_PRNNOM_OG VBLEX LEMQ-SKIP-N NDEF
+                   Override below rule
+                   We want: Carlsen heldt fram sigersrekka, not *Carlsen heldt sigersrekka fram">
+      <pattern>
+        <pattern-item n="np_prnnom_og"/>
+        <pattern-item n="vblex"/>
+        <pattern-item n="lemq-skip-n"/>
+        <pattern-item n="ndef"/>
+      </pattern>
+      <action>
+        <call-macro n="modify_prn_gen"><with-param pos="1"/></call-macro>
+        <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="VBLEX LEMQ-SKIP-N NDEF => VBLEX NDEF LEMQ-SKIP-N
+                   Push blanks one place up since lemq space is inside the chunk.
+                   - Søndag fortsatte kamphandlingene → Søndag heldt kamphandlingane fram">
+      <pattern>
+        <pattern-item n="vblex"/>
+        <pattern-item n="lemq-skip-n"/>
+        <pattern-item n="ndef"/>
       </pattern>
       <action>
         <call-macro n="set_ana"><with-param pos="1"/></call-macro>
@@ -1136,12 +1487,9 @@
 
         <call-macro n="out_det_when_adjlike"><with-param pos="3"/><with-param pos="2"/></call-macro>
         <call-macro n="out_ndef"><with-param pos="3"/><with-param pos="2"/></call-macro>
-        <out>
-          <b pos="1"/>
-          <chunk><clip pos="1" part="whole"/></chunk>
-          <b pos="2"/>
-          <chunk><clip pos="2" part="whole"/></chunk>
-        </out>
+        <out><b pos="1"/></out>
+        <call-macro n="out_bi-gen-prep"><with-param pos="1"/><with-param pos="3"/></call-macro>
+        <out><b pos="2"/><chunk><clip pos="2" part="whole"/></chunk></out>
       </action>
     </rule>
 
@@ -1176,13 +1524,13 @@
         </out>
       </action>
     </rule>
-    <rule comment="DETPOS NIND: min mor => mora mi
-                                ditt hus => huset ditt
-                   nind makes sure we don't match 'min Per(np)' nor 'min bils(gen)'
+    <rule comment="DETPOS NIND_NOGEN: min mor => mora mi
+                                      ditt hus => huset ditt
+                   nind_nogen makes sure we don't match 'min Per(np)' nor 'min bils(gen)' or 'våre dyrs beste'
                    Second example shows how determiners ..um..determine number.">
       <pattern>
         <pattern-item n="detpos"/>
-        <pattern-item n="nind"/>
+        <pattern-item n="nind_nogen"/>
       </pattern>
       <action>
         <call-macro n="set_ana"><with-param pos="2"/></call-macro>
@@ -1215,22 +1563,16 @@
         <call-macro n="out_det_when_adjlike"><with-param pos="5"/><with-param pos="1"/></call-macro>
         <call-macro n="out_ndef"><with-param pos="5"/><with-param pos="2"/></call-macro>
 
-        <out>
-          <b pos="1"/>
-          <chunk><clip pos="3" part="whole"/></chunk>
-          <b pos="2"/>
-        </out>
+        <out><b pos="1"/></out>
+        <call-macro n="out_bi-gen-prep"><with-param pos="3"/><with-param pos="5"/></call-macro> <!-- 5=_snuten_ til katten -->
+        <out><b pos="2"/></out>
         <call-macro n="out_det_when_adjlike"><with-param pos="4"/><with-param pos="4"/></call-macro>
         <call-macro n="out_ndef"><with-param pos="4"/><with-param pos="4"/></call-macro>
-        <out>
-          <b pos="3"/>
-          <chunk><clip pos="1" part="whole"/></chunk>
-          <b pos="4"/>
-        </out>
+        <out><b pos="3"/></out>
+        <call-macro n="out_bi-gen-prep"><with-param pos="1"/><with-param pos="4"/></call-macro> <!-- 4=_katten_ på kjøkkenet -->
+        <out><b pos="4"/></out>
         <call-macro n="out_det_when_adjlike"><with-param pos="2"/><with-param pos="2"/></call-macro>
-        <out>
-          <chunk><clip pos="2" part="whole"/></chunk>
-        </out>
+        <out><chunk><clip pos="2" part="whole"/></chunk></out>
       </action>
     </rule>
     <rule comment="DETPOS PREP_GEN NGEN NIND: min [til] katts snute => snuten til katten min
@@ -1248,11 +1590,9 @@
         <call-macro n="out_det_when_adjlike"><with-param pos="4"/><with-param pos="1"/></call-macro>
         <call-macro n="out_ndef"><with-param pos="4"/><with-param pos="1"/></call-macro>
 
-        <out>
-          <b pos="1"/>
-          <chunk><clip pos="2" part="whole"/></chunk>
-          <b pos="2"/>
-        </out>
+        <out><b pos="1"/></out>
+        <call-macro n="out_bi-gen-prep"><with-param pos="2"/><with-param pos="4"/></call-macro> <!-- 4=_snuten_ til katten -->
+        <out><b pos="2"/></out>
         <call-macro n="out_det_when_adjlike"><with-param pos="3"/><with-param pos="3"/></call-macro>
         <call-macro n="out_ndef"><with-param pos="3"/><with-param pos="3"/></call-macro>
 
@@ -1263,7 +1603,6 @@
         </out>
       </action>
     </rule>
-
 
     <rule comment="PREP_GEN NGEN DETNONPOS NIND:
                    toppens mange hunder =1> på toppen mange hunder =2> dei mange hundane på toppen
@@ -1284,11 +1623,84 @@
           <b pos="1"/>
         </out>
         <call-macro n="out_ndef"><with-param pos="4"/><with-param pos="4"/></call-macro>
+        <out><b pos="2"/></out>
+        <call-macro n="out_bi-gen-prep"><with-param pos="1"/><with-param pos="4"/></call-macro> <!-- 4=_hundane_ på toppen -->
+        <out><b pos="3"/></out>
+        <out><chunk><clip pos="2" part="whole"/></chunk></out>
+      </action>
+    </rule>
+    <rule comment="sin DETEMPH PREP_GEN NGEN NIND: sin egen administrasjons innsats → innsatsen til sin egen administrasjon">
+      <pattern>
+        <pattern-item n="sin"/>
+        <pattern-item n="detemph"/>
+        <pattern-item n="prep_gen"/>
+        <pattern-item n="ngen"/>
+        <pattern-item n="nind"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="5"/></call-macro>
+        <call-macro n="switch_cases"><with-param pos="5"/><with-param pos="1"/></call-macro>
+        <call-macro n="out_det_when_adjlike"><with-param pos="5"/><with-param pos="1"/></call-macro>
+        <call-macro n="out_ndef"><with-param pos="5"/><with-param pos="1"/></call-macro>
+
+        <call-macro n="modify_det_gender2.n.det"><with-param pos="4"/><with-param pos="1"/></call-macro>
+        <call-macro n="modify_det_gender2.n.det"><with-param pos="4"/><with-param pos="2"/></call-macro>
         <out>
+          <b pos="1"/>
+          <chunk><clip pos="3" part="whole"/></chunk>
           <b pos="2"/>
           <chunk><clip pos="1" part="whole"/></chunk>
           <b pos="3"/>
           <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="4"/>
+          <chunk><clip pos="4" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="DETQNTPL PREP_GEN NGENSGDEF NPLIND: alle [til] kommunen idrettslag => alle [dei] idrettslaga til kommunen">
+      <pattern>
+	<pattern-item n="detall_qntpl"/>
+	<pattern-item n="prep_gen"/>
+	<pattern-item n="ngensgdef"/>
+	<pattern-item n="nplind"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="4"/></call-macro>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
+          <b pos="1"/>
+        </out>
+        <call-macro n="out_det_when_adjlike"><with-param pos="4"/><with-param pos="2"/></call-macro>
+        <call-macro n="out_ndef"><with-param pos="4"/><with-param pos="4"/></call-macro>
+        <out>
+          <b pos="2"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="3"/>
+          <chunk><clip pos="3" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="DETQNTPL PREP_GEN NGENSGDEF NPLIND: mange [til] kommunen idrettslag => [dei] mange idrettslaga til kommunen
+                   As above rule, but opposite order of out_det_when_adjlike and detqntpl">
+      <pattern>
+	<pattern-item n="detqntpl"/>
+	<pattern-item n="prep_gen"/>
+	<pattern-item n="ngensgdef"/>
+	<pattern-item n="nplind"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="4"/></call-macro>
+        <call-macro n="out_det_when_adjlike"><with-param pos="4"/><with-param pos="1"/></call-macro>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
+          <b pos="1"/>
+        </out>
+        <call-macro n="out_ndef"><with-param pos="4"/><with-param pos="4"/></call-macro>
+        <out>
+          <b pos="2"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="3"/>
+          <chunk><clip pos="3" part="whole"/></chunk>
         </out>
       </action>
     </rule>
@@ -1347,14 +1759,14 @@
     </rule>
 
 
-    <rule comment="PREP_GEN NGENDEFPL NIND PREP_TIL
-                   næringslivets tillit til de rådende myndigheter => tillita næringslivet har til dei rådande styresmaktene
+    <rule comment="PREP_GEN NGENDEForPL NIND PREP_NHEAD
+                   næringslivets tillit til de rådende myndigheter → til næringslivet tillita de rådende myndigheter → tillita næringslivet har til dei rådande styresmaktene
                    drop the prep_gen from t1x and rewrite with «har»">
       <pattern>
         <pattern-item n="prep_gen"/>
-        <pattern-item n="ngendefpl"/>
+        <pattern-item n="ngendefORpl"/>
         <pattern-item n="nind"/>
-        <pattern-item n="prep_til"/>
+        <pattern-item n="prep_nhead"/>
       </pattern>
       <action>
         <call-macro n="set_ana"><with-param pos="2"/></call-macro>
@@ -1377,6 +1789,45 @@
           </chunk>
           <b pos="3"/>
           <chunk><clip pos="4" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="PREP_GEN NGENDEForPL DETNONPOS NIND PREP_NHEAD
+                   senterets 13 millioner i → til senteret 13 millioner i → de 13 millioner senteret har
+                   drop the prep_gen from t1x and rewrite with «har»">
+      <pattern>
+        <pattern-item n="prep_gen"/>
+        <pattern-item n="ngendefORpl"/>
+        <pattern-item n="detnonpos"/>
+        <pattern-item n="nind"/>
+        <pattern-item n="prep_nhead"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="2"/></call-macro>
+        <call-macro n="switch_cases"><with-param pos="3"/><with-param pos="2"/></call-macro>
+
+        <call-macro n="out_det_when_adjlike"><with-param pos="3"/><with-param pos="2"/></call-macro>
+        <out>
+          <chunk><clip pos="3" part="whole"/></chunk>
+          <b pos="1"/>
+        </out>
+        <call-macro n="out_ndef"><with-param pos="4"/><with-param pos="1"/></call-macro>
+        <out>
+          <b pos="2"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="3"/>
+          <chunk>
+            <lit v="vblex"/>
+            <lit-tag v="vblex"/>
+            <var n="ana_temps"/>
+            <lit v="{^ha"/>
+            <lit-tag v="vblex"/>
+            <var n="ana_temps"/>
+            <lit v="$}"/>
+          </chunk>
+          <b pos="4"/>
+          <chunk><clip pos="5" part="whole"/></chunk>
         </out>
       </action>
     </rule>
@@ -1427,6 +1878,128 @@
           <chunk><clip pos="1" part="whole"/></chunk>
           <b pos="1"/>
           <chunk><clip pos="2" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="DETITG DETQNT PREP_SOM ADV NOM: et hvilket som helst norsk hjem → ein kva som helst norsk heim
+                   Agree gender.">
+      <pattern>
+        <pattern-item n="detqnt"/>
+        <pattern-item n="detitg"/>
+        <pattern-item n="prep_som"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="5"/></call-macro>
+        <choose>
+          <when c="don't change gender for '(er) dette kjernen' etc.">
+            <test><and>
+              <equal><clip pos="1" part="gen"/><lit-tag v="nt"/></equal>
+              <not><equal><clip pos="5" part="sl-gen"/><lit-tag v="sl-nt"/></equal></not>
+            </and></test>
+            <!-- TODO: reject-current-rule in interchunk -->
+            <!-- <reject-current-rule shifting="no"/> -->
+          </when>
+          <otherwise>
+            <call-macro n="modify_det_gender2.n.det"><with-param pos="5"/><with-param pos="2"/></call-macro>
+            <call-macro n="set_n_defness"><with-param pos="5"/><with-param pos="2"/></call-macro>
+            <call-macro n="modify_det_gender2.n.det"><with-param pos="5"/><with-param pos="1"/></call-macro>
+            <call-macro n="set_n_defness"><with-param pos="5"/><with-param pos="1"/></call-macro>
+          </otherwise>
+        </choose>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
+          <b pos="1"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="2"/>
+          <chunk><clip pos="3" part="whole"/></chunk>
+          <b pos="3"/>
+          <chunk><clip pos="4" part="whole"/></chunk>
+          <b pos="4"/>
+          <chunk><clip pos="5" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="DETITG PR_AV NOM: hvilken av de to utleveringsbegjæringene → kva for eit av dei to utleveringskrava">
+      <pattern>
+        <pattern-item n="detitg"/>  <!--1-->
+        <pattern-item n="prep_av"/> <!--2-->
+        <pattern-item n="detdem"/>  <!--3-->
+        <pattern-item n="detqnt"/>  <!--4-->
+        <pattern-item n="nom"/>     <!--5-->
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="5"/></call-macro>
+        <choose>
+          <when c="don't change gender for '(er) dette kjernen' etc.">
+            <test><and>
+              <equal><clip pos="1" part="gen"/><lit-tag v="nt"/></equal>
+              <not><equal><clip pos="5" part="sl-gen"/><lit-tag v="sl-nt"/></equal></not>
+            </and></test>
+            <!-- TODO: reject-current-rule in interchunk -->
+            <!-- <reject-current-rule shifting="no"/> -->
+          </when>
+          <otherwise>
+            <call-macro n="modify_det_gender2.n.det"><with-param pos="5"/><with-param pos="1"/></call-macro>
+            <call-macro n="set_n_defness"><with-param pos="5"/><with-param pos="1"/></call-macro>
+          </otherwise>
+        </choose>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
+          <b pos="1"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="2"/>
+          <chunk><clip pos="3" part="whole"/></chunk>
+          <b pos="3"/>
+          <chunk><clip pos="4" part="whole"/></chunk>
+          <b pos="4"/>
+          <chunk><clip pos="5" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="DET2ADJ NOM: (som) en hvilken som helst annen sak → (som) alle andre sak → (som) alle andre saker">
+      <pattern>
+        <pattern-item n="det2adj"/>
+        <pattern-item n="nom_advnom"/>
+      </pattern>
+      <action>
+        <let><clip pos="2" part="nbr"/><clip pos="1" part="nbr"/></let>
+        <let><clip pos="2" part="tags"/><concat><clip pos="2" part="tags"/><lit-tag v="chunknum"/></concat></let>
+        <call-macro n="modify_det_gender2.n.det"><with-param pos="2"/><with-param pos="1"/></call-macro>
+        <choose><when c="only set ana based on det if no ana, or if n is def">
+          <test><or>
+            <equal><var n="ana_nbr"/><lit v=""/></equal>
+            <equal><clip pos="2" part="art"/><lit-tag v="def"/></equal>
+          </or></test>
+          <call-macro n="set_ana"><with-param pos="2"/></call-macro>
+        </when></choose>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
+          <b pos="1"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="NOM: synspunkt
+                   Just set_ana">
+      <pattern>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <choose><when c="only set ana based on det if no ana, or if n is def">
+          <test><or>
+            <equal><var n="ana_nbr"/><lit v=""/></equal>
+            <equal><clip pos="1" part="art"/><lit-tag v="def"/></equal>
+          </or></test>
+          <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        </when></choose>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
         </out>
       </action>
     </rule>
@@ -1514,12 +2087,58 @@
       </action>
     </rule>
 
+    <rule comment="DET PREP_AV NPLDEF: en av kvinnene => ei av kvinnene">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="prep_av"/>
+        <pattern-item n="npldef"/>
+      </pattern>
+      <action>
+        <call-macro n="set_ana"><with-param pos="3"/></call-macro>
+        <choose>
+          <when c="don't change gender for '(er) dette av kjernen' etc.">
+            <test><and>
+              <equal><clip pos="1" part="gen"/><lit-tag v="nt"/></equal>
+              <not><equal><clip pos="3" part="sl-gen"/><lit-tag v="sl-nt"/></equal></not>
+            </and></test>
+            <!-- TODO: reject-current-rule in interchunk -->
+            <!-- <reject-current-rule shifting="no"/> -->
+          </when>
+          <otherwise>
+            <choose c="can't use modify_det_gender2.n.det since that disallows plural nouns">
+              <when>
+                <test><and>
+                  <not><equal><clip pos="3" part="gen"/><lit v=""/></equal></not>
+                  <not><equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal></not>
+                </and></test>
+                <let><clip pos="1" part="gen"/><clip pos="3" part="gen"/></let>
+              </when>
+            </choose>
+            <call-macro n="set_n_defness"><with-param pos="3"/><with-param pos="1"/></call-macro>
+          </otherwise>
+        </choose>
+        <out>
+          <chunk><clip pos="1" part="whole"/></chunk>
+          <b pos="1"/>
+          <chunk><clip pos="2" part="whole"/></chunk>
+          <b pos="2"/>
+          <chunk><clip pos="3" part="whole"/></chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="DET">
       <pattern>
         <pattern-item n="det"/>
       </pattern>
       <action>
-        <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        <choose><when c="only set ana based on det if no ana, or if det is expl">
+          <test><or>
+            <equal><var n="ana_nbr"/><lit v=""/></equal>
+            <equal><clip pos="1" part="expl"/><lit-tag v="expl"/></equal>
+          </or></test>
+          <call-macro n="set_ana"><with-param pos="1"/></call-macro>
+        </when></choose>
         <out>
           <chunk><clip pos="1" part="whole"/></chunk>
         </out>
@@ -1530,6 +2149,7 @@
         <pattern-item n="prn"/>
       </pattern>
       <action>
+        <call-macro n="modify_prn_gen"><with-param pos="1"/></call-macro>
         <call-macro n="set_ana"><with-param pos="1"/></call-macro>
         <out>
           <chunk><clip pos="1" part="whole"/></chunk>
@@ -1544,18 +2164,6 @@
       <action>
         <let><var n="ana_nbr"/><lit v=""/></let>
         <let><var n="ana_gen"/><lit v=""/></let>
-        <out>
-          <chunk><clip pos="1" part="whole"/></chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="NP">
-      <pattern>
-        <pattern-item n="np"/>
-      </pattern>
-      <action>
-        <call-macro n="set_ana"><with-param pos="1"/></call-macro>
         <out>
           <chunk><clip pos="1" part="whole"/></chunk>
         </out>
