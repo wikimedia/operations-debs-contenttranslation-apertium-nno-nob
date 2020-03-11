@@ -5,8 +5,26 @@
 export DH_OPTIONS
 export LC_ALL=C.UTF-8
 
+NUMJOBS = 1
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+endif
+
 %:
-	dh $@ --fail-missing --with autoreconf
+	dh $@ --with autoreconf
 
 override_dh_auto_test:
 	# Disable test for now
+
+override_dh_auto_configure:
+	cd $(CURDIR)/apertium-nno-1.1.0 && autoreconf -fi && ./configure
+	cd $(CURDIR)/apertium-nob-1.1.0 && autoreconf -fi && ./configure
+	dh_auto_configure -- --with-lang1=$(CURDIR)/apertium-nno-1.1.0 --with-lang2=$(CURDIR)/apertium-nob-1.1.0
+
+override_dh_auto_build:
+	cd $(CURDIR)/apertium-nno-1.1.0 && $(MAKE) -j$(NUMJOBS)
+	cd $(CURDIR)/apertium-nob-1.1.0 && $(MAKE) -j$(NUMJOBS)
+	dh_auto_build
+
+override_dh_missing:
+	dh_missing --fail-missing

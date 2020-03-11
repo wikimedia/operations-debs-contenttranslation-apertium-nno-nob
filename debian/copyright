@@ -2,17 +2,38 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://apertium.org/
 
 Files: *
-Copyright: 2009-2016, Kevin Brubeck Unhammer <unhammer@fsfe.org>
-           2008-2016, Trond Trosterud <trond.trosterud@hum.uit.no>
+Copyright: 2009-2019, Kevin Brubeck Unhammer <unhammer@fsfe.org>
+                2019, Anja Zawadzka Persvold <anja.zawadzka.persvold@ntb.no>
+                2019, Jo Christian Oterhals <oterhals@gmail.com>
+           2008-2018, Trond Trosterud <trond.trosterud@uit.no>
            2008-2011, Francis M. Tyers <ftyers@prompsit.com>
-                2010, Sjurum <moshagen@users.sourceforge.net>
+                2010, Sjur Nørstebø Moshagen <sjur.n.moshagen@uit.no>
            2008-2009, Jim O'Regan <joregan@gmail.com>
                 2009, Jacob Nordfalk <jacob.nordfalk@gmail.com>
                 2008, Frode Håvik Korneliussen <frokor@users.sourceforge.net>
 License: GPL-2+
 
+Files: apertium-nno-1.1.0/*
+Copyright: 2009-2019, Kevin Brubeck Unhammer <unhammer@fsfe.org>
+                2019, Anja Zawadzka Persvold <anja.zawadzka.persvold@ntb.no>
+                2019, Jo Christian Oterhals <oterhals@gmail.com>
+           2008-2017, Trond Trosterud <trond.trosterud@hum.uit.no>
+           2008-2017, Francis M. Tyers <ftyers@prompsit.com>
+                2016, Kartik Mistry <kartik.mistry@gmail.com>
+License: GPL-2+
+
+Files: apertium-nob-1.1.0/*
+Copyright: 2009-2019, Kevin Brubeck Unhammer <unhammer@fsfe.org>
+                2019, Anja Zawadzka Persvold <anja.zawadzka.persvold@ntb.no>
+           2014-2019, Lene Antonsen <lene.antonsen@uit.no>
+           2008-2019, Trond Trosterud <trond.trosterud@uit.no>
+           2008-2017, Francis M. Tyers <ftyers@prompsit.com>
+                2017, Marina Kustova <marinakoustova@gmail.com>
+                2016, Kartik Mistry <kartik.mistry@gmail.com>
+License: GPL-2+
+
 Files: debian/*
-Copyright: 2014-2018, Apertium Project Management Committee <apertium-pmc@dlsi.ua.es>
+Copyright: 2014-2019, Apertium Project Management Committee <apertium-pmc@dlsi.ua.es>
 License: GPL-2+
 
 License: GPL-2+
