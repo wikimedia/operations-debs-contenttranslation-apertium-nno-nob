@@ -19,26 +19,39 @@
     <def-cat n="ngen">
       <cat-item tags="n.*.gen"/>
     </def-cat>
+    <def-cat n="nsgind">
+      <cat-item tags="n.*.sg.ind"/>
+    </def-cat>
+    <def-cat n="nindgen">
+      <cat-item tags="n.*.ind.gen"/>
+    </def-cat>
     <def-cat n="nind_indgen">
       <cat-item tags="n.*.*.ind"/>
       <cat-item tags="n.*.*.ind.gen"/>
     </def-cat>
     <def-cat n="nind_keep_gen_s"
-             c="Owned nouns where we want the owner ngen to keep the genitive-s">
+             c="Owned nouns where we want the owner ngen to keep the genitive-s
+                See also def-list keepgenx, and ngen_keep_gen_s for owner">
       <cat-item tags="n.*.*.ind" lemma="beste"/>
+      <cat-item tags="n.*.sg.ind" lemma="side"/>
       <cat-item tags="n.*.sg.ind" lemma="tur"/>
+      <cat-item tags="n.*.sg.ind" lemma="bekostning"/>
+      <cat-item tags="n.*.sg.ind" lemma="historie"/>
+      <cat-item tags="n.*.sg.ind" lemma="dag"/> <!-- ungdommenes dag -->
+      <cat-item tags="n.*.sg.ind" lemma="del"/>
     </def-cat>
     <def-cat n="nind_gen2cmp"
              c="Owned nouns where we want to turn it into a compound regardless of preceding lemma">
       <cat-item tags="n.*.sg.ind" lemma="verdighet"/>
       <cat-item tags="n.*.sg.ind" lemma="vedtak"/>
-      <cat-item tags="n.*.sg.ind" lemma="ledelse"/>
       <cat-item tags="n.*.sg.ind" lemma="virksomhet"/>
       <cat-item tags="n.*.sg.ind" lemma="administrasjon"/>
     </def-cat>
-    <def-cat n="nind_indsplit">
+    <def-cat n="n_nsplit">
       <cat-item tags="n.*.*.ind"/>
+      <cat-item tags="n.*.*.def"/>
       <cat-item tags="n.*.*.ind.cmp-split"/>
+      <cat-item tags="n.*.*.def.cmp-split"/>
     </def-cat>
 
     <!--
@@ -132,10 +145,30 @@
     <def-cat n="ngen_sysselmannskontor"
              c="Owner nouns where we want to turn it into a compound following preceding word">
       <cat-item tags="n.*.gen" lemma="sysselmann"/>
+      <cat-item tags="n.*.gen" lemma="parti"/>
+      <cat-item tags="n.*.gen" lemma="teater"/>
+      <cat-item tags="n.*.gen" lemma="direktør"/>
+      <cat-item tags="n.*.gen" lemma="organisasjon"/>
+      <cat-item tags="n.*.gen" lemma="selskap"/>
+      <cat-item tags="n.*.gen" lemma="forbund"/>
+      <cat-item tags="n.*.gen" lemma="kirke"/>
+      <cat-item tags="n.*.gen" lemma="sosialdemokrat"/>
+      <cat-item tags="n.*.gen" lemma="kompani"/>
+      <cat-item tags="n.*.gen" lemma="ball"/>
+      <cat-item tags="n.*.gen" lemma="rett"/>  <!-- rettsgang -->
+      <cat-item tags="n.*.gen" lemma="fisk"/>  <!-- fiskehelsa -->
+      <cat-item tags="n.*.gen" lemma="tanke"/> <!-- tankekraft -->
+      <cat-item tags="n.*.gen" lemma="orkan"/> <!-- orkanauget -->
     </def-cat>
     <def-cat n="nind_gen2cmp_sysselmannskontor"
              c="Owned nouns where we want to turn it into a compound given preceding word">
       <cat-item tags="n.*.sg.ind" lemma="kontor"/>
+      <cat-item tags="n.*.sg.ind" lemma="ledelse"/>
+      <cat-item tags="n.*.sg.ind" lemma="helse"/>
+      <cat-item tags="n.*.sg.ind" lemma="dronning"/>
+      <cat-item tags="n.*.sg.ind" lemma="kraft"/>
+      <cat-item tags="n.*.sg.ind" lemma="gang"/>
+      <cat-item tags="n.*.sg.ind" lemma="øye"/>
     </def-cat>
 
     <!-- n does not include compound lhs's: -->
@@ -167,6 +200,25 @@
       <cat-item tags="np.al"/>
       <cat-item tags="np.attr"/>
     </def-cat>
+    <def-cat n="np_nogen">
+      <cat-item tags="np.top"/>
+      <cat-item tags="np.top.f"/>
+      <cat-item tags="np.top.m"/>
+      <cat-item tags="np.top.nt"/>
+      <cat-item tags="np.org"/>
+      <cat-item tags="np.org.f"/>
+      <cat-item tags="np.org.m"/>
+      <cat-item tags="np.org.nt"/>
+      <cat-item tags="np.ant"/>
+      <cat-item tags="np.ant.f"/>
+      <cat-item tags="np.ant.m"/>
+      <cat-item tags="np.ant.nt"/>
+      <cat-item tags="np.cgguess"/>
+      <cat-item tags="np.guess"/>
+      <cat-item tags="np.cog"/>
+      <cat-item tags="np.al"/>
+      <cat-item tags="np.attr"/>
+    </def-cat>
     <def-cat n="nacr">
       <cat-item tags="n.acr"/>
     </def-cat>
@@ -174,7 +226,8 @@
       <cat-item tags="n.*.def"/>
       <cat-item tags="n.*.def.gen"/>
     </def-cat>
-    <def-cat n="ngen_time_meas">
+    <def-cat n="ngen_keep_gen_s"
+             c="Owner nouns where we want to keep the genitive-s">
       <cat-item tags="n.m.sg.*.gen"   lemma="liter"/>
       <cat-item tags="n.m.pl.ind.gen" lemma="liter"/>
       <cat-item tags="n.m.sg.*.gen"   lemma="centimeter"/>
@@ -229,6 +282,10 @@
       <cat-item tags="n.m.pl.ind.gen" lemma="meter"/>
       <cat-item tags="n.m.sg.*.gen"   lemma="kilometer"/>
       <cat-item tags="n.m.pl.ind.gen" lemma="kilometer"/>
+      <cat-item tags="n.m.sg.*.gen"   lemma="kilo"/>
+      <cat-item tags="n.m.pl.ind.gen" lemma="kilo"/>
+      <cat-item tags="n.m.sg.*.gen"   lemma="fot¹"/>
+      <cat-item tags="n.m.pl.ind.gen" lemma="fot¹"/>
 
       <cat-item tags="n.m.sg.*.gen"   lemma="tredel"/>
       <cat-item tags="n.m.pl.ind.gen" lemma="tredel"/>
@@ -285,6 +342,10 @@
       <cat-item tags="n.m.sg.*.gen"   lemma="hundredel"/>
       <cat-item tags="n.m.pl.ind.gen" lemma="hundredel"/>
 
+      <cat-item tags="n.*.sg.*.gen"   lemma="mål"/>
+      <cat-item tags="n.*.pl.ind.gen" lemma="mål"/>
+      <cat-item tags="n.*.sg.*.gen"   lemma="poeng"/>
+      <cat-item tags="n.*.pl.ind.gen" lemma="poeng"/>
       <cat-item tags="n.*.sg.*.gen"   lemma="mil"/>
       <cat-item tags="n.*.pl.ind.gen" lemma="mil"/>
       <cat-item tags="n.*.sg.*.gen"   lemma="sjømil"/>
@@ -294,6 +355,8 @@
       <cat-item tags="n.*.sg.*.gen"   lemma="halvmil"/>
       <cat-item tags="n.*.pl.ind.gen" lemma="halvmil"/>
 
+      <cat-item tags="n.nt.sg.*.gen"   lemma="hundreår"/>
+      <cat-item tags="n.nt.pl.ind.gen" lemma="hundreår"/>
       <cat-item tags="n.nt.sg.*.gen"   lemma="fjorår"/>
       <cat-item tags="n.nt.pl.ind.gen" lemma="fjorår"/>
       <cat-item tags="n.nt.sg.*.gen"   lemma="år"/>
@@ -310,22 +373,75 @@
       <cat-item tags="n.*.pl.ind.gen"  lemma="måned"/>
       <cat-item tags="n.*.sg.*.gen"    lemma="helg"/>
       <cat-item tags="n.*.pl.ind.gen"  lemma="helg"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="minutt"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="minutt"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="time"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="time"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="sekund"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="sekund"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="døgn"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="døgn"/>
+
+      <cat-item tags="n.*.sg.*.gen"    lemma="titall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="titall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="tyvetall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="tyvetall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="tjuetall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="tjuetall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="trettitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="trettitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="tredvetall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="tredvetall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="førtitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="førtitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="femtitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="femtitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="sekstitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="sekstitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="syttitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="syttitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="åttitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="åttitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="nittitall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="nittitall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="hundretall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="hundretall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="tusentall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="tusentall"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="mindretall"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="mindretall"/>
 
       <cat-item tags="n.*.pl.def.gen"  lemma="tid"/>
 
       <cat-item tags="n.m.*.gen"       lemma="prosent"/>
       <cat-item tags="n.*.sg.def.gen"  lemma="jord"/>
+      <cat-item tags="n.*.sg.*.gen"    lemma="folk"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="folk"/>
     </def-cat>
-    <def-cat n="n_time">
-      <cat-item tags="n.*" lemma="fjorår"/>
-      <cat-item tags="n.*" lemma="år"/>
-      <cat-item tags="n.*" lemma="dag"/>
-      <cat-item tags="n.*" lemma="gårsdag"/>
-      <cat-item tags="n.*" lemma="måned"/>
-      <cat-item tags="n.*" lemma="helg"/>
-      <cat-item tags="n.*"  lemma="uke"/>
-      <cat-item tags="n.*" lemma="kvarter"/>
-      <cat-item tags="n.*"  lemma="tid"/>
+    <def-cat n="ngen_keep_gen_s_kvinners_rettar"
+             c="Owner nouns where we want to keep the genitive-s if followed by nind_keep_gen_s_kvinners_rettar">
+      <cat-item tags="n.*.sg.*.gen"    lemma="kvinne"/>
+      <cat-item tags="n.*.pl.ind.gen"  lemma="kvinne"/>
+    </def-cat>
+    <def-cat n="nind_keep_gen_s_kvinners_retter"
+             c="Owned nouns where we want the owner ngen to keep the genitive-s if preceded by ngen_keep_gen_s_kvinners_rettar">
+      <cat-item tags="n.*.*.ind" lemma="rettighet"/>
+      <cat-item tags="n.*.*.ind" lemma="rett"/>
+    </def-cat>
+    <def-cat n="nind_time">
+      <cat-item tags="n.*.ind" lemma="fjorår"/>
+      <cat-item tags="n.*.ind" lemma="år"/>
+      <cat-item tags="n.*.ind" lemma="dag"/>
+      <cat-item tags="n.*.ind" lemma="gårsdag"/>
+      <cat-item tags="n.*.ind" lemma="måned"/>
+      <cat-item tags="n.*.ind" lemma="helg"/>
+      <cat-item tags="n.*.ind"  lemma="uke"/>
+      <cat-item tags="n.*.ind" lemma="kvarter"/>
+      <cat-item tags="n.*.ind"  lemma="tid"/>
+    </def-cat>
+    <def-cat n="akkurat">
+      <cat-item tags="adv" lemma="akkurat"/>
+      <cat-item tags="adv" lemma="nettopp"/>
     </def-cat>
     <def-cat n="påfølgende">
       <cat-item tags="adj.*" lemma="påfølgende"/>
@@ -345,6 +461,10 @@
     </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
+    </def-cat>
+    <def-cat n="cnjsub">
+      <cat-item tags="cnjsub.*"/>
+      <cat-item tags="cnjsub"/>
     </def-cat>
     <def-cat n="cnjcoo">
       <cat-item tags="cnjcoo.*"/>
@@ -404,6 +524,14 @@
     <def-cat n="sin">
       <cat-item lemma="sin" tags="det.pos.*"/>
     </def-cat>
+    <def-cat n="så-adv">
+      <cat-item lemma="så" tags="adv"/>
+    </def-cat>
+    <def-cat n="lenge">
+      <cat-item lemma="lenge" tags="adj.*"/>
+      <cat-item lemma="lenge" tags="adv.*"/>
+      <cat-item lemma="lenge" tags="adv"/>
+    </def-cat>
     <def-cat n="britenes">
       <cat-item lemma="brite" tags="n.m.pl.def.gen"/>
       <cat-item lemma="russer" tags="n.m.pl.def.gen"/>
@@ -420,6 +548,30 @@
       <cat-item lemma="antall" tags="n.nt.sg.ind"/>
       <cat-item lemma="antall" tags="n.nt.pl.ind"/>
     </def-cat>
+    <def-cat n="anført">
+      <cat-item lemma="anføre" tags="vblex.pp"/>
+    </def-cat>
+    <def-cat n="av">
+      <cat-item lemma="av" tags="pr"/>
+    </def-cat>
+    <def-cat n="hvilken">
+      <cat-item lemma="hvilken" tags="det.*"/>
+    </def-cat>
+    <def-cat n="hvilken_som_helst">
+      <cat-item lemma="hvilken som helst" tags="adj.*"/>
+    </def-cat>
+    <def-cat n="hvilken_som_helst_annen">
+      <cat-item lemma="hvilken som helst annen" tags="adj.*"/>
+    </def-cat>
+    <def-cat n="som">
+      <cat-item lemma="som" tags="pr"/>
+    </def-cat>
+    <def-cat n="helst">
+      <cat-item lemma="helst" tags="adv"/>
+    </def-cat>
+    <def-cat n="annen">
+      <cat-item lemma="annen" tags="det.*"/>
+    </def-cat>
     <def-cat n="har">
       <cat-item lemma="ha" tags="vblex.pres"/>
       <cat-item lemma="ha" tags="vblex.pret"/>
@@ -429,16 +581,63 @@
       <cat-item lemma="angivelig" tags="adv"/>
       <cat-item lemma="angivelig" tags="adv.*"/>
     </def-cat>
-    <def-cat n="n_keep_sin" c="keep prefixed 'sin' in 'mot sin vilje', 'på sin side' etc.">
+    <def-cat n="n_keep_sin" c="keep prefixed 'sin' in 'mot sin vilje', 'på sin side' etc. – also «hans ord», «deres side»">
+      <cat-item lemma="gang" tags="n.*.sg.ind"/>
       <cat-item lemma="vilje" tags="n.*.sg.ind"/>
       <cat-item lemma="side" tags="n.*.sg.ind"/>
       <cat-item lemma="sak" tags="n.*.sg.ind"/>
       <cat-item lemma="tid" tags="n.*.sg.ind"/>
       <cat-item lemma="vei" tags="n.*.sg.ind"/>
       <cat-item lemma="veg" tags="n.*.sg.ind"/>
+      <cat-item lemma="pris" tags="n.*.sg.ind"/>
+      <cat-item lemma="ord" tags="n.*.sg.ind"/>
+      <cat-item lemma="navn" tags="n.*.sg.ind"/>
+      <cat-item lemma="døme" tags="n.*.sg.ind"/>
+      <cat-item lemma="helhet" tags="n.*.sg.ind"/>
+      <cat-item lemma="eksempel" tags="n.*.sg.ind"/>
+      <cat-item lemma="initiativ" tags="n.*.sg.ind"/>
+      <cat-item lemma="fotspor" tags="n.*.sg.ind"/>
+      <cat-item lemma="valg" tags="n.*.sg.ind"/>
+      <cat-item lemma="syn" tags="n.*.sg.ind"/>
+      <cat-item lemma="data" tags="n.*.sg.ind"/>
+      <cat-item lemma="makt" tags="n.*.sg.ind"/>
+      <cat-item lemma="støtte" tags="n.*.sg.ind"/>
     </def-cat>
     <def-cat n="måte">
       <cat-item lemma="måte" tags="n.m.sg.ind"/>
+    </def-cat>
+    <def-cat n="på">
+      <cat-item lemma="på" tags="pr"/>
+    </def-cat>
+    <def-cat n="nind_vekedag">
+      <cat-item lemma="mandag" tags="n.*.ind"/>
+      <cat-item lemma="tirsdag" tags="n.*.ind"/>
+      <cat-item lemma="onsdag" tags="n.*.ind"/>
+      <cat-item lemma="torsdag" tags="n.*.ind"/>
+      <cat-item lemma="fredag" tags="n.*.ind"/>
+      <cat-item lemma="lørdag" tags="n.*.ind"/>
+      <cat-item lemma="søndag" tags="n.*.ind"/>
+    </def-cat>
+    <def-cat n="i">
+      <cat-item lemma="i" tags="pr"/>
+    </def-cat>
+    <def-cat n="forrige_neste">
+      <cat-item lemma="forrige" tags="det.*"/>
+      <cat-item lemma="neste" tags="det.*"/>
+    </def-cat>
+    <def-cat n="nind_periode">
+      <cat-item lemma="måned" tags="n.*.ind"/>
+      <cat-item lemma="uke" tags="n.*.ind"/>
+      <cat-item lemma="sesong" tags="n.*.ind"/>
+      <cat-item lemma="år" tags="n.*.ind"/>
+      <cat-item lemma="halvår" tags="n.*.ind"/>
+      <cat-item lemma="sommerhalvår" tags="n.*.ind"/>
+      <cat-item lemma="vinterhalvår" tags="n.*.ind"/>
+      <cat-item lemma="runde" tags="n.*.ind"/>
+      <cat-item lemma="kvartal" tags="n.*.ind"/>
+      <cat-item lemma="periode" tags="n.*.ind"/>
+      <cat-item lemma="fireårsperiode" tags="n.*.ind"/>
+      <cat-item lemma="skoleår" tags="n.*.ind"/>
     </def-cat>
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
@@ -472,6 +671,14 @@
       <cat-item tags="sent.*"/>
       <cat-item tags="sent"/>
     </def-cat>
+    <def-cat n="cm">
+      <cat-item tags="cm.*"/>
+      <cat-item tags="cm"/>
+    </def-cat>
+    <def-cat n="guio">
+      <cat-item tags="guio.*"/>
+      <cat-item tags="guio"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nom">
@@ -487,6 +694,12 @@
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
       <attr-item tags="vblex.pstv"/>
+    </def-attr>
+    <def-attr n="a_sent">
+      <attr-item tags="sent"/>
+      <attr-item tags="sent.*"/>
+      <attr-item tags="cm"/>
+      <attr-item tags="cm.*"/>
     </def-attr>
     <def-attr n="temps">
       <attr-item tags="inf"/>
@@ -565,30 +778,1229 @@
     <def-var n="caseSecondWord"/>
     <def-var n="c_name"         c="chunk name"/>
     <def-var n="c_lemtag"       c="chunk lemma-tag"/>
+    <def-var n="pr_head"        c="if prep-phrase's head is noun or verb"/>
     <def-var n="ntags"/>
     <def-var n="adjtags"/>
+    <def-var n="movable_tag"    c="np-movable iff we can move pp past np"/>
+    <def-var n="advtags"/>
+    <def-var n="prevlem"/>
+    <def-var n="prevnbr"/>
+    <def-var n="bilem"/>
     <def-var n="aux"/>
     <def-var n="defnes"/>
     <def-var n="grau_aux"       c="lexical unit containing meir/mest if translating from sint to non-sint"/>
     <def-var n="c_lemq"         c="lemq part to output in chunk"/>
     <def-var n="out_lemq"       c="lemq part to output after chunk"/>
+    <def-var n="lemq-skip"      c="whether lemq can skip ndef's"/>
     <def-var n="det_gen"/>
-    <def-var n="lu_lemh"/>
+    <def-var n="lemma"          c="Used within macros"/>
+    <def-var n="brlemma"        c="Only used for 'britenes statsminister'-rule"/>
+    <def-var n="mwe-queue"      c="Must be output before next verb or sent. TODO: There should be an EOF-rule in case nothing at end."/>
   </section-def-vars>
 
   <section-def-lists>
+    <def-list n="noun_takes_til" c="Nouns that take an adverbial with the preposition 'til' in Bokmål, e.g. utgift/tilbud">
+      <list-item v="oppkøyring"/>
+      <list-item v="utkast"/>
+      <list-item v="høve"/>
+      <list-item v="moglegheit"/>
+      <list-item v="fridom"/>
+      <list-item v="innstilling"/>
+      <list-item v="råd"/>
+      <list-item v="gåve"/>
+      <list-item v="utsending"/>
+      <list-item v="utsikt"/>
+      <list-item v="kapasitet"/>
+      <list-item v="tilknyting"/>
+      <list-item v="hang"/>
+      <list-item v="tendens"/>
+      <list-item v="nærleik"/>
+      <list-item v="kjærleik"/>
+      <list-item v="forkjærleik"/>
+      <list-item v="tilnærming"/>
+      <list-item v="middel"/>
+      <list-item v="melding"/>
+      <list-item v="utstyr"/>
+      <list-item v="reise"/>
+      <list-item v="klarsignal"/>
+      <list-item v="band"/>
+      <list-item v="kjennskap"/>
+      <list-item v="støtte"/>
+      <list-item v="bidrag"/>
+      <list-item v="evne"/>
+      <list-item v="krav"/>
+      <list-item v="kravliste"/>
+      <list-item v="forhold"/>
+      <list-item v="forslag"/>
+      <list-item v="forventing"/>
+      <list-item v="forventning"/>
+      <list-item v="haldning"/>
+      <list-item v="innspel"/>
+      <list-item v="ja"/>
+      <list-item v="nei"/>
+      <list-item v="plikt"/>
+      <list-item v="potensial"/>
+      <list-item v="rett"/>
+      <list-item v="sjanse"/>
+      <list-item v="skepsis"/>
+      <list-item v="tilbod"/>
+      <list-item v="tilgang"/>
+      <list-item v="tillit"/>
+      <list-item v="trong"/>
+      <list-item v="utgift"/>
+    </def-list>
+    <def-list n="noun_takes_i" c="Nouns that take an adverbial with the preposition 'i' in Bokmål">
+      <list-item v="investering"/>
+      <list-item v="million"/>  <!-- millioner i inntekter -->
+      <list-item v="milliard"/>
+      <list-item v="billion"/>
+      <list-item v="billiard"/>
+      <list-item v="trillion"/>
+      <list-item v="trilliard"/>
+    </def-list>
+    <def-list n="adj-ind-def" c="Allow ind adj followed by def noun for these adv-like adjectives (tl/nno)">
+      <list-item v="mykje"/>
+      <list-item v="mellombels"/>
+    </def-list>
+
+
+    <def-list n="bi-gen-til" c="This list checked before the generated bigram-lists and unigram lists,
+                                for overriding back to «til»">
+      <list-item v="økonomi_sentralbank"/>
+      <list-item v="arbeid_utval"/>
+      <list-item v="forbund_bansje"/>
+      <list-item v="skrivebord_statsråd"/>
+      <list-item v="bord_statsråd"/>
+      <list-item v="kontor_statsråd"/>
+      <list-item v="skrivebord_ombod"/>
+      <list-item v="bord_ombod"/>
+      <list-item v="kontor_ombod"/>
+      <list-item v="elev_mann"/>
+      <list-item v="sjef_hoppar"/>
+      <list-item v="sportssjef_hoppar"/>
+      <list-item v="heimeside_liga"/>
+      <list-item v="heimeside_parti"/>
+      <list-item v="heimeside_bransje"/>
+      <list-item v="heimeside_senter"/>
+      <list-item v="heimeside_aksjon"/>
+      <list-item v="nettside_liga"/>
+      <list-item v="nettside_parti"/>
+      <list-item v="nettside_bransje"/>
+      <list-item v="nettside_senter"/>
+      <list-item v="nettside_aksjon"/>
+      <list-item v="nettavis_liga"/>
+      <list-item v="nettavis_parti"/>
+      <list-item v="nettavis_bransje"/>
+      <list-item v="nettavis_senter"/>
+      <list-item v="nettavis_aksjon"/>
+      <list-item v="avis_liga"/>
+      <list-item v="avis_parti"/>
+      <list-item v="avis_bransje"/>
+      <list-item v="avis_senter"/>
+      <list-item v="avis_aksjon"/>
+      <list-item v="nettstad_liga"/>
+      <list-item v="nettstad_parti"/>
+      <list-item v="nettstad_bransje"/>
+      <list-item v="nettstad_senter"/>
+      <list-item v="nettstad_aksjon"/>
+      <list-item v="åtferd_bilist"/>
+      <list-item v="tre_bispedømmeråd"/>
+      <list-item v="trygd_forelder"/>
+      <list-item v="tale_president"/>
+      <list-item v="penge_stat"/>
+      <list-item v="samandrag_justisminister"/>
+      <list-item v="ansvar_arrangør"/>
+      <list-item v="arbeidsgiveransvar_arrangør"/>
+      <list-item v="stilling_kaffi"/>
+      <list-item v="funksjon_hjerne"/>
+      <list-item v="statistikk_bransje"/>
+      <list-item v="motpart_fagforbund"/>
+      <list-item v="motpart_forbund"/>
+      <list-item v="direktør_prisvinner"/>
+      <list-item v="forskingspris_forskingsråd"/>
+      <list-item v="pris_forskingsråd"/>
+      <list-item v="pris_råd"/>
+      <list-item v="verdi_forbund"/>
+      <list-item v="ressurs_jord"/>
+      <list-item v="arbeid_utval"/>
+      <list-item v="konklusjon_kommisjon"/>
+      <list-item v="naturskadefond_stat"/>
+      <list-item v="fond_stat"/>
+      <list-item v="tid_løpar"/>
+      <list-item v="tid_lege"/>
+      <list-item v="sak_klient"/>
+      <list-item v="sak_mann"/>
+      <list-item v="sak_kvinne"/>
+      <list-item v="verdi_stat"/>
+      <list-item v="kamp_parti"/>
+      <list-item v="sjanse_lag"/>
+    </def-list>
+    <def-list n="bi-gen-av2" c="Override generated lists">
+      <list-item v="vinnar_liga"/>
+      <list-item v="vinnar_parti"/>
+      <list-item v="vinnar_klubb"/>
+      <list-item v="vinnar_test"/>
+      <list-item v="leiar_liga"/>
+      <list-item v="leiar_parti"/>
+      <list-item v="leiar_klubb"/>
+      <list-item v="leiar_test"/>
+      <list-item v="medlem_liga"/>
+      <list-item v="medlem_parti"/>
+      <list-item v="medlem_klubb"/>
+      <list-item v="medlem_test"/>
+      <list-item v="eigar_skule"/>
+      <list-item v="eigar_selskap"/>
+      <list-item v="eigar_klubb"/>
+      <list-item v="eksistens_union"/>
+      <list-item v="avkasting_fond"/>
+      <list-item v="avkasting_fond"/>
+      <list-item v="skugge_fotball"/>
+    </def-list>
+    <def-list n="bi-gen-frå2" c="Override generated lists">
+      <list-item v="sanksjon_samfunn"/>
+      <list-item v="sanksjon_verdssamfunn"/>
+      <list-item v="fråsegn_forbund"/>
+      <list-item v="undersøking_forbund"/>
+      <list-item v="fråsegn_råd"/>
+      <list-item v="undersøking_råd"/>
+      <list-item v="bodskap_leiar"/>
+    </def-list>
+    <def-list n="bi-gen-på2" c="Override generated lists">
+      <list-item v="spelar_lag"/>
+      <list-item v="prislapp_prosjekt"/>
+    </def-list>
+
+    <def-list n="obj-gen-med2" c="Override generated lists">
+      <list-item v="hensikt"/>
+    </def-list>
+    <def-list n="obj-gen-frå2" c="Override generated lists">
+      <list-item v="meiningsmåling"/>
+      <list-item v="fråsegn"/>
+    </def-list>
+    <def-list n="obj-gen-av2" c="Override generated lists">
+      <list-item v="eksistens"/>
+      <list-item v="skugge"/>
+    </def-list>
+    <def-list n="obj-gen-på2" c="Override generated lists">
+      <list-item v="prislapp"/>
+    </def-list>
+
+<!-- BEGIN dev/genitive-prepositions: -->
+
+<!-- Genitive preps where bigram frequency gt til -->
+
+<def-list n="bi-gen-av">
+	<list-item v="del_idrett"/>
+	<list-item v="del_kommune"/>
+	<list-item v="del_politi"/>
+	<list-item v="del_selskap"/>
+	<list-item v="dokument_politi"/>
+	<list-item v="drift_selskap"/>
+	<list-item v="feiring_dag"/>
+	<list-item v="forfattar_bok"/>
+	<list-item v="forfattar_rapport"/>
+	<list-item v="forfattar_år"/>
+	<list-item v="forvaltning_fond"/>
+	<list-item v="framvekst_velferdsstat"/>
+	<list-item v="gruppe_nordmann"/>
+	<list-item v="inngang_år"/>
+	<list-item v="inntog_elbil"/>
+	<list-item v="inntog_svenske"/>
+	<list-item v="kommune_person"/>
+	<list-item v="krenking_barn"/>
+	<list-item v="leiar_justiskomité"/>
+	<list-item v="leiar_komité"/>
+	<list-item v="leiar_kommisjon"/>
+	<list-item v="leiar_lag"/>
+	<list-item v="leiar_stiftelse"/>
+	<list-item v="leiar_utval"/>
+	<list-item v="leiing_teater"/>
+	<list-item v="marknadsverdi_fond"/>
+	<list-item v="medlem_rett"/>
+	<list-item v="medlem_statsråd"/>
+	<list-item v="månad_fjorår"/>
+	<list-item v="omfang_krav"/>
+	<list-item v="produsent_serie"/>
+	<list-item v="registrering_år"/>
+	<list-item v="sal_dag"/>
+	<list-item v="side_samfunn"/>
+	<list-item v="skugge_jord"/>
+	<list-item v="slutt_år"/>
+	<list-item v="start_år"/>
+	<list-item v="tid_år"/>
+	<list-item v="utgang_år"/>
+	<list-item v="utvikling_bestand"/>
+	<list-item v="utvikling_parti"/>
+	<list-item v="verdi_fond"/>
+	<list-item v="verdi_kontrakt"/>
+	<list-item v="verdi_stat"/>
+	<list-item v="verknad_næring"/>
+</def-list>
+
+<def-list n="bi-gen-blant">
+	<list-item v="del_kvinne"/>
+	<list-item v="deltaking_kvinne"/>
+	<list-item v="forventning_leiar"/>
+	<list-item v="interesse_nordmann"/>
+	<list-item v="lyst_folk"/>
+	<list-item v="lyst_nordmann"/>
+	<list-item v="nivå_elev"/>
+	<list-item v="prosent_mann"/>
+	<list-item v="sjukdom_mann"/>
+	<list-item v="tillit_veljar"/>
+</def-list>
+
+<def-list n="bi-gen-etter">
+	<list-item v="dødsbu_mann"/>
+	<list-item v="offer_nazist"/>
+	<list-item v="oppgjer_sommar"/>
+</def-list>
+
+<def-list n="bi-gen-for">
+	<list-item v="agent_film"/>
+	<list-item v="anslag_år"/>
+	<list-item v="ansvar_samfunn"/>
+	<list-item v="avkasting_stat"/>
+	<list-item v="bekymring_nordmann"/>
+	<list-item v="comeback_sport"/>
+	<list-item v="cupfinale_kvinne"/>
+	<list-item v="cupfinale_mann"/>
+	<list-item v="dag_barn"/>
+	<list-item v="dag_ungdom"/>
+	<list-item v="direktør_museum"/>
+	<list-item v="divisjon_kvinne"/>
+	<list-item v="driftsresultat_konsern"/>
+	<list-item v="eliteserie_kvinne"/>
+	<list-item v="eventyr_framtid"/>
+	<list-item v="finale_mann"/>
+	<list-item v="framtid_nordmann"/>
+	<list-item v="fundament_samfunn"/>
+	<list-item v="gjennomsnitt_år"/>
+	<list-item v="grunnlag_fartøy"/>
+	<list-item v="hopprenn_kvinne"/>
+	<list-item v="høgdepunkt_duo"/>
+	<list-item v="interesse_fotball"/>
+	<list-item v="jaktstart_herre"/>
+	<list-item v="kompetanse_yrkessjåfør"/>
+	<list-item v="kostnad_samfunn"/>
+	<list-item v="kvardag_elev"/>
+	<list-item v="kvardag_jente"/>
+	<list-item v="kvardag_lege"/>
+	<list-item v="landevegsritt_mann"/>
+	<list-item v="leiar_demokrat"/>
+	<list-item v="leiar_gruppe"/>
+	<list-item v="leiar_institutt"/>
+	<list-item v="leiar_nemnd"/>
+	<list-item v="leiar_senter"/>
+	<list-item v="leiar_studie"/>
+	<list-item v="leiar_styre"/>
+	<list-item v="liga_herre"/>
+	<list-item v="likning_selskap"/>
+	<list-item v="løp_mann"/>
+	<list-item v="mandat_politikk"/>
+	<list-item v="meisterskap_kvinne"/>
+	<list-item v="meisterskap_mann"/>
+	<list-item v="meisterskap_ungdom"/>
+	<list-item v="middag_regjering"/>
+	<list-item v="moglegheit_barn"/>
+	<list-item v="moglegheit_kommune"/>
+	<list-item v="mål_skule"/>
+	<list-item v="mål_år"/>
+	<list-item v="mønster_ulv"/>
+	<list-item v="nestleiar_senter"/>
+	<list-item v="nivå_bedrift"/>
+	<list-item v="organisasjon_barn"/>
+	<list-item v="pensjon_framtid"/>
+	<list-item v="periode_dag"/>
+	<list-item v="pris_stat"/>
+	<list-item v="pris_år"/>
+	<list-item v="prognose_år"/>
+	<list-item v="program_politi"/>
+	<list-item v="rammevilkår_næring"/>
+	<list-item v="reisemål_nordmann"/>
+	<list-item v="resultat_bransje"/>
+	<list-item v="resultat_elev"/>
+	<list-item v="rett_part"/>
+	<list-item v="rett_tilsett"/>
+	<list-item v="risiko_kreditor"/>
+	<list-item v="side_medium"/>
+	<list-item v="situasjon_familie"/>
+	<list-item v="situasjon_flyktning"/>
+	<list-item v="situasjon_varslar"/>
+	<list-item v="sjef_flyselskap"/>
+	<list-item v="sjef_heimevern"/>
+	<list-item v="sjef_organisasjon"/>
+	<list-item v="skulegang_barn"/>
+	<list-item v="skuleår_elev"/>
+	<list-item v="slalåmrenn_mann"/>
+	<list-item v="sluttspel_herre"/>
+	<list-item v="snø_framtid"/>
+	<list-item v="stafett_herre"/>
+	<list-item v="stafett_mann"/>
+	<list-item v="stasjon_by"/>
+	<list-item v="statuett_år"/>
+	<list-item v="stilling_kvinne"/>
+	<list-item v="strategi_fond"/>
+	<list-item v="sysselsetjing_kvinne"/>
+	<list-item v="talskvinne_selskap"/>
+	<list-item v="talsmann_organisasjon"/>
+	<list-item v="talsmann_selskap"/>
+	<list-item v="talsperson_departement"/>
+	<list-item v="topp_gut"/>
+	<list-item v="toppserie_kvinne"/>
+	<list-item v="trekning_kvinne"/>
+	<list-item v="utdanning_lærar"/>
+	<list-item v="utfordring_velferdsstat"/>
+	<list-item v="utval_stat"/>
+	<list-item v="utvikling_bonde"/>
+	<list-item v="verneombod_politi"/>
+	<list-item v="vinnar_dag"/>
+</def-list>
+
+<def-list n="bi-gen-frå">
+	<list-item v="aksjon_lærar"/>
+	<list-item v="anke_påtalemakt"/>
+	<list-item v="anslag_tilsyn"/>
+	<list-item v="argumentasjon_part"/>
+	<list-item v="auke_fjorår"/>
+	<list-item v="avgjerd_lagmannsrett"/>
+	<list-item v="avslag_departement"/>
+	<list-item v="avslag_kommisjon"/>
+	<list-item v="avslag_regjering"/>
+	<list-item v="bekymring_næring"/>
+	<list-item v="betaling_stat"/>
+	<list-item v="bidrag_selskap"/>
+	<list-item v="brev_minister"/>
+	<list-item v="erfaring_år"/>
+	<list-item v="etterspørsel_hushald"/>
+	<list-item v="etterspørsel_næringsliv"/>
+	<list-item v="finansiering_stat"/>
+	<list-item v="folk_forsikringsselskap"/>
+	<list-item v="forslag_departement"/>
+	<list-item v="forslag_forgjengar"/>
+	<list-item v="forslag_komité"/>
+	<list-item v="forslag_kommisjon"/>
+	<list-item v="forslag_ordførar"/>
+	<list-item v="forslag_regjering"/>
+	<list-item v="forslag_stat"/>
+	<list-item v="forsøk_leiing"/>
+	<list-item v="forsøk_regjering"/>
+	<list-item v="funn_kommisjon"/>
+	<list-item v="føresetnad_styre"/>
+	<list-item v="førespurnad_avis"/>
+	<list-item v="førespurnad_byrå"/>
+	<list-item v="førespurnad_kanal"/>
+	<list-item v="føretak_stat"/>
+	<list-item v="føring_butikk"/>
+	<list-item v="grense_år"/>
+	<list-item v="gåve_forelder"/>
+	<list-item v="gåve_regjering"/>
+	<list-item v="handtering_kommune"/>
+	<list-item v="hending_fjorår"/>
+	<list-item v="hjelp_regjering"/>
+	<list-item v="informasjon_flyselskap"/>
+	<list-item v="innsats_etat"/>
+	<list-item v="innspel_brukar"/>
+	<list-item v="innstilling_kommisjon"/>
+	<list-item v="innstilling_råd"/>
+	<list-item v="interesse_kommune"/>
+	<list-item v="interesse_utlending"/>
+	<list-item v="klarsignal_regjering"/>
+	<list-item v="konklusjon_departement"/>
+	<list-item v="konklusjon_direktorat"/>
+	<list-item v="konklusjon_panel"/>
+	<list-item v="krav_bonde"/>
+	<list-item v="krav_forbrukar"/>
+	<list-item v="krav_forbund"/>
+	<list-item v="krav_forsikringsselskap"/>
+	<list-item v="krav_jordbruk"/>
+	<list-item v="krav_kommune"/>
+	<list-item v="krav_kunde"/>
+	<list-item v="krav_medium"/>
+	<list-item v="krav_organisasjon"/>
+	<list-item v="krav_parti"/>
+	<list-item v="krav_selskap"/>
+	<list-item v="løft_regjering"/>
+	<list-item v="marsjordre_regjering"/>
+	<list-item v="materiale_nemnd"/>
+	<list-item v="melding_departement"/>
+	<list-item v="melding_kanal"/>
+	<list-item v="melding_politi"/>
+	<list-item v="nedgang_fjorår"/>
+	<list-item v="oppfordring_politi"/>
+	<list-item v="oppfølging_kommune"/>
+	<list-item v="oppgang_år"/>
+	<list-item v="opplysning_brukar"/>
+	<list-item v="ordning_stat"/>
+	<list-item v="parti_dag"/>
+	<list-item v="pris_forbund"/>
+	<list-item v="prognose_næringsliv"/>
+	<list-item v="protest_kyrkje"/>
+	<list-item v="påstand_regjering"/>
+	<list-item v="rapport_arbeidsgruppe"/>
+	<list-item v="rapport_forum"/>
+	<list-item v="rapport_komité"/>
+	<list-item v="rapport_kommisjon"/>
+	<list-item v="rapport_lege"/>
+	<list-item v="rapport_nemnd"/>
+	<list-item v="rapport_organisasjon"/>
+	<list-item v="rapport_politi"/>
+	<list-item v="rapport_tilsyn"/>
+	<list-item v="reaksjon_opposisjon"/>
+	<list-item v="rekord_fredag"/>
+	<list-item v="resultat_studie"/>
+	<list-item v="resultat_verksemd"/>
+	<list-item v="rett_regjering"/>
+	<list-item v="råd_forskar"/>
+	<list-item v="råd_politi"/>
+	<list-item v="signal_kropp"/>
+	<list-item v="skatt_oljeselskap"/>
+	<list-item v="soldat_land"/>
+	<list-item v="spørsmål_komité"/>
+	<list-item v="statistikk_direktorat"/>
+	<list-item v="statistikk_forsikringsselskap"/>
+	<list-item v="styrevedtak_måndag"/>
+	<list-item v="svar_organisasjon"/>
+	<list-item v="søknad_kommune"/>
+	<list-item v="tal_selskap"/>
+	<list-item v="tal_tilsyn"/>
+	<list-item v="tilbod_politi"/>
+	<list-item v="tilbod_regjering"/>
+	<list-item v="tilbod_stat"/>
+	<list-item v="tillit_folk"/>
+	<list-item v="tillit_kunde"/>
+	<list-item v="tiltak_personell"/>
+	<list-item v="undersøking_måndag"/>
+	<list-item v="utgreiing_kommisjon"/>
+	<list-item v="utrekning_organisasjon"/>
+	<list-item v="utslepp_næring"/>
+	<list-item v="utslepp_år"/>
+	<list-item v="varsel_tilsyn"/>
+	<list-item v="vilkår_regjering"/>
+	<list-item v="vitne_aktorat"/>
+	<list-item v="vurdering_direktorat"/>
+	<list-item v="vurdering_rapport"/>
+	<list-item v="vurdering_selskap"/>
+	<list-item v="ønske_bonde"/>
+	<list-item v="ønske_høgskule"/>
+	<list-item v="ønske_kommune"/>
+</def-list>
+
+<def-list n="bi-gen-før">
+	<list-item v="dommar_kamp"/>
+	<list-item v="pressekonferanse_laurdag"/>
+</def-list>
+
+<def-list n="bi-gen-gjennom">
+	<list-item v="brann_dag"/>
+	<list-item v="landslag_sesong"/>
+</def-list>
+
+<def-list n="bi-gen-hos">
+	<list-item v="avdeling_fylkesmann"/>
+	<list-item v="besøk_konge"/>
+	<list-item v="elev_mann"/>
+	<list-item v="forventning_forelder"/>
+	<list-item v="kjensle_passasjer"/>
+	<list-item v="legemiddel_pasient"/>
+	<list-item v="nedgang_parti"/>
+	<list-item v="vilje_folk"/>
+	<list-item v="yrkesdeltaking_kvinne"/>
+</def-list>
+
+<def-list n="bi-gen-i">
+	<list-item v="administrasjon_klubb"/>
+	<list-item v="administrator_rett"/>
+	<list-item v="aksje_selskap"/>
+	<list-item v="aksjonær_selskap"/>
+	<list-item v="aktivitet_museum"/>
+	<list-item v="aktivitet_skule"/>
+	<list-item v="aktør_rett"/>
+	<list-item v="anlegg_bedrift"/>
+	<list-item v="avdeling_avis"/>
+	<list-item v="avdeling_departement"/>
+	<list-item v="avdeling_etat"/>
+	<list-item v="avdeling_fond"/>
+	<list-item v="avdeling_klubb"/>
+	<list-item v="avgjerd_parti"/>
+	<list-item v="beredskap_kommune"/>
+	<list-item v="bibliotek_hovudstad"/>
+	<list-item v="bodskap_bok"/>
+	<list-item v="celle_kropp"/>
+	<list-item v="datasentral_bil"/>
+	<list-item v="debatt_parti"/>
+	<list-item v="debatt_tid"/>
+	<list-item v="dekning_medium"/>
+	<list-item v="del_plan"/>
+	<list-item v="direktør_fond"/>
+	<list-item v="direktør_nav"/>
+	<list-item v="direktør_selskap"/>
+	<list-item v="direktør_tilsyn"/>
+	<list-item v="divisjon_selskap"/>
+	<list-item v="drift_klubb"/>
+	<list-item v="dyr_familie"/>
+	<list-item v="dåp_kyrkje"/>
+	<list-item v="ekspert_etat"/>
+	<list-item v="ekspert_verk"/>
+	<list-item v="endring_reform"/>
+	<list-item v="endring_regjering"/>
+	<list-item v="etasje_bygg"/>
+	<list-item v="etat_delstat"/>
+	<list-item v="fag_skule"/>
+	<list-item v="feilmargin_undersøking"/>
+	<list-item v="fleirtal_komité"/>
+	<list-item v="fleirtal_utval"/>
+	<list-item v="folkebibliotek_hovudstad"/>
+	<list-item v="folketal_hovudstad"/>
+	<list-item v="fond_stat"/>
+	<list-item v="forsamling_selskap"/>
+	<list-item v="forslag_avtale"/>
+	<list-item v="forum_avis"/>
+	<list-item v="frykt_kommune"/>
+	<list-item v="gate_hovudstad"/>
+	<list-item v="generaldirektør_organisasjon"/>
+	<list-item v="generalsekretær_forbund"/>
+	<list-item v="generalsekretær_parti"/>
+	<list-item v="grunnfjell_parti"/>
+	<list-item v="helsesektor_kommune"/>
+	<list-item v="hovudperson_film"/>
+	<list-item v="høgdepunkt_karriere"/>
+	<list-item v="innbyggar_hovudstad"/>
+	<list-item v="innhald_bibliotek"/>
+	<list-item v="innhald_film"/>
+	<list-item v="innhald_medium"/>
+	<list-item v="innhald_skule"/>
+	<list-item v="innhald_teneste"/>
+	<list-item v="innhald_vakt"/>
+	<list-item v="innhald_video"/>
+	<list-item v="institusjonsteater_hovudstad"/>
+	<list-item v="investering_oljeselskap"/>
+	<list-item v="kapital_fond"/>
+	<list-item v="kassaapparat_butikk"/>
+	<list-item v="komité_parti"/>
+	<list-item v="kommissær_delstat"/>
+	<list-item v="kompetanse_kommune"/>
+	<list-item v="kompetanse_næring"/>
+	<list-item v="kompetanse_politi"/>
+	<list-item v="kompetanse_selskap"/>
+	<list-item v="konkurs_selskap"/>
+	<list-item v="kontrollkomité_klubb"/>
+	<list-item v="kostnad_selskap"/>
+	<list-item v="kraft_bodskap"/>
+	<list-item v="krav_avtale"/>
+	<list-item v="krav_krig"/>
+	<list-item v="krav_psykiatri"/>
+	<list-item v="landsstyre_organisasjon"/>
+	<list-item v="leiar_forbund"/>
+	<list-item v="leiar_jury"/>
+	<list-item v="leiar_klubb"/>
+	<list-item v="leiar_kontrollkomité"/>
+	<list-item v="leiar_kyrkje"/>
+	<list-item v="leiar_organisasjon"/>
+	<list-item v="leiar_parti"/>
+	<list-item v="leiar_stat"/>
+	<list-item v="leiar_ungdom"/>
+	<list-item v="leiing_bedrift"/>
+	<list-item v="leiing_forbund"/>
+	<list-item v="leiing_konsern"/>
+	<list-item v="leiing_kyrkje"/>
+	<list-item v="leiing_organisasjon"/>
+	<list-item v="leiing_parti"/>
+	<list-item v="leiing_politi"/>
+	<list-item v="leiing_selskap"/>
+	<list-item v="lesar_kanal"/>
+	<list-item v="linje_dag"/>
+	<list-item v="lokalpolitikar_parti"/>
+	<list-item v="læreplan_skule"/>
+	<list-item v="lønnsemd_verksemd"/>
+	<list-item v="lønnsnivå_selskap"/>
+	<list-item v="medlem_forbund"/>
+	<list-item v="medlem_gruppe"/>
+	<list-item v="medlem_jury"/>
+	<list-item v="medlem_komité"/>
+	<list-item v="medlem_kyrkje"/>
+	<list-item v="medlem_organisasjon"/>
+	<list-item v="medlem_regjering"/>
+	<list-item v="medlem_utval"/>
+	<list-item v="meining_departement"/>
+	<list-item v="miljøverndepartement_delstat"/>
+	<list-item v="mindretal_utval"/>
+	<list-item v="måltid_veke"/>
+	<list-item v="møte_kontrollkomité"/>
+	<list-item v="natur_kommune"/>
+	<list-item v="nestleiar_komité"/>
+	<list-item v="nestleiar_parti"/>
+	<list-item v="nivå_skule"/>
+	<list-item v="område_regjering"/>
+	<list-item v="operasjonsleiar_politi"/>
+	<list-item v="oppfølging_vesen"/>
+	<list-item v="opplegg_studie"/>
+	<list-item v="optimisme_bedrift"/>
+	<list-item v="ordførar_kommune"/>
+	<list-item v="ordning_regjering"/>
+	<list-item v="organisasjon_næringsliv"/>
+	<list-item v="overhovud_kyrkje"/>
+	<list-item v="partnar_selskap"/>
+	<list-item v="person_studie"/>
+	<list-item v="politikar_parti"/>
+	<list-item v="praktisering_kommune"/>
+	<list-item v="prest_kyrkje"/>
+	<list-item v="prinsipp_reform"/>
+	<list-item v="profil_klubb"/>
+	<list-item v="prosess_kommune"/>
+	<list-item v="prosess_regjering"/>
+	<list-item v="prosjekt_selskap"/>
+	<list-item v="påstand_bok"/>
+	<list-item v="ramme_avtale"/>
+	<list-item v="ramme_stat"/>
+	<list-item v="regel_demokrati"/>
+	<list-item v="regel_krig"/>
+	<list-item v="regel_stat"/>
+	<list-item v="region_dag"/>
+	<list-item v="respons_hushald"/>
+	<list-item v="ressurs_natur"/>
+	<list-item v="rutine_verksemd"/>
+	<list-item v="rådmann_kommune"/>
+	<list-item v="seksjon_departement"/>
+	<list-item v="senter_hjerne"/>
+	<list-item v="sentralstyre_parti"/>
+	<list-item v="sjef_fond"/>
+	<list-item v="sjef_konsern"/>
+	<list-item v="sjef_parti"/>
+	<list-item v="sjef_regjering"/>
+	<list-item v="sjef_selskap"/>
+	<list-item v="sjef_svenske"/>
+	<list-item v="sjølvstyre_kommune"/>
+	<list-item v="skipper_organisasjon"/>
+	<list-item v="skulesjef_kommune"/>
+	<list-item v="spiskammer_natur"/>
+	<list-item v="spørsmål_regjering"/>
+	<list-item v="strateg_parti"/>
+	<list-item v="struktur_konsern"/>
+	<list-item v="stund_barnehage"/>
+	<list-item v="styre_forbund"/>
+	<list-item v="styre_parti"/>
+	<list-item v="styre_selskap"/>
+	<list-item v="styreleiar_lag"/>
+	<list-item v="styreleiar_selskap"/>
+	<list-item v="styring_organisasjon"/>
+	<list-item v="system_hjerne"/>
+	<list-item v="team_kommune"/>
+	<list-item v="teneste_kommune"/>
+	<list-item v="tilbod_kommune"/>
+	<list-item v="tillitsmann_parti"/>
+	<list-item v="tilsett_etat"/>
+	<list-item v="tilsett_selskap"/>
+	<list-item v="tilsett_stat"/>
+	<list-item v="time_barnehage"/>
+	<list-item v="tropp_politi"/>
+	<list-item v="usemje_regjering"/>
+	<list-item v="utfordring_kommune"/>
+	<list-item v="utfordring_næring"/>
+	<list-item v="utfordring_næringsliv"/>
+	<list-item v="utfordring_sjukehus"/>
+	<list-item v="utval_organisasjon"/>
+	<list-item v="vedtak_komité"/>
+	<list-item v="vedtak_kommune"/>
+	<list-item v="vedtak_parti"/>
+	<list-item v="verdi_selskap"/>
+	<list-item v="verneombod_bedrift"/>
+	<list-item v="visepresident_parti"/>
+	<list-item v="årsmøte_klubb"/>
+	<list-item v="årsmøte_organisasjon"/>
+	<list-item v="årsmøte_parti"/>
+	<list-item v="økonomi_avis"/>
+	<list-item v="økonomi_klubb"/>
+	<list-item v="økonomi_selskap"/>
+</def-list>
+
+<def-list n="bi-gen-med">
+	<list-item v="avhøyr_politi"/>
+	<list-item v="avtale_brite"/>
+	<list-item v="avtale_stat"/>
+	<list-item v="del_mann"/>
+	<list-item v="formål_avtale"/>
+	<list-item v="formål_ordning"/>
+	<list-item v="intensjon_bygg"/>
+	<list-item v="modell_dag"/>
+	<list-item v="møte_ungdom"/>
+	<list-item v="ordning_kommune"/>
+	<list-item v="problem_dag"/>
+	<list-item v="reform_dag"/>
+	<list-item v="slott_konge"/>
+</def-list>
+
+<def-list n="bi-gen-mellom">
+	<list-item v="avtale_regjering"/>
+	<list-item v="avtale_selskap"/>
+	<list-item v="diskusjon_parti"/>
+	<list-item v="forhandling_regjering"/>
+	<list-item v="grense_land"/>
+	<list-item v="handel_land"/>
+	<list-item v="måne_jord"/>
+	<list-item v="temperatur_natt"/>
+</def-list>
+
+<def-list n="bi-gen-mot">
+	<list-item v="sak_klient"/>
+	<list-item v="sak_mann"/>
+	<list-item v="sanksjon_land"/>
+</def-list>
+
+<def-list n="bi-gen-om">
+	<list-item v="domstol_dag"/>
+	<list-item v="historie_dotter"/>
+	<list-item v="historie_nasjon"/>
+	<list-item v="kamp_parti"/>
+	<list-item v="kamp_tid"/>
+	<list-item v="måling_dag"/>
+	<list-item v="sjanse_lag"/>
+</def-list>
+
+<def-list n="bi-gen-over">
+	<list-item v="liste_selskap"/>
+</def-list>
+
+<def-list n="bi-gen-per">
+	<list-item v="nett_dag"/>
+</def-list>
+
+<def-list n="bi-gen-på">
+	<list-item v="alder_elev"/>
+	<list-item v="alder_flåte"/>
+	<list-item v="baksete_bil"/>
+	<list-item v="fakultet_universitet"/>
+	<list-item v="feilmargin_måling"/>
+	<list-item v="frist_veke"/>
+	<list-item v="hjarte_folk"/>
+	<list-item v="identitet_kjøpar"/>
+	<list-item v="kaptein_lag"/>
+	<list-item v="klubb_land"/>
+	<list-item v="konklusjon_undersøking"/>
+	<list-item v="kontor_skule"/>
+	<list-item v="kostnad_prosjekt"/>
+	<list-item v="kvalitet_kjøtt"/>
+	<list-item v="kvalitet_liga"/>
+	<list-item v="lasteplan_bil"/>
+	<list-item v="lege_sjukehus"/>
+	<list-item v="lengde_svangerskap"/>
+	<list-item v="levetid_plattform"/>
+	<list-item v="namn_fag"/>
+	<list-item v="namn_offer"/>
+	<list-item v="penge_elev"/>
+	<list-item v="premiere_film"/>
+	<list-item v="pris_fjorår"/>
+	<list-item v="rygg_pasient"/>
+	<list-item v="sak_land"/>
+	<list-item v="sensor_køyretøy"/>
+	<list-item v="senter_universitet"/>
+	<list-item v="sjef_sjukehus"/>
+	<list-item v="sjef_teater"/>
+	<list-item v="spelar_år"/>
+	<list-item v="storleik_barnehage"/>
+	<list-item v="storleik_gruppe"/>
+	<list-item v="storleik_kommune"/>
+	<list-item v="storleik_marknad"/>
+	<list-item v="storleik_parti"/>
+	<list-item v="storleik_regjering"/>
+	<list-item v="storleik_verksemd"/>
+	<list-item v="tak_katedral"/>
+	<list-item v="vekt_fisk"/>
+	<list-item v="vekt_fly"/>
+	<list-item v="yttervegg_kyrkje"/>
+</def-list>
+
+<def-list n="bi-gen-rundt">
+	<list-item v="område_skule"/>
+</def-list>
+
+<def-list n="bi-gen-som">
+	<list-item v="jobb_minister"/>
+	<list-item v="rolle_ordførar"/>
+</def-list>
+
+<def-list n="bi-gen-uansett">
+	<list-item v="rekord_månad"/>
+</def-list>
+
+<def-list n="bi-gen-under">
+	<list-item v="innsamling_år"/>
+	<list-item v="pris_festival"/>
+</def-list>
+
+<def-list n="bi-gen-unna">
+	<list-item v="barn_stad"/>
+</def-list>
+
+<def-list n="bi-gen-ut">
+	<list-item v="lag_sesong"/>
+</def-list>
+
+<def-list n="bi-gen-ved">
+	<list-item v="avdeling_sjukehus"/>
+	<list-item v="elev_skule"/>
+	<list-item v="kostnad_dag"/>
+	<list-item v="laboratorium_institutt"/>
+	<list-item v="produksjon_fabrikk"/>
+	<list-item v="rektor_skule"/>
+	<list-item v="side_forbund"/>
+	<list-item v="utfordring_dag"/>
+</def-list>
+
+<!-- Genitive preps where unigram frequency of *object* gt til -->
+
+<def-list n="obj-gen-av">
+	<list-item v="del"/>
+	<list-item v="inntog"/>
+	<list-item v="omfang"/>
+	<list-item v="produsent"/>
+	<list-item v="slutt"/>
+	<list-item v="start"/>
+	<list-item v="tid"/>
+	<list-item v="utgang"/>
+	<list-item v="verdi"/>
+	<list-item v="vinnar"/>
+</def-list>
+
+<def-list n="obj-gen-bak">
+	<list-item v="forfattar"/>
+</def-list>
+
+<def-list n="obj-gen-for">
+	<list-item v="avkasting"/>
+	<list-item v="eventyr"/>
+	<list-item v="kostnad"/>
+	<list-item v="pensjon"/>
+	<list-item v="pris"/>
+	<list-item v="situasjon"/>
+	<list-item v="snø"/>
+	<list-item v="stafett"/>
+</def-list>
+
+<def-list n="obj-gen-frå">
+	<list-item v="forslag"/>
+	<list-item v="innstilling"/>
+	<list-item v="rapport"/>
+	<list-item v="resultat"/>
+	<list-item v="råd"/>
+	<list-item v="statistikk"/>
+	<list-item v="styrevedtak"/>
+	<list-item v="utslepp"/>
+</def-list>
+
+<def-list n="obj-gen-gjennom">
+	<list-item v="landslag"/>
+</def-list>
+
+<def-list n="obj-gen-i">
+	<list-item v="bodskap"/>
+	<list-item v="debatt"/>
+	<list-item v="direktør"/>
+	<list-item v="ekspert"/>
+	<list-item v="endring"/>
+	<list-item v="etasje"/>
+	<list-item v="feilmargin"/>
+	<list-item v="hovudperson"/>
+	<list-item v="innhald"/>
+	<list-item v="investering"/>
+	<list-item v="konklusjon"/>
+	<list-item v="leiar"/>
+	<list-item v="leiing"/>
+	<list-item v="medlem"/>
+	<list-item v="prinsipp"/>
+	<list-item v="regel"/>
+	<list-item v="region"/>
+	<list-item v="ressurs"/>
+	<list-item v="sjef"/>
+	<list-item v="utfordring"/>
+	<list-item v="økonomi"/>
+</def-list>
+
+<def-list n="obj-gen-med">
+	<list-item v="formål"/>
+</def-list>
+
+<def-list n="obj-gen-på">
+	<list-item v="frist"/>
+	<list-item v="kvalitet"/>
+	<list-item v="lengde"/>
+	<list-item v="storleik"/>
+</def-list>
+
+<!-- Genitive preps where unigram frequency gt til -->
+
+<def-list n="gen-av">
+	<list-item v="angrep"/>
+	<list-item v="avstemming"/>
+	<list-item v="celle"/>
+	<list-item v="døgn"/>
+	<list-item v="eksport"/>
+	<list-item v="endring"/>
+	<list-item v="film"/>
+	<list-item v="forhandling"/>
+	<list-item v="geithams"/>
+	<list-item v="gull"/>
+	<list-item v="hjerne"/>
+	<list-item v="kaffi"/>
+	<list-item v="kjøtt"/>
+	<list-item v="konkurs"/>
+	<list-item v="krise"/>
+	<list-item v="makt"/>
+	<list-item v="månad"/>
+	<list-item v="omgang"/>
+	<list-item v="oppløysing"/>
+	<list-item v="pris"/>
+	<list-item v="produkt"/>
+	<list-item v="reform"/>
+	<list-item v="register"/>
+	<list-item v="skade"/>
+	<list-item v="skilt"/>
+	<list-item v="stab"/>
+	<list-item v="svangerskap"/>
+	<list-item v="svolt"/>
+	<list-item v="søknadsfrist"/>
+	<list-item v="tankanlegg"/>
+	<list-item v="tiltak"/>
+	<list-item v="utslepp"/>
+	<list-item v="vaksine"/>
+	<list-item v="val"/>
+	<list-item v="virveldyr"/>
+	<list-item v="åremål"/>
+	<list-item v="åtvaring"/>
+</def-list>
+
+<def-list n="gen-bak">
+	<list-item v="studie"/>
+</def-list>
+
+<def-list n="gen-blant">
+	<list-item v="bygdefolk"/>
+	<list-item v="sigøynar"/>
+</def-list>
+
+<def-list n="gen-etter">
+	<list-item v="konvensjon"/>
+</def-list>
+
+<def-list n="gen-for">
+	<list-item v="1-åring"/>
+	<list-item v="djevel"/>
+	<list-item v="fjorår"/>
+	<list-item v="handel"/>
+	<list-item v="jurist"/>
+	<list-item v="løyve"/>
+	<list-item v="nazisme"/>
+	<list-item v="nettverk"/>
+	<list-item v="omkamp"/>
+	<list-item v="prosjekt"/>
+	<list-item v="sak"/>
+	<list-item v="skiskyttar"/>
+	<list-item v="telefon"/>
+	<list-item v="trålar"/>
+	<list-item v="verksemd"/>
+</def-list>
+
+<def-list n="gen-frå">
+	<list-item v="arrangør"/>
+	<list-item v="barndom"/>
+	<list-item v="bilist"/>
+	<list-item v="bondeorganisasjon"/>
+	<list-item v="direktør"/>
+	<list-item v="ekspert"/>
+	<list-item v="fylkeskommune"/>
+	<list-item v="fylkesmann"/>
+	<list-item v="fylkesrådmann"/>
+	<list-item v="gårsdag"/>
+	<list-item v="havforskar"/>
+	<list-item v="jordbær"/>
+	<list-item v="kreditor"/>
+	<list-item v="kulturdepartement"/>
+	<list-item v="kystvakt"/>
+	<list-item v="landbruksminister"/>
+	<list-item v="lokallag"/>
+	<list-item v="meteorolog"/>
+	<list-item v="naturvitskap"/>
+	<list-item v="nav"/>
+	<list-item v="ombod"/>
+	<list-item v="opposisjonsparti"/>
+	<list-item v="plattform"/>
+	<list-item v="romsdaling"/>
+	<list-item v="sentralbank"/>
+	<list-item v="statsråd"/>
+	<list-item v="undersøking"/>
+	<list-item v="utval"/>
+	<list-item v="utøvar"/>
+</def-list>
+
+<def-list n="gen-gjennom">
+	<list-item v="tid"/>
+</def-list>
+
+<def-list n="gen-hos">
+	<list-item v="keeper"/>
+</def-list>
+
+<def-list n="gen-i">
+	<list-item v="analyse"/>
+	<list-item v="arbeidsliv"/>
+	<list-item v="arbeidsmiljølov"/>
+	<list-item v="befalsskule"/>
+	<list-item v="bibel"/>
+	<list-item v="bispedømmeråd"/>
+	<list-item v="bondelag"/>
+	<list-item v="bransje"/>
+	<list-item v="by"/>
+	<list-item v="bygning"/>
+	<list-item v="dom"/>
+	<list-item v="domkyrkje"/>
+	<list-item v="eining"/>
+	<list-item v="etterforsking"/>
+	<list-item v="fagforbund"/>
+	<list-item v="fløyparti"/>
+	<list-item v="forbod"/>
+	<list-item v="forlik"/>
+	<list-item v="fortid"/>
+	<list-item v="forum"/>
+	<list-item v="fotball"/>
+	<list-item v="framtid"/>
+	<list-item v="fredsorganisasjon"/>
+	<list-item v="fylke"/>
+	<list-item v="føretak"/>
+	<list-item v="generalforsamling"/>
+	<list-item v="gjennomsnitt"/>
+	<list-item v="grunnlov"/>
+	<list-item v="haust"/>
+	<list-item v="hav"/>
+	<list-item v="helg"/>
+	<list-item v="høgsterett"/>
+	<list-item v="industri"/>
+	<list-item v="justiskomité"/>
+	<list-item v="kamp"/>
+	<list-item v="kommunistparti"/>
+	<list-item v="konflikt"/>
+	<list-item v="konsumprisindeks"/>
+	<list-item v="kor"/>
+	<list-item v="kost"/>
+	<list-item v="kveld"/>
+	<list-item v="land"/>
+	<list-item v="landskap"/>
+	<list-item v="liga"/>
+	<list-item v="lov"/>
+	<list-item v="luftfart"/>
+	<list-item v="marknad"/>
+	<list-item v="militærpoliti"/>
+	<list-item v="mål"/>
+	<list-item v="måling"/>
+	<list-item v="naboland"/>
+	<list-item v="nett"/>
+	<list-item v="parlament"/>
+	<list-item v="prosent"/>
+	<list-item v="provins"/>
+	<list-item v="psykoterapi"/>
+	<list-item v="påske"/>
+	<list-item v="rapport"/>
+	<list-item v="råd"/>
+	<list-item v="samfunn"/>
+	<list-item v="serie"/>
+	<list-item v="sesong"/>
+	<list-item v="sommar"/>
+	<list-item v="sone"/>
+	<list-item v="statsbudsjett"/>
+	<list-item v="straffelov"/>
+	<list-item v="styre"/>
+	<list-item v="tarm"/>
+	<list-item v="tekst"/>
+	<list-item v="test"/>
+	<list-item v="tiltale"/>
+	<list-item v="time"/>
+	<list-item v="trygd"/>
+	<list-item v="uføretrygda"/>
+	<list-item v="union"/>
+	<list-item v="velferdsstat"/>
+	<list-item v="vind"/>
+	<list-item v="vinter"/>
+	<list-item v="vm"/>
+	<list-item v="år"/>
+</def-list>
+
+<def-list n="gen-innan">
+	<list-item v="samfunnsvitskap"/>
+</def-list>
+
+<def-list n="gen-mellom">
+	<list-item v="sentral"/>
+</def-list>
+
+<def-list n="gen-om">
+	<list-item v="aksjon"/>
+</def-list>
+
+<def-list n="gen-på">
+	<list-item v="angrefrist"/>
+	<list-item v="beløp"/>
+	<list-item v="bok"/>
+	<list-item v="bot"/>
+	<list-item v="bustad"/>
+	<list-item v="forsking"/>
+	<list-item v="fredag"/>
+	<list-item v="funn"/>
+	<list-item v="gebyr"/>
+	<list-item v="jord"/>
+	<list-item v="kandidat"/>
+	<list-item v="klinikk"/>
+	<list-item v="konsulat"/>
+	<list-item v="landsmøte"/>
+	<list-item v="laurdag"/>
+	<list-item v="liste"/>
+	<list-item v="manndomsprøve"/>
+	<list-item v="medisin"/>
+	<list-item v="mobil"/>
+	<list-item v="måndag"/>
+	<list-item v="møte"/>
+	<list-item v="onsdag"/>
+	<list-item v="overflate"/>
+	<list-item v="portefølje"/>
+	<list-item v="pyramide"/>
+	<list-item v="reise"/>
+	<list-item v="rigg"/>
+	<list-item v="samling"/>
+	<list-item v="senter"/>
+	<list-item v="skip"/>
+	<list-item v="skøyte"/>
+	<list-item v="straff"/>
+	<list-item v="straum"/>
+	<list-item v="sverm"/>
+	<list-item v="søndag"/>
+	<list-item v="torsdag"/>
+	<list-item v="tysdag"/>
+	<list-item v="utbrot"/>
+	<list-item v="valkamp"/>
+	<list-item v="yting"/>
+</def-list>
+
+<def-list n="gen-som">
+	<list-item v="rektor"/>
+</def-list>
+
+<def-list n="gen-ved">
+	<list-item v="forskingsstasjon"/>
+	<list-item v="friluftsliv"/>
+	<!-- <list-item v="fylkeslege"/> -->
+	<list-item v="kompromiss"/>
+</def-list>
+
+<!-- END dev/genitive-prepositions -->
+
+
     <def-list n="ind-gen-i" c="høstens kamp→kampen i haust, remove definiteness for these">
       <list-item v="haust"/>
       <list-item v="vår"/>
       <list-item v="sommar"/>
       <list-item v="vinter"/>
+      <list-item v="natt"/>
+      <list-item v="kveld"/>
     </def-list>
-    <!-- POSSESSED-DEPENDENT EXCEPTIONS TODO: omkretsen til verda,
-         lengden på dokumentet, ryktet til styret, lukta av/etter
-         kua… (although this could be coded in all the dictionaries,
-         or added by CG, it's probably simpler and more compact to do
-         it with def-list and macros) -->
-    <def-list n="gen-i">
+    <def-list n="gen-i2">
       <list-item v="verd"/>
       <list-item v="delstat"/>
       <!-- <list-item v="stat"/> -->
@@ -622,12 +2034,17 @@
       <list-item v="ferie"/>
       <list-item v="sak"/>
       <list-item v="århundre"/>
+      <list-item v="sesong"/>
       <list-item v="dokument"/>
       <list-item v="draperi"/>
       <list-item v="brev"/>
       <list-item v="høyringsbrev"/>
       <list-item v="kamp"/>
+      <list-item v="landbruk"/>
+      <list-item v="kongedømme"/>
+      <list-item v="gruppe"/>
     </def-list>
+
     <def-list n="ind-gen-på" c="fredagens kamp→kampen på fredag, remove definiteness for these">
       <list-item v="måndag"/>
       <list-item v="tysdag"/>
@@ -637,7 +2054,7 @@
       <list-item v="laurdag"/>
       <list-item v="søndag"/>
     </def-list>
-    <def-list n="gen-på">
+    <def-list n="gen-på2">
       <list-item v="måndag"/>
       <list-item v="tysdag"/>
       <list-item v="onsdag"/>
@@ -651,17 +2068,19 @@
       <list-item v="kjøkken"/>
       <list-item v="skip"/>
     </def-list>
-    <def-list n="gen-av">
+    <def-list n="gen-av2">
       <list-item v="bok"/>
+      <list-item v="ordning"/>
     </def-list>
-    <def-list n="gen-for">
+    <def-list n="gen-for2">
       <list-item v="sikta"/>    <!-- Den siktedes situasjon TODO -->
       <list-item v="neste år"/>    <!-- statsbudsjettet for neste år -->
     </def-list>
-    <def-list n="gen-frå">
+    <def-list n="gen-frå2">
       <list-item v="UEFA"/>    <!-- UEFAs forslag TODO (men ikkje UEFAs leder, må sjå på begge ledd …) -->
     </def-list>
-    <!-- TODO: see gen-av-head etc. in sme-nob.t1x -->
+
+
 
     <def-list n="det_indef">
       <!-- feels like these should have their own
@@ -687,9 +2106,174 @@
       <list-item v="&lt;nt&gt;"/>
       <list-item v="&lt;un&gt;"/>
     </def-list>
+
+    <def-list n="pres-pret" c="finite temps taking subjects">
+      <list-item v="&lt;pres&gt;"/>
+      <list-item v="&lt;pret&gt;"/>
+    </def-list>
+
+    <def-list n="np-immovable-verb" c="These verbs in passive-turned-into-participles shouldn't be moved past noun phrases">
+      <list-item v="tildele"/> <!-- Gunnar Sønsteby tildeles denne dekorasjonen → blir tildelt denne dekorasjonen -->
+    </def-list>
+
+    <def-list n="immovable-adv" c="Shouldn't be moved in passives or across lemq's, typically ambig with prep's or adj's">
+      <list-item v="straks"/>   <!-- «Bildene slettes straks man er ferdig klarert.» -->
+      <list-item v="bort"/>
+      <list-item v="inn"/>
+      <list-item v="med"/>
+      <list-item v="til"/>      <!-- «Vi venter at utvalgets råd lyttes til av regjeringen» -->
+      <list-item v="nærare"/>
+      <list-item v="betydeleg"/>
+      <list-item v="frå no av"/>
+      <list-item v="så lenge"/>
+      <list-item v="på alvor"/>
+      <list-item v="denne veka"/>
+      <list-item v="denne hausten"/>
+      <list-item v="denne sommaren"/>
+      <list-item v="denne vinteren"/>
+      <list-item v="denne våren"/>
+      <list-item v="denne månaden"/>
+    </def-list>
+
+    <def-list n="skip-n-lemqverbs" c="An ndef after verb-lemq here is typically a subject, which should be moved before the lemq
+                                 E.g.:
+                                 - , tilføyer medaljevinneren → , legg medaljevinnaren til
+                                 - nå pågår forhandlingene → nå går forhandlingane føre seg
+                                 - nå påklager mannen avgjørelsen → nå klager mannen på avgjørelsen
+                                 Also, some lemq's should be after objects even, e.g.
+                                 - beriker verden → gjer verda rik
+                                 ">
+      <list-item v="legge# til"/>
+      <list-item v="gå# ut"/>
+      <list-item v="halde# fram"/>
+      <list-item v="klage# på"/>
+      <!-- Korrekt her:
+           - Etter debatten tysdag, heldt motgangen fram for May
+           - … å vere med, held 64-åringen fram.
+           - Tysdag held jakta fram på det som kan bli eit eventyr-VM for langrennstjerna frå Dalsbygda.
+             (betre med «fortset» her?)
+           - Dermed held tyskaren fram å tone ned draumane
+           - , då held viruset fram å sirkulere
+           - , held demonstrantane fram å planlegge
+           -  Held utviklinga fram, vil …
+           - , heldt forsvarssjefen fram
+           - og for mange av dei heldt problema fram
+
+           Men me ikkje etter proprium/nominativ (sjå t2x-regel NP_PRNNOM_OG VBLEX LEMQ-SKIP-N NDEF):
+           - *Det britiske parlamentet held debatten fram om statsminister
+           - *Saudiarabisk kronprins held turneen fram
+           - *Carlsen heldt sigersrekka fram
+           - *Vi held dialogen fram med autoritetane
+
+      -->
+      <list-item v="gå# føre seg"/>
+      <list-item v="gi# frå seg"/>
+      <list-item v="gjere# rik"/>
+      <list-item v="bli# verande"/>
+    </def-list>
+    <def-list n="keepgenx" c="Get tagged keepgenx for t2x to avoid gen-prep-transformation">
+      <list-item v="side"/>
+      <list-item v="del"/>
+      <list-item v="tur"/>
+      <list-item v="bekostning"/>
+      <list-item v="dag"/>
+    </def-list>
   </section-def-lists>
 
   <section-def-macros>
+
+    <def-macro n="flush-mwe-queue" npar="1">
+      <choose><when>
+        <test><not><equal><var n="mwe-queue"/><lit v=""/></equal></not></test>
+        <choose><when c="output space before, when before punctuation">
+          <test><not><equal><clip pos="1" side="tl" part="a_sent"/><lit v=""/></equal></not></test>
+          <out><b/></out>
+        </when></choose>
+        <out><var n="mwe-queue"/></out>
+        <choose><when c="output space after, unless before punctuation">
+          <test><equal><clip pos="1" side="tl" part="a_sent"/><lit v=""/></equal></test>
+          <out><b/></out>
+        </when></choose>
+        <let><var n="mwe-queue"/><lit v=""/></let>
+      </when></choose>
+    </def-macro>
+
+    <def-macro n="bigram_genprep" npar="1"
+               c="arg.1: possibly owned noun. Helper for stash_case_in_ntags">
+      <!-- TODO: More general handling of owned keepgenx: -->
+      <choose><when>
+        <test><in caseless="yes"><clip pos="1" side="tl" part="lemh"/><list n="keepgenx"/></in></test>
+        <append n="ntags"><lit-tag v="keepgenx"/></append>
+      </when></choose>
+      <!-- Override gen-prep on prevlem by looking up bigram -->
+      <let><var n="bilem"/><concat><clip pos="1" side="tl" part="lem"/><lit v="_"/><var n="prevlem"/></concat></let>
+      <modify-case><var n="bilem"/><lit v="aa"/></modify-case>
+      <choose>
+        <when><test><in><var n="bilem"/><list n="bi-gen-til"/></in></test><append n="ntags"><lit-tag v="pr_til"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-av2"/></in></test><append n="ntags"><lit-tag v="pr_av"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-frå2"/></in></test><append n="ntags"><lit-tag v="pr_frå"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-på2"/></in></test><append n="ntags"><lit-tag v="pr_på"/></append></when>
+        <when c="Some prepositions only on plurals – «blant menn» but not *«blant mannen»">
+          <test><and>
+            <equal><var n="prevnbr"/><lit-tag v="pl"/></equal>
+            <in><var n="bilem"/><list n="bi-gen-blant"/></in>
+          </and></test>
+          <append n="ntags"><lit-tag v="pr_blant"/></append>
+        </when>
+        <when c="Some prepositions only on plurals – «mellom menn» but not *«mellom mannen»">
+          <test><and>
+            <equal><var n="prevnbr"/><lit-tag v="pl"/></equal>
+            <in><var n="bilem"/><list n="bi-gen-mellom"/></in>
+          </and></test>
+          <append n="ntags"><lit-tag v="pr_mellom"/></append>
+        </when>
+        <!-- dev/genitive-prepositions: -->
+        <when><test><in><var n="bilem"/><list n="bi-gen-av"/></in></test><append n="ntags"><lit-tag v="pr_av"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-etter"/></in></test><append n="ntags"><lit-tag v="pr_etter"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-for"/></in></test><append n="ntags"><lit-tag v="pr_for"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-frå"/></in></test><append n="ntags"><lit-tag v="pr_frå"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-før"/></in></test><append n="ntags"><lit-tag v="pr_før"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-gjennom"/></in></test><append n="ntags"><lit-tag v="pr_gjennom"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-hos"/></in></test><append n="ntags"><lit-tag v="pr_hos"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-i"/></in></test><append n="ntags"><lit-tag v="pr_i"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-med"/></in></test><append n="ntags"><lit-tag v="pr_med"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-mot"/></in></test><append n="ntags"><lit-tag v="pr_mot"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-om"/></in></test><append n="ntags"><lit-tag v="pr_om"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-over"/></in></test><append n="ntags"><lit-tag v="pr_over"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-per"/></in></test><append n="ntags"><lit-tag v="pr_per"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-på"/></in></test><append n="ntags"><lit-tag v="pr_på"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-rundt"/></in></test><append n="ntags"><lit-tag v="pr_rundt"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-som"/></in></test><append n="ntags"><lit-tag v="pr_som"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-uansett"/></in></test><append n="ntags"><lit-tag v="pr_uansett"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-under"/></in></test><append n="ntags"><lit-tag v="pr_under"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-unna"/></in></test><append n="ntags"><lit-tag v="pr_unna"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-ut"/></in></test><append n="ntags"><lit-tag v="pr_ut"/></append></when>
+        <when><test><in><var n="bilem"/><list n="bi-gen-ved"/></in></test><append n="ntags"><lit-tag v="pr_ved"/></append></when>
+        <otherwise>
+          <let><var n="lemma"/><clip pos="1" side="tl" part="lem"/></let>
+          <modify-case><var n="lemma"/><lit v="aa"/></modify-case>
+          <choose><when c="Only use obj unigram if both out_gen-prep and bi-gen didn't pick something first">
+            <test><equal><var n="gen-prep"/><lit v="til"/></equal></test>
+            <choose>
+              <when><test><in><var n="lemma"/><list n="obj-gen-frå2"/></in></test><append n="ntags"><lit-tag v="pr_frå"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-med2"/></in></test><append n="ntags"><lit-tag v="pr_med"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-av2"/></in></test><append n="ntags"><lit-tag v="pr_av"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-på2"/></in></test><append n="ntags"><lit-tag v="pr_på"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-av"/></in></test><append n="ntags"><lit-tag v="pr_av"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-bak"/></in></test><append n="ntags"><lit-tag v="pr_bak"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-for"/></in></test><append n="ntags"><lit-tag v="pr_for"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-frå"/></in></test><append n="ntags"><lit-tag v="pr_frå"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-gjennom"/></in></test><append n="ntags"><lit-tag v="pr_gjennom"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-i"/></in></test><append n="ntags"><lit-tag v="pr_i"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-med"/></in></test><append n="ntags"><lit-tag v="pr_med"/></append></when>
+              <when><test><in><var n="lemma"/><list n="obj-gen-på"/></in></test><append n="ntags"><lit-tag v="pr_på"/></append></when>
+            </choose>
+          </when></choose>
+        </otherwise>
+      </choose>
+      <let><var n="prevlem"/><clip pos="1" side="tl" part="lem"/></let>
+      <let><var n="prevnbr"/><clip pos="1" side="tl" part="nbr"/></let>
+    </def-macro>
 
     <def-macro n="stash_case_in_ntags" npar="1"
                c="arg.1: noun. Puts tags of noun in ntags (for use as chunk tags).">
@@ -719,11 +2303,7 @@
           </when>
         </choose>
       </when></choose>
-      <choose><when>
-        <test><equal><clip pos="1" side="tl" part="lemh"/><lit v="del"/></equal></test>
-        <append n="ntags"><lit-tag v="keepgenx"/></append>
-      </when></choose>
-
+      <call-macro n="bigram_genprep"><with-param pos="1"/></call-macro>
     </def-macro>
 
     <def-macro n="switch_cases" npar="2">
@@ -744,10 +2324,13 @@
     </def-macro>
 
     <def-macro n="set_caseFirstWord" npar="1"
-               c="Downcases the argument, unless np">
+               c="Downcases the argument, unless np or UPPERCASE">
       <!-- TODO: Put a marker for acronyms where we don't want to copy case from them; then drop the tag -->
       <choose><when>
-        <test><not><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np"/></equal></not></test>
+        <test><and>
+          <not><equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="np"/></equal></not>
+          <equal><lit v="Aa"/><get-case-from pos="1"><lit v="aa"/></get-case-from></equal>
+        </and></test>
         <modify-case><clip pos="1" side="tl" part="lemh"/><lit v="aa"/></modify-case>
       </when></choose>
       <choose>
@@ -790,11 +2373,22 @@
             </and>
           </test>
           <let><var n="c_lemq"/><lit v=""/></let>
+          <choose>
+            <when>
+              <test><and>
+                <in><clip pos="1" side="tl" part="lem"/><list n="skip-n-lemqverbs"/></in>
+                <in><clip pos="1" side="tl" part="temps"/><list n="pres-pret"/></in>
+              </and></test>
+              <let><var n="lemq-skip"/><lit-tag v="lemq-skip-n"/></let>
+            </when>
+            <otherwise><let><var n="lemq-skip"/><lit v=""/></let></otherwise>
+          </choose>
           <let>
             <var n="out_lemq"/>
             <concat>
               <lit v="^lemq"/>
               <lit-tag v="vblex.lemq"/>
+              <var n="lemq-skip"/>
               <lit v="{^"/>
               <clip pos="1" side="tl" part="lemq"/>
               <lit v="$}$"/>
@@ -1130,46 +2724,59 @@
 
     <def-macro n="out_gen-prep" npar="1"
                c="arg.1: noun. Only acts on genitives. Adds a space after.">
+      <let><var n="lemma"/><clip pos="1" side="tl" part="lemh"/></let>
+      <modify-case><var n="lemma"/><lit v="aa"/></modify-case>
       <choose><when c="gen">
         <test><and>
           <equal><clip pos="1" side="sl" part="cas"/><lit-tag v="gen"/></equal>
           <equal><clip pos="1" side="tl" part="a_nom"/><lit-tag v="n"/></equal>
         </and></test>
         <choose>
-          <when c="i">
-            <test><in><clip pos="1" side="tl" part="lemh"/><list n="gen-i"/></in></test>
-            <choose>
-              <when>
-                <test><in><clip pos="1" side="tl" part="lemh"/><list n="ind-gen-i"/></in></test>
-                <let>
-                  <clip pos="1" side="tl" part="tags"/>
-                  <concat><clip pos="1" side="tl" part="tags"/><lit-tag v="defdrop"/></concat>
-                </let>
-              </when>
-            </choose>
+          <!-- Manual lists first: -->
+          <when c="i+defdrop">
+            <test><in caseless="yes"><var n="lemma"/><list n="ind-gen-i"/></in></test>
+            <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/><lit-tag v="defdrop"/></concat></let>
             <let><var n="gen-prep"/><lit v="i"/></let>
           </when>
-          <when c="på">
-            <test><in><clip pos="1" side="tl" part="lemh"/><list n="gen-på"/></in></test>
-            <choose>
-              <when>
-                <test><in><clip pos="1" side="tl" part="lemh"/><list n="ind-gen-på"/></in></test>
-                <let>
-                  <clip pos="1" side="tl" part="tags"/>
-                  <concat><clip pos="1" side="tl" part="tags"/><lit-tag v="defdrop"/></concat>
-                </let>
-              </when>
-            </choose>
+          <when c="på+defdrop">
+            <test><in><var n="lemma"/><list n="ind-gen-på"/></in></test>
+            <let><clip pos="1" side="tl" part="tags"/><concat><clip pos="1" side="tl" part="tags"/><lit-tag v="defdrop"/></concat></let>
             <let><var n="gen-prep"/><lit v="på"/></let>
           </when>
-          <when c="av">
-            <test><in><clip pos="1" side="tl" part="lemh"/><list n="gen-av"/></in></test>
-            <let><var n="gen-prep"/><lit v="av"/></let>
+          <when><test><in><var n="lemma"/><list n="gen-i2"/></in></test><let><var n="gen-prep"/><lit v="i"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-på2"/></in></test><let><var n="gen-prep"/><lit v="på"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-av2"/></in></test><let><var n="gen-prep"/><lit v="av"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-for2"/></in></test><let><var n="gen-prep"/><lit v="for"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-frå2"/></in></test><let><var n="gen-prep"/><lit v="frå"/></let></when>
+          <when c="Some prepositions only on plurals – «blant menn» but not *«blant mannen»">
+            <test><and>
+              <equal><clip pos="1" side="tl" part="nbr"/><lit-tag v="pl"/></equal>
+              <in><var n="lemma"/><list n="gen-blant"/></in>
+            </and></test>
+            <let><var n="gen-prep"/><lit v="blant"/></let>
           </when>
-          <when c="for">
-            <test><in><clip pos="1" side="tl" part="lemh"/><list n="gen-for"/></in></test>
-            <let><var n="gen-prep"/><lit v="for"/></let>
+          <when c="Some prepositions only on plurals – «mellom menn» but not *«mellom mannen»">
+            <test><and>
+              <equal><clip pos="1" side="tl" part="nbr"/><lit-tag v="pl"/></equal>
+              <in><var n="lemma"/><list n="gen-mellom"/></in>
+            </and></test>
+            <let><var n="gen-prep"/><lit v="mellom"/></let>
           </when>
+          <!-- dev/genitive-prepositions: -->
+          <when><test><in><var n="lemma"/><list n="gen-av"/></in></test><let><var n="gen-prep"/><lit v="av"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-bak"/></in></test><let><var n="gen-prep"/><lit v="bak"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-etter"/></in></test><let><var n="gen-prep"/><lit v="etter"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-for"/></in></test><let><var n="gen-prep"/><lit v="for"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-frå"/></in></test><let><var n="gen-prep"/><lit v="frå"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-gjennom"/></in></test><let><var n="gen-prep"/><lit v="gjennom"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-hos"/></in></test><let><var n="gen-prep"/><lit v="hos"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-i"/></in></test><let><var n="gen-prep"/><lit v="i"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-innan"/></in></test><let><var n="gen-prep"/><lit v="innan"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-om"/></in></test><let><var n="gen-prep"/><lit v="om"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-på"/></in></test><let><var n="gen-prep"/><lit v="på"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-som"/></in></test><let><var n="gen-prep"/><lit v="som"/></let></when>
+          <when><test><in><var n="lemma"/><list n="gen-ved"/></in></test><let><var n="gen-prep"/><lit v="ved"/></let></when>
+
           <otherwise c="til">
             <let><var n="gen-prep"/><lit v="til"/></let>
           </otherwise>
@@ -1206,9 +2813,18 @@
       <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
 
       <call-macro n="stash_case_in_ntags"><with-param pos="1"/></call-macro>
-      <let><clip pos="1" side="tl" part="nbr"/><lit-tag v="sg"/></let>
-      <let><clip pos="1" side="tl" part="art"/><lit-tag v="ind.cmp"/></let>
-      <let><clip pos="1" side="tl" part="cas"/><lit v=""/></let>
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="nbr"/><lit-tag v="sp"/></equal></test>
+          <let><clip pos="1" side="tl" part="nbr"/><lit-tag v="sp.cmp"/></let>
+          <let><clip pos="1" side="tl" part="cas"/><lit v=""/></let>
+        </when>
+        <otherwise>
+          <let><clip pos="1" side="tl" part="nbr"/><lit-tag v="sg"/></let>
+          <let><clip pos="1" side="tl" part="art"/><lit-tag v="ind.cmp"/></let>
+          <let><clip pos="1" side="tl" part="cas"/><lit v=""/></let>
+        </otherwise>
+      </choose>
       <let><clip pos="2" side="tl" part="art"/><lit-tag v="def"/></let>
       <out>
         <chunk namefrom="c_name">
@@ -1230,7 +2846,190 @@
 
 
   <section-rules>
+    <rule comment="PÅ MANDAG: på måndag => måndag
+                   Unntak: særlig på søndag, etter hvert på onsdag, – på lørdag
+                   Tag as adv for interchunk rules (TODO: actual syntactical tagging)">
+      <pattern>
+        <pattern-item n="på"/>
+        <pattern-item n="nind_vekedag"/>
+      </pattern>
+      <action>
+        <choose><when c="Don't drop for 'etter hvert på søndag'">
+          <test><or>
+            <equal caseless="yes"><var n="prevlem"/><lit v="etter kvart"/></equal>
+            <equal caseless="yes"><var n="prevlem"/><lit v="etterkvart"/></equal>
+            <equal caseless="yes"><var n="prevlem"/><lit v="spesielt"/></equal>
+            <equal caseless="yes"><var n="prevlem"/><lit v="spesiell"/></equal>
+            <equal caseless="yes"><var n="prevlem"/><lit v="–"/></equal>
+          </or></test>
+          <reject-current-rule shifting="no"/>
+        </when></choose>
+        <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
+        <choose><when>
+          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
+          <out><b pos="1"/></out>
+        </when></choose>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+              <tag><clip pos="2" side="tl" part="tags"/></tag>
+            </tags>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <let><var n="prevlem"/><clip pos="2" side="tl" part="lem"/></let>
+      </action>
+    </rule>
+    <rule comment="MANDAG: måndag => måndag
+                   Tag as adv for interchunk rules (TODO: actual syntactical tagging)">
+      <pattern>
+        <pattern-item n="nind_vekedag"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+              <tag><clip pos="1" side="tl" part="tags"/></tag>
+            </tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <let><var n="prevlem"/><clip pos="1" side="tl" part="lem"/></let>
+      </action>
+    </rule>
+
     <!-- Idiomatic rules first -->
+    <rule comment="hvilken som helst by → kva by som helst
+                   put lemq after">
+      <pattern>
+        <pattern-item n="hvilken_som_helst"/>
+        <pattern-item n="n_np"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="2"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="2"/></call-macro>
+        <call-macro n="set_lemq"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="adj" case="caseFirstWord">
+            <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="lemh"/><clip pos="1" side="tl" part="tags"/><var n="c_lemq"/></lu>
+          </chunk>
+          <b pos="1"/>
+          <chunk name="n" case="caseSecondWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+          <var n="out_lemq"/>
+        </out>
+      </action>
+    </rule>
+    <rule comment="en hvilken som helst by → kva by som helst
+                   put lemq after
+                   and drop DETQNT (should we instead tag the adj as det-drop and do it in t2x?)">
+      <pattern>
+        <pattern-item n="detqnt"/>
+        <pattern-item n="hvilken_som_helst"/>
+        <pattern-item n="n_np"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="3"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="3"/></call-macro>
+        <call-macro n="set_lemq"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="adj" case="caseFirstWord">
+            <tags><tag><clip pos="2" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="2" side="tl" part="lemh"/><clip pos="2" side="tl" part="tags"/><var n="c_lemq"/></lu>
+          </chunk>
+          <b pos="1"/>
+          <chunk name="n" case="caseSecondWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+          </chunk>
+          <var n="out_lemq"/>
+        </out>
+        <choose><when><test><not><equal><b pos="2"/><lit v=" "/></equal></not></test><out><b pos="3"/></out></when></choose>
+      </action>
+    </rule>
+
+    <rule comment="en hvilken som helst annen → kva som helst annan
+                   drop DETQNT (should we instead tag the adj as det-drop and do it in t2x?)">
+      <pattern>
+        <pattern-item n="detqnt"/>
+        <pattern-item n="hvilken_som_helst_annen"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <choose><when>
+          <test><equal><clip pos="2" side="tl" part="lemh"/><lit v="alle andre"/></equal></test>
+          <let><clip pos="2" side="tl" part="nbr"/><lit-tag v="pl"/></let>
+          <let><clip pos="2" side="tl" part="gen"/><lit-tag v="un"/></let>
+        </when></choose>
+        <out>
+          <chunk name="det2adj" case="caseFirstWord">
+            <tags><tag><clip pos="2" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <choose><when><test><not><equal><b pos="1"/><lit v=" "/></equal></not></test><out><b pos="1"/></out></when></choose>
+      </action>
+    </rule>
+
+    <rule comment="anført av X → med X i spissen
+                   Sets variable `mwe-queue`, which has to be output before the next finite verb or comma or period.">
+      <pattern>
+        <pattern-item n="anført"/>
+        <pattern-item n="av"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="pr" case="caseFirstWord">
+            <tags><tag><lit-tag v="pr.med"/></tag></tags>
+            <lu>
+              <lit v="med"/>
+              <lit-tag v="pr"/>
+            </lu>
+          </chunk>
+        </out>
+        <choose><when>
+          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
+          <out><b pos="1"/></out>
+        </when></choose>
+        <let>
+          <var n="mwe-queue"/>
+          <chunk name="default">
+            <tags><tag><lit-tag v="default"/></tag></tags>
+            <lu>
+              <lit v="i"/>
+              <lit-tag v="pr"/>
+            </lu>
+            <b/>
+            <lu>
+              <lit v="spiss"/>
+              <lit-tag v="n.m.sg.def"/>
+            </lu>
+          </chunk>
+        </let>
+      </action>
+    </rule>
+
     <rule comment="har angivelig → skal ha">
       <pattern>
         <pattern-item n="har"/>
@@ -1296,7 +3095,7 @@
     <rule comment="påfølgende uke → den følgjande veka">
       <pattern>
         <pattern-item n="påfølgende"/>
-        <pattern-item n="n_time"/>
+        <pattern-item n="nind_time"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord2">
@@ -1356,32 +3155,32 @@
         <pattern-item n="nind_indgen"/>
       </pattern>
       <action>
-        <let><var n="lu_lemh"/><clip pos="1" side="sl" part="lemh"/></let>
-        <modify-case><var n="lu_lemh"/><lit v="aa"/></modify-case>
+        <let><var n="brlemma"/><clip pos="1" side="sl" part="lemh"/></let>
+        <modify-case><var n="brlemma"/><lit v="aa"/></modify-case>
         <choose>
           <when>
-            <test><equal><var n="lu_lemh"/><lit v="brite"/></equal></test>
-            <let>        <var n="lu_lemh"/><lit v="britisk"/></let>
+            <test><equal><var n="brlemma"/><lit v="brite"/></equal></test>
+            <let>        <var n="brlemma"/><lit v="britisk"/></let>
           </when>
           <when>
-            <test><equal><var n="lu_lemh"/><lit v="russer"/></equal></test>
-            <let>        <var n="lu_lemh"/><lit v="russisk"/></let>
+            <test><equal><var n="brlemma"/><lit v="russer"/></equal></test>
+            <let>        <var n="brlemma"/><lit v="russisk"/></let>
           </when>
           <when>
-            <test><equal><var n="lu_lemh"/><lit v="sveitser"/></equal></test>
-            <let>        <var n="lu_lemh"/><lit v="sveitsisk"/></let>
+            <test><equal><var n="brlemma"/><lit v="sveitser"/></equal></test>
+            <let>        <var n="brlemma"/><lit v="sveitsisk"/></let>
           </when>
           <when>
-            <test><equal><var n="lu_lemh"/><lit v="same"/></equal></test>
-            <let>        <var n="lu_lemh"/><lit v="samisk"/></let>
+            <test><equal><var n="brlemma"/><lit v="same"/></equal></test>
+            <let>        <var n="brlemma"/><lit v="samisk"/></let>
           </when>
           <when>
-            <test><equal><var n="lu_lemh"/><lit v="india"/></equal></test>
-            <let>        <var n="lu_lemh"/><lit v="indisk"/></let>
+            <test><equal><var n="brlemma"/><lit v="india"/></equal></test>
+            <let>        <var n="brlemma"/><lit v="indisk"/></let>
           </when>
           <when>
-            <test><equal><var n="lu_lemh"/><lit v="kina"/></equal></test>
-            <let>        <var n="lu_lemh"/><lit v="kinesisk"/></let>
+            <test><equal><var n="brlemma"/><lit v="kina"/></equal></test>
+            <let>        <var n="brlemma"/><lit v="kinesisk"/></let>
           </when>
           <otherwise>
             <reject-current-rule shifting="no"/>
@@ -1414,7 +3213,7 @@
             <tags><tag><var n="ntags"/></tag></tags>
             <var n="grau_aux"/>
             <lu>
-              <var n="lu_lemh"/>
+              <var n="brlemma"/>
               <var n="adjtags"/>
             </lu>
             <b pos="1"/>
@@ -1465,6 +3264,16 @@
           <otherwise>
             <call-macro n="set_aux"><with-param pos="1"/></call-macro>
             <!-- todo: why do I get a bus error when calling set_aux2 here? -->
+            <choose c="Only movable past an NP if no lemq or not in np-immovable-verb list">
+              <when>
+                <test><or>
+                  <in><clip pos="1" side="tl" part="lemh"/><list n="np-immovable-verb"/></in>
+                  <not><equal><clip pos="1" side="tl" part="lemq"/><lit v=""/></equal></not>
+                </or></test>
+                <let><var n="movable_tag"/><lit v=""/></let>
+              </when>
+              <otherwise><let><var n="movable_tag"/><lit-tag v="np-movable"/></let></otherwise>
+            </choose>
             <out>
               <chunk name="aux" case="caseFirstWord">
                 <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
@@ -1474,6 +3283,7 @@
               <chunk name="adj2vblex">
                 <tags>
                   <tag><lit-tag v="adj.pp.nt.sg.ind"/></tag>
+                  <tag><var n="movable_tag"/></tag>
                 </tags>
                 <lu>
                   <clip pos="1" side="tl" part="lemh"/>
@@ -1526,6 +3336,7 @@
         <pattern-item n="vblex"/>
       </pattern>
       <action>
+        <call-macro n="flush-mwe-queue"><with-param pos="1"/></call-macro>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
         <call-macro n="set_lemq"><with-param pos="1"/></call-macro>
         <let><var n="c_name"/><lit v="vblex"/></let>
@@ -1576,20 +3387,86 @@
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
+        <let><var n="advtags"/><clip pos="1" side="tl" part="tags"/></let>
+        <choose>
+          <when>
+            <test><not><in><clip pos="1" side="tl" part="lemh"/><list n="immovable-adv"/></in></not></test>
+            <append n="advtags">
+              <lit-tag v="movable"/>
+            </append>
+          </when>
+        </choose>
         <out>
           <chunk name="adv" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="1" side="tl" part="tags"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
+            <tags><tag><var n="advtags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <let><var n="prevlem"/><clip pos="1" side="tl" part="lem"/></let>
+      </action>
+    </rule>
+    <rule comment="så-ADV lenge-ADV/ADJ: så lenge → så lenge">
+      <pattern>
+        <pattern-item n="så-adv"/>
+        <pattern-item n="lenge"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
+        <let><var n="advtags"/><clip pos="1" side="tl" part="tags"/></let>
+        <!-- not movable -->
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags><tag><var n="advtags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <let><var n="prevlem"/><clip pos="2" side="tl" part="lem"/></let>
+      </action>
+    </rule>
+
+    <rule comment="akkurat DETPOS: akkurat deres by → akkurat deira by
+                   Tell t2x to not use DETPOS NIND → NDEF DETPOS rule.">
+      <pattern>
+        <pattern-item n="akkurat"/>
+        <pattern-item n="detpos"/>
+        <pattern-item n="n_np"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><and>
+              <or>
+                <equal><clip pos="3" side="tl" part="gen"/><lit-tag v="m"/></equal>
+                <equal><clip pos="3" side="tl" part="gen"/><lit-tag v="f"/></equal>
+                <equal><clip pos="3" side="tl" part="gen"/><lit-tag v="nt"/></equal>
+              </or>
+              <not><equal><clip pos="3" side="tl" part="nbr"/><lit-tag v="pl"/></equal></not>
+              <not><equal><clip pos="2" side="tl" part="nbr"/><lit-tag v="pl"/></equal></not>
+            </and></test>
+            <let><clip pos="2" side="tl" part="gen"/><clip pos="3" side="tl" part="gen"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="adv">
+            <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+          </chunk>
+          <b pos="1"/>
+          <chunk name="detpos-keep">
+            <tags><tag><clip pos="2" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+          <b pos="2"/>
+          <chunk name="n">
+            <tags><tag><clip pos="3" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
           </chunk>
         </out>
       </action>
     </rule>
 
-    <!-- POSGEN måte å VBLEXINF -->
     <rule comment="DETPOS N_KEEP_SIN: sin vilje → sin vilje
                                       deres side → deres side
                    Tell t2x to not use DETPOS NIND → NDEF DETPOS rule.">
@@ -1625,6 +3502,8 @@
         </out>
       </action>
     </rule>
+
+    <!-- POSGEN måte å VBLEXINF -->
     <rule comment="sin måte å VBLEXINF: sin måte å referere => sin måte å referere
                    Override the below rule (TODO: use exception tag instead, when accepted to trunk).">
       <pattern>
@@ -1793,44 +3672,9 @@ no lemq-moving">
     </rule>
 
     <!-- Nouns -->
-    <rule comment="NGEN CNJCOO NGEN: lørdagens og søndagens => laurdagens og søndagens">
+    <rule comment="NGEN_KEEP_GEN_S: dagens => dagens">
       <pattern>
-        <pattern-item n="ngen"/>
-        <pattern-item n="cnjcoo"/>
-        <pattern-item n="ngen"/>
-      </pattern>
-      <action>
-        <call-macro n="set_caseFirstWord2">
-          <with-param pos="1"/>
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="n" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="1" side="tl" part="tags"/></tag>
-            </tags>
-            <lu><clip pos="1" side="tl" part="whole"/></lu>
-          </chunk>
-          <b pos="1"/>
-          <chunk name="default" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="2" side="tl" part="tags"/></tag>
-            </tags>
-            <lu><clip pos="2" side="tl" part="whole"/></lu>
-          </chunk>
-          <b pos="2"/>
-          <chunk name="n" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="3" side="tl" part="tags"/></tag>
-            </tags>
-            <lu><clip pos="3" side="tl" part="whole"/></lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-    <rule comment="NGEN_TIME_MEAS: dagens => dagens">
-      <pattern>
-        <pattern-item n="ngen_time_meas"/>
+        <pattern-item n="ngen_keep_gen_s"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
@@ -1845,10 +3689,10 @@ no lemq-moving">
         </out>
       </action>
     </rule>
-    <rule comment="ADJ NGEN_TIME_MEAS: flere års => fleire års">
+    <rule comment="ADJ NGEN_KEEP_GEN_S: flere års => fleire års">
       <pattern>
         <pattern-item n="adj"/>
-        <pattern-item n="ngen_time_meas"/>
+        <pattern-item n="ngen_keep_gen_s"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="adj_n"/></let>
@@ -1891,6 +3735,7 @@ no lemq-moving">
           <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><clip pos="2" side="tl" part="tags"/></tag>
+              <tag><clip pos="1" side="tl" part="cas"/></tag>
             </tags>
             <lu><clip pos="1" side="tl" part="whole"/></lu>
             <b pos="1"/>
@@ -1899,10 +3744,58 @@ no lemq-moving">
         </out>
       </action>
     </rule>
-    <rule comment="NGEN_TIME_MEAS NIND: dagens vedtak => dagens vedtak">
+    <rule comment="NGEN_KEEP_GEN_S NIND: dagens vedtak => dagens vedtak">
       <pattern>
-        <pattern-item n="ngen_time_meas"/>
+        <pattern-item n="ngen_keep_gen_s"/>
         <pattern-item n="nind_indgen"/>
+      </pattern>
+      <action>
+        <let><var n="c_name"/><lit v="n_n"/></let>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk namefrom="c_name" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="2" side="tl" part="tags"/></tag>
+            </tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="NGEN_KEEP_GEN_S NIND: 710-kilos hai → 710-kilos hai">
+      <pattern>
+        <pattern-item n="ncmp"/>
+        <pattern-item n="ngen_keep_gen_s"/>
+        <pattern-item n="nind_indgen"/>
+      </pattern>
+      <action>
+        <let><var n="c_name"/><lit v="n_n_n"/></let>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="3"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk namefrom="c_name" case="caseFirstWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+            <b pos="2"/>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="NGEN_KEEP_GEN_S_KVINNERS_RETTAR NIND_KEEP_GEN_S_KVINNERS_RETTER">
+      <pattern>
+        <pattern-item n="ngen_keep_gen_s_kvinners_rettar"/>
+        <pattern-item n="nind_keep_gen_s_kvinners_retter"/>
       </pattern>
       <action>
         <let><var n="c_name"/><lit v="n_n"/></let>
@@ -2057,23 +3950,24 @@ no lemq-moving">
       </action>
     </rule>
     <rule comment="NIND CNJCOO NIND: (kvinners) stemme og deltakelse → stemma og deltakinga til kvinner
+                                                barn og unges filminteresse → filminteressa til barn og unge
                    Chunk the coordination for genitive-movement in t2x">
       <!-- TODO: avoid «landets ambassader og konsulater i utlandet» -->
       <pattern>
-        <pattern-item n="nind_indsplit"/>
+        <pattern-item n="n_np"/>
         <pattern-item n="cnjcoo_nkon"/>
-        <pattern-item n="nind_indsplit"/>
+        <pattern-item n="n_np"/>
       </pattern>
       <action>
         <call-macro n="set_caseFirstWord2">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="3"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="3"/></call-macro>
         <out>
           <chunk name="n_cnjcoo_n" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="3" side="tl" part="tags"/></tag>
-            </tags>
+            <tags><tag><var n="ntags"/></tag></tags>
             <lu><clip pos="1" side="tl" part="whole"/></lu>
             <b pos="1"/>
             <lu><clip pos="2" side="tl" part="lemh"/><lit-tag v="cnjcoo"/></lu>
@@ -2083,10 +3977,69 @@ no lemq-moving">
         </out>
       </action>
     </rule>
+
+    <rule comment="N CNJCOO ADJ N: (selskapets) eier og daglige leder
+                   Chunk the coordination for genitive-movement in t2x">
+      <pattern>
+        <pattern-item n="n_np"/>
+        <pattern-item n="cnjcoo_nkon"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="n_np"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="4"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="4"/></call-macro>
+        <out>
+          <chunk name="n_cnjcoo_adj_n" case="caseFirstWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="lemh"/><lit-tag v="cnjcoo"/></lu>
+            <b pos="2"/>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+            <b pos="3"/>
+            <lu><clip pos="4" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="NCMP NIND CNJCOO N: landenes selvbestemmelse og suverenitet → sjølvbestemminga og suvereniteten til landa
+                   Chunk the coordination for genitive-movement in t2x">
+      <pattern>
+        <pattern-item n="ncmp"/>
+        <pattern-item n="n_np"/>
+        <pattern-item n="cnjcoo_nkon"/>
+        <pattern-item n="n_np"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="4"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="4"/></call-macro>
+        <out>
+          <chunk name="n_n_cnjcoo_n" case="caseFirstWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+            <b pos="2"/>
+            <lu><clip pos="3" side="tl" part="lemh"/><lit-tag v="cnjcoo"/></lu>
+            <b pos="3"/>
+            <lu><clip pos="4" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
     <rule comment="NIND CNJCOO NCMP N: (kvinners) kontroll- og konstitusjonskomité → kontroll- og konstitusjonskomitéen til kvinner
                    Chunk the coordination for genitive-movement in t2x">
       <pattern>
-        <pattern-item n="nind_indsplit"/>
+        <pattern-item n="n_np"/>
         <pattern-item n="cnjcoo_nkon"/>
         <pattern-item n="ncmp"/>
         <pattern-item n="n_np"/>
@@ -2096,17 +4049,138 @@ no lemq-moving">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
+        <call-macro n="out_gen-prep"><with-param pos="4"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="4"/></call-macro>
         <out>
           <chunk name="n_cnjcoo_n_n" case="caseFirstWord">
-            <tags>
-              <tag><clip pos="4" side="tl" part="tags"/></tag>
-            </tags>
+            <tags><tag><var n="ntags"/></tag></tags>
             <lu><clip pos="1" side="tl" part="whole"/></lu>
             <b pos="1"/>
             <lu><clip pos="2" side="tl" part="lemh"/><lit-tag v="cnjcoo"/></lu>
             <b pos="2"/>
             <lu><clip pos="3" side="tl" part="whole"/></lu>
             <lu><clip pos="4" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="NIND CNJCOO ADJ N: bransjens og den enkelte bedrifts (situasjon) → (situasjonen) til bransjen og den enkelte bedriften
+                   Chunk the coordination for genitive-movement in t2x">
+      <pattern>
+        <pattern-item n="n_np"/>
+        <pattern-item n="cnjcoo_nkon"/>
+        <pattern-item n="det"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="n_np"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_gender2.n.adj"><with-param pos="5"/><with-param pos="4"/></call-macro>
+        <!-- TODO grau_aux <call-macro n="set_grau_aux1"><with-param pos="1"/></call-macro> -->
+        <call-macro n="out_gen-prep"><with-param pos="5"/></call-macro>
+        <let><clip pos="5" side="tl" part="art"/><lit-tag v="def"/></let>
+        <call-macro n="stash_case_in_ntags"><with-param pos="5"/></call-macro>
+        <out>
+          <chunk name="n_cnjcoo_det_adj_n" case="caseFirstWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="lemh"/><lit-tag v="cnjcoo"/></lu>
+            <b pos="2"/>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+            <b pos="3"/>
+            <lu><clip pos="4" side="tl" part="whole"/></lu>
+            <b pos="4"/>
+            <lu><clip pos="5" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="NGEN CNJCOO NGEN: lørdagens og søndagens => laurdagens og søndagens
+                   If above rules didn't match (no @nkon tag), we keep genitive, unchunked">
+      <pattern>
+        <pattern-item n="ngen"/>
+        <pattern-item n="cnjcoo"/>
+        <pattern-item n="ngen"/>
+      </pattern>
+      <action>
+        <call-macro n="set_caseFirstWord2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+          </chunk>
+          <b pos="1"/>
+          <chunk name="default" case="caseFirstWord">
+            <tags><tag><clip pos="2" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="2" side="tl" part="lemh"/><lit-tag v="cnjcoo"/></lu>
+          </chunk>
+          <b pos="2"/>
+          <chunk name="n" case="caseFirstWord">
+            <tags><tag><clip pos="3" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- NP_NOGEN NINDGEN -->
+    <rule comment="NP_NOGEN NINDGEN: Sogn tingretts → Sogn tingretts
+                   Chunk for genitive movement">
+      <pattern>
+        <pattern-item n="np_nogen"/>
+        <pattern-item n="nindgen"/>
+      </pattern>
+      <action>
+        <choose><when c="Only copy case at start of sentence">
+          <test><equal><var n="caseFirstWord"/><lit v=""/></equal></test>
+          <call-macro n="set_caseFirstWord2">
+            <with-param pos="1"/>
+            <with-param pos="2"/>
+          </call-macro>
+        </when></choose>
+        <call-macro n="out_gen-prep"><with-param pos="2"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk name="n_n" case="caseFirstWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="NP_NOGEN NCMP NINDGEN: Sogn politidistrikts → Sogn politidistrikts
+                   Chunk for genitive movement">
+      <pattern>
+        <pattern-item n="np_nogen"/>
+        <pattern-item n="ncmp"/>
+        <pattern-item n="nindgen"/>
+      </pattern>
+      <action>
+        <choose><when c="Only copy case at start of sentence">
+          <test><equal><var n="caseFirstWord"/><lit v=""/></equal></test>
+          <call-macro n="set_caseFirstWord2">
+            <with-param pos="1"/>
+            <with-param pos="2"/>
+          </call-macro>
+        </when></choose>
+        <call-macro n="out_gen-prep"><with-param pos="3"/></call-macro>
+        <call-macro n="stash_case_in_ntags"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk name="n_n_n" case="caseFirstWord">
+            <tags><tag><var n="ntags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+            <b pos="1"/>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
           </chunk>
         </out>
       </action>
@@ -2121,7 +4195,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="2" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2160,7 +4234,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="3" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2201,7 +4275,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="4" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2244,7 +4318,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="5" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2287,7 +4361,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="3" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2339,7 +4413,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="4" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2393,7 +4467,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="5" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2449,7 +4523,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="6" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2518,7 +4592,8 @@ no lemq-moving">
         </out>
       </action>
     </rule>
-    <rule comment="ADJ ADJ">
+    <rule comment="ADJ ADJ
+                   mest betydningsfulle → viktigaste">
       <pattern>
         <pattern-item n="adj"/>
         <pattern-item n="adj"/>
@@ -2526,7 +4601,7 @@ no lemq-moving">
       <action>
         <choose><when>
           <test><and>
-            <not><equal><clip pos="1" side="tl" part="lemh"/><lit v="mykje"/></equal></not>
+            <not><in><clip pos="1" side="tl" part="lemh"/><list n="adj-ind-def"/></in></not>
             <equal><clip pos="1" side="tl" part="art"/><lit-tag v="ind"/></equal>
             <equal><clip pos="2" side="tl" part="art"/><lit-tag v="def"/></equal>
           </and></test>
@@ -2584,6 +4659,10 @@ no lemq-moving">
           <when>
             <test><equal caseless="yes"><clip pos="1" side="tl" part="lemh"/><lit v="sin"/></equal></test>
             <let><var n="c_name"/><lit v="detsin"/></let>
+          </when>
+          <when>
+            <test><equal caseless="yes"><clip pos="1" side="tl" part="lemh"/><lit v="all"/></equal></test>
+            <let><var n="c_name"/><lit v="detall"/></let>
           </when>
           <otherwise><let><var n="c_name"/><lit v="det"/></let></otherwise>
         </choose>
@@ -2649,12 +4728,92 @@ no lemq-moving">
           <var n="c_lemtag"/>
           <concat><lit v="&lt;"/><clip pos="1" side="tl" part="lemh"/><lit v="&gt;"/></concat>
         </let>
+        <choose>
+          <when>
+            <test><or>
+              <and><in caseless="yes"><var n="prevlem"/><list n="noun_takes_i"/></in>  <equal caseless="yes"><clip pos="1" side="tl" part="lemh"/><lit v="i"/></equal></and>
+              <and><in caseless="yes"><var n="prevlem"/><list n="noun_takes_til"/></in><equal caseless="yes"><clip pos="1" side="tl" part="lemh"/><lit v="til"/></equal></and>
+            </or></test>
+            <let><var n="pr_head"/><lit-tag v="nhead"/></let>
+          </when>
+        <otherwise>
+          <!-- By default no tag, assume verb head: -->
+          <let><var n="pr_head"/><lit v=""/></let>
+        </otherwise>
+        </choose>
         <out>
           <chunk name="pr" case="caseFirstWord">
             <tags>
               <tag><clip pos="1" side="tl" part="tags"/></tag>
               <tag><var n="c_lemtag"/></tag>
+              <tag><var n="pr_head"/></tag>
             </tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <let><var n="prevlem"/><clip pos="1" side="tl" part="lem"/></let>
+        <let><var n="prevnbr"/><clip pos="1" side="tl" part="nbr"/></let>
+      </action>
+    </rule>
+
+    <rule comment="I FORRIGE MÅNED: i neste uke => neste uke">
+      <pattern>
+        <pattern-item n="i"/>
+        <pattern-item n="forrige_neste"/>
+        <pattern-item n="nind_periode"/>
+      </pattern>
+      <action>
+        <choose><when c="Don't drop for 'utover i neste uke'">
+          <test><or>
+            <equal caseless="yes"><var n="prevlem"/><lit v="utover"/></equal>
+            <equal caseless="yes"><var n="prevlem"/><lit v="ut"/></equal>
+            <equal caseless="yes"><var n="prevlem"/><lit v="inn"/></equal>
+          </or></test>
+          <reject-current-rule shifting="no"/>
+        </when></choose>
+        <call-macro n="set_caseFirstWord"><with-param pos="1"/></call-macro>
+        <choose><when>
+          <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
+          <out><b pos="1"/></out>
+        </when></choose>
+        <out>
+          <chunk name="det" case="caseFirstWord">
+            <tags><tag><clip pos="2" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="2" side="tl" part="whole"/></lu>
+          </chunk>
+          <b pos="2"/>
+          <chunk name="n">
+            <tags><tag><clip pos="3" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="3" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="GUIO">
+      <pattern>
+        <pattern-item n="guio"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="guio">
+            <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
+            <lu><clip pos="1" side="tl" part="whole"/></lu>
+          </chunk>
+        </out>
+        <let><var n="prevlem"/><clip pos="1" side="tl" part="lem"/></let>
+      </action>
+    </rule>
+
+    <rule comment="CM">
+      <pattern>
+        <pattern-item n="cm"/>
+      </pattern>
+      <action>
+        <call-macro n="flush-mwe-queue"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="cm">
+            <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
             <lu><clip pos="1" side="tl" part="whole"/></lu>
           </chunk>
         </out>
@@ -2666,9 +4825,27 @@ no lemq-moving">
         <pattern-item n="sent"/>
       </pattern>
       <action>
+        <call-macro n="flush-mwe-queue"><with-param pos="1"/></call-macro>
         <let><var n="caseFirstWord"/><lit v=""/></let>
+        <choose><when>
+          <test><not><equal><clip pos="1" side="tl" part="lemh"/><lit v=""/></equal></not></test>
+          <out>
+            <chunk name="sent">
+              <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
+              <lu><clip pos="1" side="tl" part="whole"/></lu>
+            </chunk>
+          </out>
+        </when></choose>
+      </action>
+    </rule>
+
+    <rule comment="CNJSUB">
+      <pattern>
+        <pattern-item n="cnjsub"/>
+      </pattern>
+      <action>
         <out>
-          <chunk name="sent">
+          <chunk name="cnjsub">
             <tags><tag><clip pos="1" side="tl" part="tags"/></tag></tags>
             <lu><clip pos="1" side="tl" part="whole"/></lu>
           </chunk>
